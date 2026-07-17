@@ -3,17 +3,30 @@ valida tudo e registra inventário e respostas complementares.
 
 Uso: python integrar_pacote.py <caminho/do/pacote.json> [--somente-validar]
 
-Para cada item com status "pronto":
+Granularidade por questão: cada resposta pode trazer `status_questao`
+("pronto"/"pendente"). Um item é integrado desde que tenha PDF original,
+link do Poliedro e ao menos uma resposta — mesmo que o `status` do item
+como um todo seja "pendente" por causa de sub-questões incompletas (isso é
+comum: a maioria das provas discursivas tem algumas questões sem resultado
+separável, ao lado de outras já prontas). Regra (seção 16 do plano): nenhuma
+questão fica em branco. Para cada questão publicada no PDF:
+  - status_questao == "pronto": publica o texto transcrito tal como veio;
+  - status_questao != "pronto" (ou ausente): publica a frase padrão "Confira
+    a resolução completa no link e no QR Code apresentados na página de
+    proteção anterior." — o texto candidato do Codex NÃO é publicado (fica
+    só no registro interno de auditoria em RESPOSTAS_COMPLEMENTARES.csv),
+    pois o próprio pacote o marcou como não confirmado/não separável.
+
+Passos por item:
 1. confere que o PDF original existe e que o SHA-256 bate com o declarado;
 2. confere que a URL direta do Poliedro responde 200;
 3. monta o PDF final Caso 2 (prova + 2 proteções com crédito/link/QR +
    gabarito oficial quando houver + respostas finais complementares);
 4. valida o PDF final, a fidelidade visual das páginas da prova e decodifica
    o QR Code renderizado, comparando com a URL declarada;
-5. registra a linha `pdf_final` no inventário e as respostas em
+5. registra a linha `pdf_final` no inventário e TODAS as respostas (prontas
+   e pendentes, com o texto original do Codex preservado para auditoria) em
    RESPOSTAS_COMPLEMENTARES.csv.
-
-Itens com status diferente de "pronto" são apenas listados como pendências.
 """
 
 import argparse
@@ -41,6 +54,27 @@ CABECALHO_RESPOSTAS = [
 ]
 
 
+FRASE_PADRAO = (
+    "Confira a resolução completa no link e no QR Code apresentados "
+    "na página de proteção anterior."
+)
+
+
+def respostas_para_publicacao(item: dict) -> list[dict]:
+    """Aplica a regra por questão: só publica texto de `status_questao`
+    'pronto'; as demais recebem a frase padrão, sem publicar o candidato
+    ainda não confirmado."""
+    publicaveis = []
+    for r in item.get("respostas", []):
+        pronto = r.get("status_questao", "pronto") == "pronto"
+        publicaveis.append({
+            "questao": r.get("questao", ""),
+            "rotulo": r.get("rotulo"),
+            "resposta": r["resposta"] if pronto else FRASE_PADRAO,
+        })
+    return publicaveis
+
+
 def url_responde(url: str) -> bool:
     try:
         req = urllib.request.Request(
@@ -53,7 +87,10 @@ def url_responde(url: str) -> bool:
 
 
 def registrar_respostas(item: dict, agente: str, hoje: str) -> None:
-    """Substitui as respostas do documento, tornando a integração idempotente."""
+    """Substitui as respostas do documento, tornando a integração idempotente.
+    Preserva o texto ORIGINAL do Codex para toda questão (pronta ou
+    pendente), mesmo quando o PDF público usa a frase padrão — este CSV é
+    só para auditoria interna, nunca publicado no site."""
     existentes = []
     if RESPOSTAS_CSV.is_file():
         with open(RESPOSTAS_CSV, newline="", encoding="utf-8") as f:
@@ -68,6 +105,11 @@ def registrar_respostas(item: dict, agente: str, hoje: str) -> None:
         w.writeheader()
         w.writerows(existentes)
         for r in item.get("respostas", []):
+            pronto = r.get("status_questao", "pronto") == "pronto"
+            situacao = (
+                "pronta; publicada no PDF" if pronto
+                else "pendente; PDF público usa a frase padrão, texto abaixo é só para auditoria"
+            )
             w.writerow({
                 "documento_id": item["id"],
                 "questao": r.get("questao", r.get("rotulo", "")),
@@ -75,7 +117,7 @@ def registrar_respostas(item: dict, agente: str, hoje: str) -> None:
                 "url_resolucao": r.get("url_fonte", item["poliedro"]["url_direta"]),
                 "data_consulta": hoje,
                 "agente": agente,
-                "situacao_conferencia": "transcrita e integrada pelo Codex",
+                "situacao_conferencia": situacao,
                 "observacoes": r.get("obs", "")
                 + (f" | evidência: {r['evidencia']}" if r.get("evidencia") else ""),
             })
@@ -125,7 +167,7 @@ def integrar_item(item: dict, hoje: str, somente_validar: bool) -> list[str]:
         erros.append(f"URL direta do Poliedro não respondeu 200: {url}")
 
     if not item.get("respostas"):
-        erros.append("item 'pronto' sem lista de respostas")
+        erros.append("item sem lista de respostas")
     if erros:
         return erros
 
@@ -143,7 +185,7 @@ def integrar_item(item: dict, hoje: str, somente_validar: bool) -> list[str]:
     resumo = montar_pdf_final(
         original, saida, caso=2, gabarito_oficial=gabarito,
         links_poliedro=[{"rotulo": rotulo_link, "url": url}],
-        respostas=item["respostas"],
+        respostas=respostas_para_publicacao(item),
     )
 
     resultado = validar(saida)
@@ -200,8 +242,13 @@ def main() -> int:
     falhas, pendentes, ok = [], [], 0
 
     for item in pacote.get("itens", []):
-        if item.get("status") != "pronto":
-            pendentes.append(f"{item.get('id', '?')} (status: {item.get('status')})")
+        # Itens integráveis têm PDF original, link do Poliedro e respostas —
+        # o "status" de nível de item é só um resumo do Codex (algumas
+        # sub-questões pendentes não impedem publicar as demais com a frase
+        # padrão; ver respostas_para_publicacao).
+        tem_insumos = item.get("pdf_original") and item.get("poliedro") and item.get("respostas")
+        if not tem_insumos:
+            pendentes.append(f"{item.get('id', '?')} (sem insumos suficientes; status: {item.get('status')})")
             continue
         erros = integrar_item(item, hoje, args.somente_validar)
         if erros:

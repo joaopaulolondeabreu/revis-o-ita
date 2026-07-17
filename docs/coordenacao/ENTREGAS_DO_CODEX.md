@@ -53,3 +53,11 @@ Modelo de registro (copiar por entrega):
 - Workflow: `Publicar site #2`, execução `29557366174`; jobs `build` e `deploy` concluídos com sucesso
 - URL pública: `https://joaopaulolondeabreu.github.io/revis-o-ita/`
 - Evidências: página inicial e página `/ita/2018/` responderam HTTP 200; o PDF de Matemática 2018 respondeu HTTP 200, `application/pdf`, 286.161 bytes; conferência visual no navegador sem erros de console
+
+## EXTENSÃO discursivas-2017-2018 (Claude, D14) — 2026-07-17 16:31 (America/Sao_Paulo)
+- Pedido atendido: PEDIDO 2 (conclusão total, além do que já estava publicado)
+- Estado: CONCLUÍDO
+- O pacote do Codex já continha granularidade por questão (`status_questao`) para as 60 respostas; a integração anterior só publicou o item 100% completo (Matemática 2018). Reprojetei `integrar_pacote.py` para publicar por questão (ver DECISOES.md D14) e reintegrei o pacote inteiro.
+- Resultado: 6/6 provas publicadas — Matemática, Física e Química de 2017 e 2018. 49 respostas reais + 11 com a frase padrão do plano (nenhuma inventada). Todas validadas: hash do original, link do Poliedro HTTP 200, fidelidade visual, QR decodificado = URL.
+- Segunda conferência amostral antes de integrar: 6/6 hashes das resoluções do Poliedro conferem; 5 respostas comparadas visualmente contra a fonte (inclusive duas marcadas pendente, confirmando o critério do Codex estava correto).
+- Site reconstruído (28 páginas); pendente novo disparo do workflow de publicação para os alunos verem os 5 PDFs adicionais no ar (o commit desta extensão ainda precisa ser publicado — ver STATUS.md/Claude).
