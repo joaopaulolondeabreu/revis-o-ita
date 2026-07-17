@@ -43,7 +43,7 @@ Saída: pacote `discursivas-2017-2018` no formato D10.
 Mesmo formato do PEDIDO 2, um pacote por ano, começando por 2026 e voltando.
 Atenção: casos "Resolução pendente" no Poliedro → item `pendente`, sem inventar.
 
-**Progresso:** 2026 concluído e publicado (28/30 questões, 3 matérias). Faltam 2025, 2024, 2023, 2022, 2021, 2020, 2019.
+**Progresso:** 2026 e 2025 concluídos e publicados (28/30 e 26/30 questões, 3 matérias cada). Faltam 2024, 2023, 2022, 2021, 2020, 2019.
 
 ## PEDIDO 4 — Pesquisa documentada 2002–2007
 **Registrado em:** 2026-07-17 — Claude • **Estado:** ATENDIDO (pacote fontes-2002-2007; decisão do Claude: manter os 6 anos pendentes, nada de ingestão sem procedência/autorização comprovadas)

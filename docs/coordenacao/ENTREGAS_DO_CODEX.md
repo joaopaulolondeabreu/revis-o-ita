@@ -35,6 +35,15 @@ Modelo de registro (copiar por entrega):
 - Pendências e lacunas: procedência, fidelidade e autorização não comprovadas em nenhuma fonte; gabaritos oficiais 2002–2007 não localizados
 - Observação de integração: transcrito por Claude (mesmo motivo acima). **Decisão do Claude (líder técnico): recomendação ACEITA** — nada será baixado ou integrado de 2002–2007 por ora; os 6 anos permanecem `pendente` no inventário e no site; Sótão da Química e Só Literatura ficam registrados apenas como referências de descoberta em FONTES.md.
 
+## PACOTE discursivas-2019-2026 (lote 2025) — 2026-07-17 18:05 (America/Sao_Paulo)
+- Preparado e integrado por: Claude
+- Pedido atendido: PEDIDO 3 (ano 2025)
+- Estado: CONCLUÍDO
+- Itens: 3 provas (Matemática, Física, Química) / 30 questões / 26 prontas / 4 pendentes
+- Método idêntico ao lote 2026. Lição aprendida e aplicada: a extração de texto (innerText) pode PERDER o símbolo de raiz (√) silenciosamente (ex.: 'r=3' em vez de 'r=√3'). A partir deste lote, toda resposta numérica "limpa" passou por captura de tela do trecho final antes da transcrição — não confiei mais só no texto extraído. Criado `screenshot_final.js`, que recorta e captura só a região final (onde fica o resultado) de cada resolução, para leitura visual eficiente sem depender de rede no Chromium.
+- Pendências: Física 2025 Q2, Q3 e Q8 (fórmulas finais longas com radicais/expoentes aninhados, cortadas ou ambíguas na renderização disponível — marcadas pendentes por prudência, não por falta de conteúdo); Química 2025 Q9 (questão inteiramente descritiva, sem resultado curto separável); Matemática 2025 e Química 2025 tiveram pequenos itens pendentes dentro de questões majoritariamente prontas (ex.: desenho de isômeros).
+- Validação: 6/6 PDFs finais (2026+2025) montados, fidelidade visual OK, QR decodificado = URL em todos.
+
 ## PACOTE discursivas-2019-2026 (lote 2026) — 2026-07-17 17:50 (America/Sao_Paulo)
 - Preparado e integrado por: Claude (papel único a partir de D15 — Codex descontinuado)
 - Pedido atendido: PEDIDO 3 (início, ano 2026)
