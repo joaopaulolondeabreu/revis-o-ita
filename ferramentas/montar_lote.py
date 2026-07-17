@@ -21,11 +21,29 @@ RAIZ = Path(__file__).resolve().parent.parent
 DESTINO = RAIZ / "site" / "public" / "pdfs" / "ita"
 PAGINA_ORIGEM = "https://www.vestibular.ita.br/provas.htm"
 
-# (ano, prova, gabarito, nome_final, fase, materia)
+NOTA_REDACAO = {
+    "titulo": "OBSERVAÇÃO SOBRE A REDAÇÃO",
+    "itens": [{"rotulo": "Redação", "questao": "",
+               "resposta": "Não possui resposta única — produção textual."}],
+}
+
+# Trabalhos Caso 1: gabarito oficial cobre todas as questões objetivas da prova.
+# Cada item: dict com ano, prova, gabarito, nome_final, fase, dia, materia e
+# opcionalmente "nota" (página de observação após o gabarito — decisão D11).
 TRABALHOS_CASO1 = [
-    (str(ano), f"{ano}_fase1.pdf", f"gabarito_{ano}.pdf",
-     f"ita-{ano}-1-fase-prova-com-gabarito-no-final.pdf", "1ª fase", "")
+    {"ano": str(ano), "prova": f"{ano}_fase1.pdf", "gabarito": f"gabarito_{ano}.pdf",
+     "nome_final": f"ita-{ano}-1-fase-prova-com-gabarito-no-final.pdf",
+     "fase": "1ª fase", "dia": "", "materia": ""}
     for ano in range(2019, 2027)
+] + [
+    {"ano": str(ano), "prova": f"portugues_{ano}_2f.pdf",
+     "gabarito": f"gabarito_{ano}_2f.pdf",
+     "nome_final": f"ita-{ano}-2-fase-portugues-e-redacao-com-gabarito-no-final.pdf",
+     "fase": "2ª fase", "dia": "dia 4", "materia": "Português e Redação",
+     "nota": NOTA_REDACAO,
+     "obs": "15 questões objetivas cobertas pelo gabarito oficial da 2ª fase; "
+            "redação sem resposta única (página de observação)"}
+    for ano in (2025, 2026)
 ]
 
 
@@ -42,7 +60,10 @@ def ja_registrado(nome_final: str) -> bool:
 def main() -> int:
     hoje = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%Y-%m-%d")
     falhas = []
-    for ano, prova, gabarito, nome_final, fase, materia in TRABALHOS_CASO1:
+    for t in TRABALHOS_CASO1:
+        ano, prova, gabarito = t["ano"], t["prova"], t["gabarito"]
+        nome_final, fase, materia = t["nome_final"], t["fase"], t["materia"]
+        nota = t.get("nota")
         if ja_registrado(nome_final):
             print(f"pulado (já registrado): {nome_final}")
             continue
@@ -53,7 +74,9 @@ def main() -> int:
         saida = pasta_saida / nome_final
         try:
             resumo = montar_pdf_final(
-                caminho_prova, saida, caso=1, gabarito_oficial=caminho_gab
+                caminho_prova, saida, caso=1, gabarito_oficial=caminho_gab,
+                respostas=nota["itens"] if nota else None,
+                respostas_titulo=nota["titulo"] if nota else "",
             )
             resultado = validar(saida)
             if not resultado["valido"]:
@@ -64,7 +87,7 @@ def main() -> int:
                 raise RuntimeError(f"fidelidade visual falhou: {ruins}")
             registrar_linha({
                 "instituicao": "ITA", "ano": ano, "fase_formato": fase,
-                "dia": "", "materia": materia, "tipo_material": "pdf_final",
+                "dia": t["dia"], "materia": materia, "tipo_material": "pdf_final",
                 "nome_original": f"{prova} + protecao + {gabarito}",
                 "nome_padronizado": nome_final,
                 "url_pagina_origem": PAGINA_ORIGEM, "url_arquivo": "",
@@ -75,7 +98,8 @@ def main() -> int:
                 "tamanho_bytes": resultado["tamanho_bytes"],
                 "sha256": resultado["sha256"],
                 "situacao": "encontrado",
-                "observacoes": f"Caso 1; blocos: {resumo}",
+                "observacoes": f"Caso 1; blocos: {resumo}"
+                + (f"; {t['obs']}" if t.get("obs") else ""),
             })
             print(f"OK {nome_final}: {resumo}")
         except Exception as e:

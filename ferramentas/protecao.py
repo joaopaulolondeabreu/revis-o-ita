@@ -106,21 +106,26 @@ def pagina_protecao_creditos(c: Canvas, links: list[dict], dir_temp: Path) -> No
     c.showPage()
 
 
-def paginas_respostas_complementares(c: Canvas, respostas: list[dict]) -> None:
-    """Seção 'RESPOSTAS FINAIS COMPLEMENTARES — FONTE: POLIEDRO RESOLVE'.
+TITULO_RESPOSTAS_POLIEDRO = "RESPOSTAS FINAIS COMPLEMENTARES — FONTE: POLIEDRO RESOLVE"
+
+
+def paginas_respostas_complementares(
+    c: Canvas, respostas: list[dict], titulo: str = TITULO_RESPOSTAS_POLIEDRO
+) -> None:
+    """Seção de respostas/observações após o gabarito.
 
     respostas: lista de {"questao": "1", "resposta": "12"} já transcritas e
-    conferidas a partir do Poliedro (nunca redigidas pelo agente).
+    conferidas a partir da fonte (nunca redigidas pelo agente). Um item pode
+    trazer "rotulo" (ex.: "Redação") no lugar do prefixo "Questão N".
     """
     y = ALTURA - 2.5 * cm
     c.setFont("Helvetica-Bold", 16)
-    c.drawCentredString(
-        LARGURA / 2, y, "RESPOSTAS FINAIS COMPLEMENTARES — FONTE: POLIEDRO RESOLVE"
-    )
+    c.drawCentredString(LARGURA / 2, y, titulo)
     y -= 1.2 * cm
     c.setFont("Helvetica", 13)
     for item in respostas:
-        texto = f"Questão {item['questao']}: {item['resposta']}"
+        prefixo = item.get("rotulo") or f"Questão {item['questao']}"
+        texto = f"{prefixo}: {item['resposta']}"
         c.drawString(2.5 * cm, y, texto)
         y -= 0.8 * cm
         if y < 2.5 * cm:
@@ -151,8 +156,10 @@ def gerar_pdf_protecao(
     return saida
 
 
-def gerar_pdf_respostas(saida: Path, respostas: list[dict]) -> Path:
+def gerar_pdf_respostas(
+    saida: Path, respostas: list[dict], titulo: str = TITULO_RESPOSTAS_POLIEDRO
+) -> Path:
     c = Canvas(str(saida), pagesize=A4)
-    paginas_respostas_complementares(c, respostas)
+    paginas_respostas_complementares(c, respostas, titulo)
     c.save()
     return saida

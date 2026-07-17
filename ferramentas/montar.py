@@ -14,7 +14,7 @@ import numpy as np
 from pypdf import PdfReader, PdfWriter
 
 from comum import numero_paginas, renderizar_pagina
-from protecao import gerar_pdf_protecao, gerar_pdf_respostas
+from protecao import TITULO_RESPOSTAS_POLIEDRO, gerar_pdf_protecao, gerar_pdf_respostas
 
 
 def montar_pdf_final(
@@ -24,6 +24,7 @@ def montar_pdf_final(
     gabarito_oficial: Path | None = None,
     links_poliedro: list[dict] | None = None,
     respostas: list[dict] | None = None,
+    respostas_titulo: str = TITULO_RESPOSTAS_POLIEDRO,
 ) -> dict:
     """Monta o PDF final e devolve um resumo com a contagem de páginas por bloco."""
     escritor = PdfWriter()
@@ -47,9 +48,9 @@ def montar_pdf_final(
             escritor.add_page(pagina)
         resumo["gabarito_oficial"] = len(leitor_gab.pages)
 
-    if caso == 2 and respostas:
+    if respostas:
         pdf_resp = saida.parent / f"_respostas_{saida.stem}.pdf"
-        gerar_pdf_respostas(pdf_resp, respostas)
+        gerar_pdf_respostas(pdf_resp, respostas, respostas_titulo)
         leitor_resp = PdfReader(str(pdf_resp))
         for pagina in leitor_resp.pages:
             escritor.add_page(pagina)

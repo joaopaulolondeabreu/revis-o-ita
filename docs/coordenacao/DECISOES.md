@@ -30,3 +30,46 @@ Se o material não estiver no acervo oficial do ITA, priorizar fonte oficial ou 
 
 ### D9 — Identidade de commits
 Commits com autoria neutra ("Claude <noreply@anthropic.com>"), sem dados pessoais do usuário no histórico do Git (ajuste do usuário, 2026-07-16).
+
+## 2026-07-17 (America/Sao_Paulo) — Claude
+
+### D10 — Formato único dos pacotes do Codex
+Cada pacote = uma pasta `docs/coordenacao/pacotes/<nome-do-pacote>/` contendo um único **`pacote.json`** (UTF-8) e, quando necessário, subpasta `consulta/` (materiais do Poliedro só para leitura — **nunca commitados**; cobertos por `.gitignore`). Esquema do `pacote.json`:
+
+```json
+{
+  "pacote": "discursivas-2017-2018",
+  "preparado_por": "Codex",
+  "data": "2026-07-17T10:00-03:00",
+  "itens": [
+    {
+      "id": "ita-2017-matematica",
+      "ano": "2017", "fase": "prova por matéria", "dia": "", "materia": "Matemática",
+      "pdf_original": "arquivos/originais/ita/2017/matematica_2017.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2017/gabarito_2017.pdf",
+      "sha256_original": "…", "num_paginas_original": 6,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2017.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2017/matematica-7/questao-1-geral-matematica-ita-2017#exam-downloads",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/…pdf (não commitado)"
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "n = 100", "evidencia": "resolução, pág. 3, fim da questão 21", "url_fonte": "…", "conferida_por_codex": true, "obs": ""}
+      ],
+      "status": "pronto",
+      "observacoes": ""
+    }
+  ],
+  "pendencias": ["…"]
+}
+```
+Campos de resposta seguem as regras da seção 16 do plano (transcrição mínima; frase padrão para questões sem resultado separável; "Não possui resposta única — produção textual." para redação). O QR Code é gerado e testado pelo pipeline do Claude a partir de `url_direta` — o Codex não precisa gerar PNG, apenas garantir que a URL é exata e responde 200.
+
+### D11 — Redação e observações no PDF final
+Provas cujo caderno inclui redação recebem, após o gabarito oficial, uma página de observação com título neutro (ex.: "OBSERVAÇÃO SOBRE A REDAÇÃO") registrando "Não possui resposta única — produção textual.". A seção com título "RESPOSTAS FINAIS COMPLEMENTARES — FONTE: POLIEDRO RESOLVE" fica reservada a conteúdo efetivamente conferido no Poliedro.
+
+### D12 — Divisão de trabalho (definida pelo usuário em 2026-07-17)
+Claude = líder técnico (código, PDFs finais, site, testes, publicação, integração, decisões). Codex = preparação (fontes, downloads permitidos, inventário, links diretos, respostas mínimas com evidência), sem alterar implementação. Esteira: Codex prepara N+1 enquanto Claude implementa N. Claude não interrompe tarefa técnica para caçar insumo: registra em PEDIDOS_PARA_CODEX.md e segue.
