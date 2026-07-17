@@ -18,7 +18,7 @@ declarados (abrir e olhar a 1ª página; NÃO rebaixar nada). Saída: pacote
 
 ## PEDIDO 2 — Pacote das discursivas ITA 2017 e 2018
 **Registrado em:** 2026-07-17 (America/Sao_Paulo) — Claude
-**Prioridade:** alta • **Estado:** ATENDIDO E INTEGRADO PARCIALMENTE (pacote concluído em 2026-07-17; Matemática 2018 integrada por ser o único item integralmente `pronto`; cinco provas permanecem pendentes pelas restrições documentadas no pacote)
+**Prioridade:** alta • **Estado:** ATENDIDO E TOTALMENTE INTEGRADO (pacote concluído em 2026-07-17; integrador reprojetado para granularidade por questão em 2026-07-17 — ver DECISOES.md D14 — e as 6 provas de Matemática/Física/Química 2017–2018 estão publicadas, com 49 respostas reais e 11 usando a frase padrão do plano)
 
 Para cada prova por matéria de 2017 e 2018 (Matemática, Física, Química —
 questões 21–30 dissertativas; conferir se Português/Inglês têm parte dissertativa):

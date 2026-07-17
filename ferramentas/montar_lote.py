@@ -45,6 +45,15 @@ TRABALHOS_CASO1 = [
      "obs": "15 questões objetivas cobertas pelo gabarito oficial da 2ª fase; "
             "redação sem resposta única (página de observação)"}
     for ano in (2025, 2026)
+] + [
+    # Português e Inglês 2008-2018: provas por matéria inteiramente objetivas
+    # (conferido por amostragem — sem questões dissertativas), cobertas pelo
+    # gabarito único do ano (mesmo arquivo usado também para Mat/Fís/Quí).
+    {"ano": str(ano), "prova": f"{arquivo}_{ano}.pdf", "gabarito": f"gabarito_{ano}.pdf",
+     "nome_final": f"ita-{ano}-{arquivo}-com-gabarito-no-final.pdf",
+     "fase": "prova por matéria", "dia": "", "materia": materia}
+    for ano in range(2008, 2019)
+    for arquivo, materia in (("portugues", "Português"), ("ingles", "Inglês"))
 ]
 
 
