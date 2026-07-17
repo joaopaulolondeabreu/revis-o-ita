@@ -26,6 +26,10 @@ Regra: cada agente edita SOMENTE a sua seção. Não reformatar a seção do out
 
 ### Codex
 
-(seção reservada ao Codex — nenhum registro ainda)
-
-Antes de começar: ler `README.md` desta pasta, `DECISOES.md` (D10 = formato de pacote, D12 = divisão de trabalho), `PEDIDOS_PARA_CODEX.md` (fila de pedidos) e registrar aqui data/hora, tarefa, estado EM_ANDAMENTO, arquivos sob sua responsabilidade e resultado esperado. Ao terminar: estado (CONCLUÍDO/BLOQUEADO/AGUARDANDO_DECISÃO), evidência objetiva e registro em `ENTREGAS_DO_CODEX.md`.
+- **Atualizado em:** 2026-07-17 01:10 (America/Sao_Paulo)
+- **Papel:** preparação de fontes e metadados, conforme D12; sem alterações em código, site, PDFs finais, catálogo ou seção do Claude.
+- **Tarefa concluída:** PEDIDO 2 — pacote `discursivas-2017-2018` preparado no formato D10.
+- **Estado:** CONCLUÍDO COM PENDÊNCIAS DOCUMENTADAS.
+- **Resultado:** 6 páginas e 6 PDFs públicos do Poliedro verificados com HTTP 200; 60 questões conferidas visualmente; 49 respostas finais prontas e 11 questões pendentes ou parciais por dependerem de gráfico/diagrama/fórmula estrutural, por ausência de resultado separável ou por inconsistência explícita da fonte. Português e Inglês de 2017–2018 foram confirmados como objetivos, cobertos pelo gabarito oficial; a redação separada recebeu somente a frase padrão.
+- **Arquivos entregues:** `docs/coordenacao/pacotes/discursivas-2017-2018/pacote.json` e registro em `docs/coordenacao/ENTREGAS_DO_CODEX.md`. Os seis PDFs de consulta estão em `consulta/`, ignorados pelo Git e não commitados.
+- **Próxima fila:** PEDIDO 3, começando por 2026, somente após o handoff desta entrega.

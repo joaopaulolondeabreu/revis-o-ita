@@ -1,0 +1,273 @@
+{
+  "pacote": "discursivas-2017-2018",
+  "preparado_por": "Codex",
+  "data": "2026-07-17T01:10:53-03:00",
+  "pedido_atendido": "PEDIDO 2",
+  "escopo": "Respostas finais mínimas explicitamente declaradas nas resoluções públicas do Poliedro Resolve para as questões discursivas 21–30 de Matemática, Física e Química do ITA 2017 e 2018. Os PDFs do Poliedro foram usados somente para consulta local e não integram o pacote versionado.",
+  "metodo": [
+    "As seis páginas públicas candidatas e os seis PDFs de resolução foram acessados diretamente, sem login, formulário, CAPTCHA, aceite de termos ou contorno de restrições; todos responderam HTTP 200 em 2026-07-17.",
+    "Os seis PDFs foram validados pelo cabeçalho PDF, tamanho, SHA-256 e total de 30 páginas; as páginas 21–30 foram renderizadas e conferidas visualmente, uma a uma.",
+    "Somente o resultado final explicitamente apresentado pela fonte foi transcrito. Diagramas, gráficos, fórmulas estruturais, demonstrações e explicações não foram copiados.",
+    "Qualquer resultado não separável, contraditório, não único, dependente de figura ou sem correspondência inequívoca foi marcado como pendente, sem dedução ou correção pelo Codex."
+  ],
+  "resumo": {
+    "questoes_no_escopo": 60,
+    "questoes_prontas": 49,
+    "questoes_pendentes_ou_parciais": 11,
+    "itens_prontos": 1,
+    "itens_com_pendencias": 5
+  },
+  "confirmacao_portugues_ingles": [
+    {
+      "ano": "2017",
+      "resultado": "Inglês contém questões objetivas 1–20 e Português contém questões objetivas 21–40, todas cobertas pelo gabarito oficial; não há bloco discursivo 21–30 nessas matérias. O caderno de Português inclui uma proposta de redação separada.",
+      "evidencia": "Conferência visual das páginas finais de ingles_2017.pdf e portugues_2017.pdf e das colunas Inglês 01–20 e Português 21–40 em gabarito_2017.pdf.",
+      "redacao": "Não possui resposta única — produção textual.",
+      "status": "confirmado"
+    },
+    {
+      "ano": "2018",
+      "resultado": "Inglês contém questões objetivas 1–20 e Português contém questões objetivas 21–40, todas cobertas pelo gabarito oficial; não há bloco discursivo 21–30 nessas matérias. O caderno de Português inclui uma proposta de redação separada.",
+      "evidencia": "Conferência visual das páginas finais de ingles_2018.pdf e portugues_2018.pdf e das colunas Inglês 01–20 e Português 21–40 em gabarito_2018.pdf.",
+      "redacao": "Não possui resposta única — produção textual.",
+      "status": "confirmado"
+    }
+  ],
+  "itens": [
+    {
+      "id": "ita-2017-matematica",
+      "ano": "2017",
+      "fase": "prova por matéria",
+      "dia": "",
+      "materia": "Matemática",
+      "pdf_original": "arquivos/originais/ita/2017/matematica_2017.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2017/gabarito_2017.pdf",
+      "sha256_original": "139f96cedaa7c53755454a2cda2e074ec2f4fb1c0b0af654392ce7a71602d450",
+      "num_paginas_original": 5,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2017.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2017/matematica-7/questao-1-geral-matematica-ita-2017#exam-downloads",
+        "url_arquivo_resolucao": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf",
+        "http_status_verificado": 200,
+        "http_status_arquivo_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/2017-matematica.pdf (não commitado)",
+        "sha256_consulta": "8af291851371b8b0f58c182c2e25589cac9f51c6fa7cf6808615e5c692806831",
+        "num_paginas_consulta": 30
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "121√2/12", "evidencia": "resolução, pág. 21, resultado final emoldurado no fim da página", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "22", "resposta": "S = {x ∈ ℝ | x < log_{8/9}(2)}", "evidencia": "resolução, pág. 22, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "23", "resposta": "a = -2√3; b = -1; raízes = {√3 + √2, √3 - √2, (1 + √7 i)/2, (1 - √7 i)/2}", "evidencia": "resolução, pág. 23, bloco final após a fatoração", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "24", "resposta": "150", "evidencia": "resolução, pág. 24, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "25", "resposta": "n máximo = 4", "evidencia": "resolução, pág. 25, conclusão no fim da página", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "26", "resposta": "", "evidencia": "resolução, pág. 26, resposta apresentada somente como gráfico no fim da página", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "A resposta final é exclusivamente gráfica; não foi copiada nem reformulada."},
+        {"questao": "27", "resposta": "a = -6", "evidencia": "resolução, pág. 27, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "28", "resposta": "2(√6 + 9)π", "evidencia": "resolução, pág. 28, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "29", "resposta": "S = {2π/3 + 2kπ; -2π/3 + 2kπ; 2 arcsen(√3/3) + 2kπ; -2 arcsen(√3/3) + 2kπ | k ∈ ℤ}", "evidencia": "resolução, pág. 29, conjunto solução nas linhas finais", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "30", "resposta": "A = √3", "evidencia": "resolução, pág. 30, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "pendente",
+      "observacoes": "Questão 26 depende de resposta gráfica. As demais nove respostas estão prontas."
+    },
+    {
+      "id": "ita-2017-fisica",
+      "ano": "2017",
+      "fase": "prova por matéria",
+      "dia": "",
+      "materia": "Física",
+      "pdf_original": "arquivos/originais/ita/2017/fisica_2017.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2017/gabarito_2017.pdf",
+      "sha256_original": "78dedcfb96ea3a85aa3e1467d9f01958bda19526489d2807b58dfbd18f10d30e",
+      "num_paginas_original": 7,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2017.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2017/fisica-7/questao-1-geral-fisica-ita-2017#exam-downloads",
+        "url_arquivo_resolucao": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf",
+        "http_status_verificado": 200,
+        "http_status_arquivo_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/2017-fisica.pdf (não commitado)",
+        "sha256_consulta": "21e433e910a6a3b94621d5db00ba803720cd8aef3d35ad8461d1cdadc28dd5e1",
+        "num_paginas_consulta": 30
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "Maior.", "evidencia": "resolução, pág. 21, primeira palavra da resposta", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": "Somente a conclusão explícita foi transcrita; a justificativa não foi copiada."},
+        {"questao": "22", "resposta": "a) vRMS/vE: CO₂ = 0,063; N₂ = 0,080; Ar = 0,067; Ne = 0,095; He = 0,212. b) He terá a concentração mais baixa.", "evidencia": "resolução, pág. 22, tabela central e conclusão na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "23", "resposta": "a) m/M = 5/3; b) 4L/3; c) 4L/3.", "evidencia": "resolução, pág. 23, resultados dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "24", "resposta": "t_total = (ℓ/4)√(μ₁/T)(1 + √2/2)", "evidencia": "resolução, pág. 24, fórmula final na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "A fonte declara apenas o tempo total; a posição solicitada no enunciado não aparece como resultado final separável."},
+        {"questao": "25", "resposta": "", "evidencia": "resolução, pág. 25, resposta apresentada somente como diagrama de circuito", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "A resposta final é exclusivamente diagramática; não foi copiada nem reformulada."},
+        {"questao": "26", "resposta": "Δx_cm = 0", "evidencia": "resolução, pág. 26, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "27", "resposta": "ℓ = 768 mm", "evidencia": "resolução, pág. 27, resultado final na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "28", "resposta": "a) T₂ = [2kT₁ + P + √(4kT₁P + P²)]/(2k); b) T₂ = (P + kT₁)/k; c) aquecedor de Carnot.", "evidencia": "resolução, pág. 28, resultados finais dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "29", "resposta": "y = (√3/2)x, com x ≥ 2,5√3/2 cm e x ≤ -2,5√3/2 cm.", "evidencia": "resolução, pág. 29, conclusão nas linhas finais", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "A própria fonte imprime simultaneamente limites incompatíveis para x; a transcrição foi preservada sem tentar corrigir."},
+        {"questao": "30", "resposta": "a) α = 0°; b) d = 1/2 m; c) θ < arcsen(√3/3) ± 30°, com sinal positivo para θ > 0° e negativo para θ < 0°.", "evidencia": "resolução, pág. 30, resultados finais dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20F%C3%8DSICA.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "pendente",
+      "observacoes": "Questões 24, 25 e 29 pendentes; sete questões prontas."
+    },
+    {
+      "id": "ita-2017-quimica",
+      "ano": "2017",
+      "fase": "prova por matéria",
+      "dia": "",
+      "materia": "Química",
+      "pdf_original": "arquivos/originais/ita/2017/quimica_2017.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2017/gabarito_2017.pdf",
+      "sha256_original": "cd34917c74c58791f7576aae66cd3c442ab0769a42a942ea8a81be2473e7aa7d",
+      "num_paginas_original": 8,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2017.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2017/quimica-7/questao-1-geral-quimica-ita-2017#exam-downloads",
+        "url_arquivo_resolucao": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf",
+        "http_status_verificado": 200,
+        "http_status_arquivo_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/2017-quimica.pdf (não commitado)",
+        "sha256_consulta": "cc5bee0ab630589ed5e78f9633a6ccb90909dcce16834ae4e7ab3ad2fe9883b8",
+        "num_paginas_consulta": 30
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "a) Cl⁻ e ClO₃⁻. b) Apenas Cl⁻; Cl⁻(aq) + Ag⁺(aq) → AgCl(s), precipitado branco.", "evidencia": "resolução, pág. 21, respostas finais dos itens a e b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "22", "resposta": "a) 5S²⁻ + 2BrO₃⁻ + 12H⁺ → 5S(s) + Br₂(l) + 6H₂O; 5SO₃²⁻ + 2BrO₃⁻ + 2H⁺ → 5SO₄²⁻ + Br₂(l) + H₂O(l). b) BrO₃⁻ + 3SO₃²⁻ → Br⁻ + 3SO₄²⁻; sem mudança de coloração.", "evidencia": "resolução, pág. 22, equações finais dos itens a e b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "23", "resposta": "a) tolueno + 3HNO₃ —H₂SO₄(conc.)→ 2-metil-1,3,5-trinitrobenzeno + 3H₂O. b) 2-metil-1,3,5-trinitrobenzeno. c) TNT purificado na forma de 2-metil-1,3,5-trinitrobenzeno.", "evidencia": "resolução, pág. 23, produtos e nome explícitos nos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": "A resolução apresenta a reação em fórmula estrutural; somente os nomes e a estequiometria textual explícita foram transcritos."},
+        {"questao": "24", "resposta": "Os dados fornecidos não são suficientes para uma solução com uma resposta numérica pragmática.", "evidencia": "resolução, pág. 24, conclusão no fim da página", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": "Conclusão final explícita da fonte."},
+        {"questao": "25", "resposta": "", "evidencia": "resolução, pág. 25, resposta apresentada como explicação contínua, sem resultado final separável", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "Não há resposta final mínima separável; a explicação não foi copiada nem reformulada."},
+        {"questao": "26", "resposta": "AgCN + 1/2 O₂ → AgNCO; AgNCO + NH₄Cl → AgCl + NH₄NCO; NH₄NCO(s) —Δ→ O=C(NH₂)₂(s).", "evidencia": "resolução, pág. 26, sequência de três equações", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "27", "resposta": "a) 6CO₂(g) + 6H₂O(l) → C₆H₁₂O₆(s) + 6O₂(g), ΔH = +2.808 kJ/mol; b) ΔH' = +4,66×10⁻²¹ kJ; c) E = 4,65×10⁻²² kJ; d) 10 fótons.", "evidencia": "resolução, pág. 27, resultados dos itens a, b, c e d", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "28", "resposta": "a) Proposta da fonte: v₂ = k₂[Br⁻][SO₄²⁻][H⁺]. b) K = 1,25×10⁸²; a própria fonte classifica o valor como absurdo devido ao dado do enunciado.", "evidencia": "resolução, pág. 28, proposta do item a e conclusão do item b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "A fonte declara que a lei de velocidade não é única e ressalva que o valor calculado é absurdo; não há resposta inequívoca."},
+        {"questao": "29", "resposta": "a) P_f = 4 atm; T_f = 1.200 K. b) massa de CH₄ = 0,1 g.", "evidencia": "resolução, pág. 29, resultados finais dos itens a e b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "30", "resposta": "b) o-diclorobenzeno = 1,2-diclorobenzeno; p-diclorobenzeno = 1,4-diclorobenzeno. c) o-diclorobenzeno tem maior ponto de ebulição.", "evidencia": "resolução, pág. 30, estruturas no item a e resultados textuais dos itens b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202017%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "Item a depende exclusivamente de fórmulas estruturais e não foi copiado; itens b e c têm resultado textual explícito."}
+      ],
+      "status": "pendente",
+      "observacoes": "Questões 25, 28 e 30 pendentes ou parciais; sete questões prontas."
+    },
+    {
+      "id": "ita-2018-matematica",
+      "ano": "2018",
+      "fase": "prova por matéria",
+      "dia": "",
+      "materia": "Matemática",
+      "pdf_original": "arquivos/originais/ita/2018/matematica_2018.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2018/gabarito_2018.pdf",
+      "sha256_original": "5c9097ae336f57b4d8850b97d7c827d59d7486a5f7d5321f587294c784afb538",
+      "num_paginas_original": 6,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2018.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2018/matematica-5/questao-1-geral-matematica-ita-2018#exam-downloads",
+        "url_arquivo_resolucao": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf",
+        "http_status_verificado": 200,
+        "http_status_arquivo_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/2018-matematica.pdf (não commitado)",
+        "sha256_consulta": "3342486338cc83937c7a42e18cbf054040174700c978336493663e2584d98ecd",
+        "num_paginas_consulta": 30
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "V = 6", "evidencia": "resolução, pág. 21, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "22", "resposta": "S = {x ∈ ℝ | x ≤ log₃(1/2)}", "evidencia": "resolução, pág. 22, conjunto solução na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "23", "resposta": "C₁ = (1/4, 15√3/4), R = 11/2; C₂ = (23/4, -7√3/4), R = 11/2.", "evidencia": "resolução, pág. 23, dois resultados finais emoldurados", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "24", "resposta": "a = 1; b = 2", "evidencia": "resolução, pág. 24, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "25", "resposta": "MN mínimo = 10√2, atingido em x = 5√2.", "evidencia": "resolução, pág. 25, conclusão nas últimas linhas", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "26", "resposta": "a) P_r = [C(10,r) C(6,k-r)]/C(16,k). b) Σ_{r=0}^6 C(10,r)C(6,6-r) = C(16,6).", "evidencia": "resolução, pág. 26, expressões finais dos itens a e b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "27", "resposta": "473", "evidencia": "resolução, pág. 27, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "28", "resposta": "12/∛3 cm; [12(∛2 - 1)]/∛3 cm; [12(∛3 - ∛2)]/∛3 cm.", "evidencia": "resolução, pág. 28, três medidas na conclusão", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "29", "resposta": "4", "evidencia": "resolução, pág. 29, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "30", "resposta": "N = ((1 + √19)/2, 0)", "evidencia": "resolução, pág. 30, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Matem%C3%A1tica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "pronto",
+      "observacoes": "Dez respostas prontas."
+    },
+    {
+      "id": "ita-2018-fisica",
+      "ano": "2018",
+      "fase": "prova por matéria",
+      "dia": "",
+      "materia": "Física",
+      "pdf_original": "arquivos/originais/ita/2018/fisica_2018.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2018/gabarito_2018.pdf",
+      "sha256_original": "521e4b68416ddf960dee6214fed916704efeab3e8a4dc6b3fbc41dd8251afb22",
+      "num_paginas_original": 7,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2018.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2018/fisica-5/questao-1-geral-fisica-ita-2018#exam-downloads",
+        "url_arquivo_resolucao": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf",
+        "http_status_verificado": 200,
+        "http_status_arquivo_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/2018-fisica.pdf (não commitado)",
+        "sha256_consulta": "d5ee8c5c484da479be88e8f109e2bb56437dd4f9eae82c979c165f03c86bb94a",
+        "num_paginas_consulta": 30
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "x_CM(t) = x cos(√(μg/ℓ) t)", "evidencia": "resolução, pág. 21, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "22", "resposta": "V_c/V = (ρ_b - ρ)/(ρ_b - ρ_c)", "evidencia": "resolução, pág. 22, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "23", "resposta": "a) ΔQ = UC(k - 1)/(k + 1); b) U' = 2U/(1 + k); c) Δε = CU²(1 - k)/(1 + k).", "evidencia": "resolução, pág. 23, resultados finais dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "24", "resposta": "ε = (r_a - r_p)/(r_a + r_p); α = 2r_a r_p/(r_a + r_p); T = 2π√[(r_p + r_a)³/(8GM_s)].", "evidencia": "resolução, pág. 24, três resultados finais", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "25", "resposta": "i(t) = [7×10⁻³]/[2(1 - 7×10⁻³t)], com t < 1000/7 s.", "evidencia": "resolução, pág. 25, resultado final e restrição na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "26", "resposta": "b) T = (2,898×10⁻³/λ_pico) K.", "evidencia": "resolução, pág. 26, gráfico no item a e fórmula final no item b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "Item a depende exclusivamente de gráfico e não foi copiado; item b tem resultado textual explícito."},
+        {"questao": "27", "resposta": "R_v = 20 Ω", "evidencia": "resolução, pág. 27, última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "28", "resposta": "ω_min = 6 rad/s; x = 6 m", "evidencia": "resolução, pág. 28, dois resultados finais emoldurados", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "29", "resposta": "(E_p)₂ = -6,8 eV", "evidencia": "resolução, pág. 29, resultado final na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "30", "resposta": "B₀ = μI/(12a)", "evidencia": "resolução, pág. 30, resultado final emoldurado", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20F%C3%ADsica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "pendente",
+      "observacoes": "Questão 26 parcial por depender de gráfico no item a; nove questões prontas."
+    },
+    {
+      "id": "ita-2018-quimica",
+      "ano": "2018",
+      "fase": "prova por matéria",
+      "dia": "",
+      "materia": "Química",
+      "pdf_original": "arquivos/originais/ita/2018/quimica_2018.pdf",
+      "gabarito_oficial": "arquivos/originais/ita/2018/gabarito_2018.pdf",
+      "sha256_original": "05cae96cf041acbffe0bf1a57bb9341a2c0826433fe3fc3137dd82e0fb7080ea",
+      "num_paginas_original": 7,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2018.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2018/quimica-5/questao-1-geral-quimica-ita-2018#exam-downloads",
+        "url_arquivo_resolucao": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf",
+        "http_status_verificado": 200,
+        "http_status_arquivo_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "consulta/2018-quimica.pdf (não commitado)",
+        "sha256_consulta": "5dc4c4f618edcf17335d1a88e3adc3f78a9c25e083a544d944be0fc0167d0575",
+        "num_paginas_consulta": 30
+      },
+      "respostas": [
+        {"questao": "21", "resposta": "a) CuSO₄ + 2NaOH → Cu(OH)₂↓ + Na₂SO₄; FeCl₃ + 3NaOH → Fe(OH)₃↓ + 3NaCl. b) Cu(OH)₂ + 2HNO₃ → Cu(NO₃)₂ + 2H₂O; Fe(OH)₃ + 3HNO₃ → Fe(NO₃)₃ + 3H₂O. c) m(CuSO₄) = 15,95 g; m(FeCl₃) = 32,5 g.", "evidencia": "resolução, pág. 21, equações e massas dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "22", "resposta": "A = CaO; B = CO₂; C = NaHCO₃; D = NH₄Cl; E = Ca(OH)₂.", "evidencia": "resolução, pág. 22, identificação final das substâncias", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "23", "resposta": "b) Na₂CO₃ + HCl → NaCl + NaHCO₃; NaHCO₃ + HCl → NaCl + CO₂ + H₂O. c) Na₂CO₃ + 2HCl → 2NaCl + CO₂ + H₂O.", "evidencia": "resolução, pág. 23, curva no item a e equações nos itens b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "Item a depende exclusivamente de curva de titulação e não foi copiado; itens b e c têm resultado textual explícito."},
+        {"questao": "24", "resposta": "b) cátodo: 2H⁺ + 2e⁻ → H₂; ânodo: Pb → Pb²⁺ + 2e⁻; global: Pb + 2H⁺ → Pb²⁺ + H₂. c) cátodo: Pb²⁺ + 2e⁻ → Pb; ânodo: 2Fe²⁺ → 2Fe³⁺ + 2e⁻; global: Pb²⁺ + 2Fe²⁺ → Pb + 2Fe³⁺.", "evidencia": "resolução, pág. 24, esquema no item a e equações nos itens b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "Item a depende exclusivamente de esquema e não foi copiado; itens b e c têm resultado textual explícito."},
+        {"questao": "25", "resposta": "", "evidencia": "resolução, pág. 25, respostas apresentadas exclusivamente como fórmulas estruturais", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": false, "status_questao": "pendente", "obs": "As fórmulas estruturais não foram copiadas nem reformuladas."},
+        {"questao": "26", "resposta": "a) Q_v = 10 kJ; b) T_f = 600 K; c) P_i = 0,9 atm; P_f = 1,9 atm.", "evidencia": "resolução, pág. 26, resultados finais dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "27", "resposta": "Espuma sólida: Isopor; dispersante sólido (poliestireno); disperso gás (ar). Espuma líquida: Chantilly; dispersante líquido (creme de leite); disperso gás (ar). Aerossol líquido: neblina; dispersante gás (ar); disperso líquido (água). Aerossol sólido: fumaça; dispersante gás (ar); disperso sólido (fuligem).", "evidencia": "resolução, pág. 27, tabela final preenchida", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": "Somente o conteúdo textual das células foi transcrito."},
+        {"questao": "28", "resposta": "V = 9×10⁵ mol·L⁻¹·s⁻¹", "evidencia": "resolução, pág. 28, resultado final na última linha", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "29", "resposta": "a) Zn eletrodeposita sobre Cu, gerando coloração prateada. b) Forma-se latão (liga de Zn e Cu), gerando coloração dourada.", "evidencia": "resolução, pág. 29, conclusões dos itens a e b", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""},
+        {"questao": "30", "resposta": "a) Pb(C₂H₅)₄ + 13O₂ → Pb + 8CO₂ + 10H₂O. b) 20,07×10⁹ anos. c) Incompatível com a idade do Universo; Pb extra faz a amostra parecer mais velha.", "evidencia": "resolução, pág. 30, equação e conclusões dos itens a, b e c", "url_fonte": "https://poliedroresolve-api.sistemapoliedro.com.br/files/exam-files/ITA%202018%20-%20Qu%C3%ADmica.pdf", "conferida_por_codex": true, "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "pendente",
+      "observacoes": "Questões 23, 24 e 25 pendentes ou parciais; sete questões prontas."
+    }
+  ],
+  "pendencias": [
+    "ITA 2017 Matemática, questão 26: resposta exclusivamente gráfica.",
+    "ITA 2017 Física, questão 24: a fonte não apresenta separadamente a posição solicitada; registra apenas o tempo total.",
+    "ITA 2017 Física, questão 25: resposta exclusivamente diagramática.",
+    "ITA 2017 Física, questão 29: limites de x impressos pela fonte são incompatíveis; não houve tentativa de correção.",
+    "ITA 2017 Química, questão 25: explicação contínua sem resultado final mínimo separável.",
+    "ITA 2017 Química, questão 28: a fonte declara proposta não única e resultado numérico absurdo por problema no dado.",
+    "ITA 2017 Química, questão 30: item a depende de fórmulas estruturais; itens b e c foram transcritos.",
+    "ITA 2018 Física, questão 26: item a depende de gráfico; item b foi transcrito.",
+    "ITA 2018 Química, questão 23: item a depende de curva de titulação; itens b e c foram transcritos.",
+    "ITA 2018 Química, questão 24: item a depende de esquema; itens b e c foram transcritos.",
+    "ITA 2018 Química, questão 25: respostas exclusivamente em fórmulas estruturais."
+  ]
+}
