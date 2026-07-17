@@ -28,7 +28,7 @@ Regra: cada agente edita SOMENTE a sua seção. Não reformatar a seção do out
 - Formatos históricos confirmados: 2008–2018 provas por matéria (Q1–20 objetivas com gabarito oficial; Q21–30 dissertativas sem resposta oficial → Caso 2, exceto Português/Inglês que são 100% objetivos → Caso 1); 2019–2026 1ª fase objetiva (Caso 1) + 2ª fase discursiva (Caso 2), Redação 2019–2024, Português na 2ª fase 2025–2026 com `gabarito_<ano>_2f.pdf`.
 - **38 PDFs finais publicados:** 1ª fase 2019–2026 (8, Caso 1), Português e Redação 2ª fase 2025–2026 (2, Caso 1), discursivas 2017–2018 Matemática/Física/Química (6, Caso 2), Português/Inglês 2008–2018 (22, Caso 1). Repositório de PDFs: ~71 MB.
 - Poliedro verificado: cobertura pública 2017–2026; link direto por prova = página da 1ª questão + `#exam-downloads` (download sem cadastro). Dissertativas 2008–2016 sem fonte pública no Poliedro (lacuna registrada).
-- Site Astro publicado em `https://joaopaulolondeabreu.github.io/revis-o-ita/` (GitHub Pages ativo, workflow manual). Checklist de testes do plano rodado e aprovado (ver acima).
+- Site Astro publicado em `https://joaopaulolondeabreu.github.io/revis-o-ita/` (GitHub Pages ativo, workflow manual). Checklist de testes do plano rodado e aprovado (ver acima). Commit `23a2675` publicado (workflow run 29599008982, sucesso); favicon e as 22 provas de Português/Inglês confirmados ao vivo por HTTP.
 
 **Próxima dependência:** pacote do Codex para o PEDIDO 3 (2ª fases 2019–2026, começando por 2026, conforme fila em PEDIDOS_PARA_CODEX.md).
 
