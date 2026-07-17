@@ -1220,6 +1220,312 @@
    ],
    "status": "10 de 10 prontas",
    "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. O PDF de resoluções do dia 2 inclui ao final o comentário da Redação (não é questão numerada; não transcrito)."
+  },
+  {
+   "id": "ita-2022-matematica-2fase",
+   "ano": "2022",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Matemática",
+   "pdf_original": "arquivos/originais/ita/2022/matematica_2022_2f.pdf",
+   "sha256_original": "30c67fdba7ac862771a209e4f46a583d8fefd69dd4bf684431233c630aceecc6",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2022_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2022 - 2ª Fase - 1º Dia - Matemática - Resoluções.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): b5219e73c1"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a = 164/125 e b = 336/125",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "z = −1/2 + (√3/2)i ou z = −1/2 − (√3/2)i",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "725",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "240 configurações",
+     "evidencia": "resolução, resultado final em destaque (8·2·15·1)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "Os possíveis valores de arccos(x) são π/4 (para x = √2/2) e 3π/4 (para x = −√2/2)",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "Q = (−4/5, 6/5)",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "V_T = (112√3/3)·(2 + √3)",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "r = 7√3/3",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "C₁ ∩ C₂ ∩ C₃ = Q = (1, 21/4)",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "l₁₀/l₁ = (1/3)⁹",
+     "evidencia": "resolução, resultado final em destaque (PG de razão 1/3)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-matematica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Todas as respostas com resultado final separável."
+  },
+  {
+   "id": "ita-2022-quimica-2fase",
+   "ano": "2022",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Química",
+   "pdf_original": "arquivos/originais/ita/2022/quimica_2022_2f.pdf",
+   "sha256_original": "2828cb0cd96b41985f8b437bbe5e2d2d0e7c3d95b70df8c6fd4533909b7622b2",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2022_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2022 - 2ª Fase - 1º Dia - Química - Resoluções.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 38485366a8"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) k₋₁ = 100/9 ≅ 11,11 L²/mol²·s. b) V₀ = 0,2 mol/(L·s) no instante inicial e V_eq = 3,75·10⁻² mol/(L·s) no equilíbrio",
+     "evidencia": "resolução, resultados finais em destaque; o próprio texto observa que o enunciado não fixa o instante do item b e apresenta os dois instantes notáveis",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "a) (i) NH₄⁺ + OH⁻ → NH₃ + H₂O; (ii) NH₃ + H₃BO₃ → NH₄H₂BO₃; (iii) 2 NH₄H₂BO₃ + H₂SO₄ → (NH₄)₂SO₄ + 2 H₃BO₃. b) m = 1,19 g de (NH₄)₂SO₄. c) m_N = 0,252 g. d) (%N)amostra = 0,84%",
+     "evidencia": "resolução, itens a-d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "a) Reação de 2ª ordem. b) k = 10⁻² atm⁻¹·min⁻¹. c) Em t = 10,42 min: P_I = 4 atm; P_A = 6 atm; P_B = 15 atm. d) t½ = 100/(P_A)_t min (depende da pressão parcial de A no início de cada intervalo)",
+     "evidencia": "resolução, resultados finais em destaque nos itens a-d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "a) Somente o AgBr pode ser empregado (AgI reprovado pelo critério τ > 10 ppb; AgCl reprovado pelo critério C_Ag ≤ 0,09 mg/L; para o AgBr, C_Br = 5,6·10⁻² mg/L < 4 mg/L). b) Com o AgCl, nenhum dos dois sais pode ser usado (seriam necessários [Na⁺]f = 1,22·10⁻³ mol/L ou [Hg²⁺]f = 0,61·10⁻³ mol/L, que excedem os limites da Tabela 2). Com o AgI, o HgCl₂ pode ser usado, resultando [Hg²⁺]f = 3,95·10⁻¹⁵ mol/L; o NaCl não serve, pois não ocorre precipitação de NaI",
+     "evidencia": "resolução, conclusões dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) 8 N₂O(g) + 4 CS₂(l) → S₈(s) + 4 CO₂(g) + 8 N₂(g). b) V ≅ 0,30 m³ (300 L) de gases. c) 256 g de S₈",
+     "evidencia": "resolução, resultados finais em destaque nos itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "I. O poli(álcool vinílico) [−CH₂−CH(OH)−]ₙ (ligações de hidrogênio entre as cadeias). II. O polímero com anel aromático [−CH₂−C₆H₄−CH₂−]ₙ (anel plano aumenta a área de contato e as forças de van der Waals). III. A poliamida de cadeia alquílica menor [−NH−(CH₂)₂−C(=O)−]ₙ (mais ligações de hidrogênio por comprimento de cadeia). IV. O polietileno [−CH₂−CH₂−]ₙ (nos poliéteres a atração entre cadeias é menor)",
+     "evidencia": "resolução, conclusão de cada par I-IV com justificativa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "a fonte apresenta as estruturas desenhadas; transcrição textual equivalente"
+    },
+    {
+     "questao": "7",
+     "resposta": "a) I. Ca(g) → Ca⁺(g) + e⁻, ΔH = +590 kJ/mol; II. Ca⁺(g) → Ca²⁺(g) + e⁻, ΔH = +1145 kJ/mol; III. Cl(g) + e⁻ → Cl⁻(g), ΔH = −340 kJ/mol; IV. CaCl₂(s) → Ca²⁺(aq) + 2Cl⁻(aq), ΔH = −81 kJ/mol; V. Ca²⁺(g) → Ca²⁺(aq), ΔH = −1579 kJ/mol; VI. Cl⁻(g) → Cl⁻(aq), ΔH = −378 kJ/mol. b) Invertendo V, invertendo e dobrando VI e somando com IV: CaCl₂(s) → Ca²⁺(g) + 2Cl⁻(g). c) ΔH_rede = +2254 kJ/mol",
+     "evidencia": "resolução, itens a-c (Lei de Hess)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) 2 NH₃ + 5/2 O₂ → 2 NO + 3 H₂O. b) X(NH₃) = 0,2 e X(O₂) = 0,8. c) %excesso = 220%. d) Ao final: n(NH₃) = 0 mol; n(O₂) = 55 mol; n(NO) = 20 mol; n(H₂O) = 30 mol",
+     "evidencia": "resolução, resultados finais em destaque nos itens a-d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "Rota (i): A = propanonitrila (H₃C−CH₂−C≡N), formada por isomerização do isocianeto de etila a 250 °C; A + CH₃MgCl e posterior hidrólise formam B = butan-2-ona (H₃C−CH₂−CO−CH₃), liberando Mg(OH)Cl e NH₃. Rota (ii): hidrólise ácida do isocianeto de etila forma C = etilamina (H₃C−CH₂−NH₂) e D = ácido metanoico (HCOOH)",
+     "evidencia": "resolução, rotas (i) e (ii) com os compostos A-D identificados",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "a fonte apresenta as estruturas desenhadas; transcrição textual equivalente"
+    },
+    {
+     "questao": "10",
+     "resposta": "a) CaCl₂(aq) + 2 NaF(aq) → CaF₂(s) [precipitado 1] + 2 NaCl(aq); Cl⁻(aq) + Ag⁺(aq) → AgCl(s) [precipitado 2]; Zn⁰(s) + 2 Ag⁺(aq) → Zn²⁺(aq) + 2 Ag⁰(s). b) n(AgCl) = 0,40 mol. c) m(CaCl₂) = 22,2 g e m(NaF) = 16,8 g",
+     "evidencia": "resolução, itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-1-dia-8/dissertativa-1-quimica-2-fase-1-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Questões 6 e 9 respondidas na fonte com estruturas desenhadas — transcritas por nomenclatura/fórmula textual equivalente."
+  },
+  {
+   "id": "ita-2022-fisica-2fase",
+   "ano": "2022",
+   "fase": "2ª fase",
+   "dia": "dia 2",
+   "materia": "Física",
+   "pdf_original": "arquivos/originais/ita/2022/fisica_2022_2f.pdf",
+   "sha256_original": "8892c9d5d31bc46e38e8e98a40c9f0a9b94924eb50f83bf6bfebb80b78fd8957",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2022_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2022 - 2ª Fase - 2º Dia - Física - Resoluções.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 8110746910"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) a_B = g·(senθ + μ·cosθ)/(cosθ − μ·senθ). b) F_c = m_A·g·√(1 + μ²)/(cosθ − μ·senθ)",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "a) m = M_L/2 e r = R_L/∛2. b) D_limite = r·(12·M_T/m)^(1/3)",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "a) f₂/f₁ = 15/11. b) v₀/(A·f_m) = 22π",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "a) T = (P_atm + mg/(πr²) + ρ·g·h)·a³/(nR). b) λ = (v₀/f)·√[(P_atm + mg/(πr²) + ρgh)·a³/(nRT₀)]",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) T₁ = 277,2 K. b) Δv ≅ 2·10⁴ m³ de água. c) Parte da brisa que flui da costa para a cordilheira precipita; no lado continental o ar chega com umidade relativa baixa, o que leva à formação de desertos",
+     "evidencia": "resolução, resultados finais dos itens a-c; a própria fonte observa que usou dados não fornecidos na prova (densidade de saturação 25 g/m³, R = 8,31 J/mol·K e densidade da água)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) λ = 1,2·10⁸ m. b) d = 12,5·10⁻⁹ m",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) i(t) = 0 quando U ≤ V_d e i(t) = (U − V_d)/175 quando U > V_d, com U = 120·sen(120πt); corrente de pico ≅ 0,69 − V_d/175 (A) e período de 17 ms — gráfico: senoide com os trechos abaixo da tensão de corte suprimidos. b) R = 100/3 Ω",
+     "evidencia": "resolução, item a (expressão e esboço) e item b em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) cos α = 1 − (B·d_x/2)·√(q/(2mV)). b) d_z = π·√[(2d_x/B)·√(mV/(2q)) − d_x²/4]",
+     "evidencia": "resolução, resultados finais em destaque (notação conferida)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "a) Três forças: peso P = mg (para baixo), resistência do ar F_r = α·v e força magnética F_m = B²·a²·v/R (ambas para cima). b) v_T = mg/(α + B²a²/R). c) Gráfico de v(t) crescente a partir de v(0) = 0, com concavidade para baixo, tendendo assintoticamente a v_T",
+     "evidencia": "resolução, itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) φ = 12,5 eV. b) Somente saltos com n_i = 1 e n_f ≥ 4 (para n_i ≥ 2 não há energia suficiente)",
+     "evidencia": "resolução, resultados finais dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2022/2-fase-2-dia-8/dissertativa-1-fisica-2-fase-2-dia-ita-2022#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase."
   }
  ],
  "pendencias": [
