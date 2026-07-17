@@ -1,0 +1,29 @@
+{
+  "pacote": "auditoria-2008-2026",
+  "preparado_por": "Codex",
+  "transcrito_por": "Claude (a sessão do Codex não tinha credencial de push; conteúdo colado pelo usuário em 2026-07-17)",
+  "data": "2026-07-17T00:00:10-03:00",
+  "pedido_atendido": "PEDIDO 1",
+  "escopo": "Auditoria dos PDFs oficiais ITA 2008-2026 já presentes no repositório, sem novos downloads.",
+  "metodo": [
+    "Comparação de 116 itens originais marcados como encontrados no INVENTARIO_ITA.csv com 116 PDFs em arquivos/originais/ita/.",
+    "Conferência de caminho, SHA-256, número de páginas e abertura por leitor de PDF para cada item.",
+    "Renderização da primeira página dos 116 PDFs e inspeção visual em folhas de contato por ano, conferindo instituição, ano, fase e matéria quando indicados na capa; nos cadernos antigos sem capa, conferência do conteúdo e do gabarito compatíveis com o arquivo e inventário."
+  ],
+  "resultado": {
+    "declaracao": "sem divergências",
+    "itens_inventariados": 116,
+    "pdfs_encontrados_no_diretorio": 116,
+    "primeiras_paginas_renderizadas": 116,
+    "arquivos_ausentes": 0,
+    "hashes_divergentes": 0,
+    "numeros_de_paginas_divergentes": 0,
+    "pdfs_ilegiveis": 0,
+    "divergencias": []
+  },
+  "itens": [],
+  "pendencias": [],
+  "observacoes_tecnicas": [
+    "arquivos/originais/ita/2021/redacao_2021_2f.pdf emite o aviso não fatal do pypdf 'Ignoring wrong pointing object 8 0 (offset 0)'. O SHA-256 e a página registrada conferem; pdfinfo, extração de texto e renderização da primeira página funcionam normalmente. Não é divergência de conteúdo."
+  ]
+}

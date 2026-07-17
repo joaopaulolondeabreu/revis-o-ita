@@ -8,7 +8,9 @@ Regra: cada agente edita SOMENTE a sua seção. Não reformatar a seção do out
 
 - **Atualizado em:** 2026-07-17 (America/Sao_Paulo)
 - **Papel:** líder técnico (decisões, código, PDFs finais, site, testes, publicação, integração) — ver DECISOES.md D12.
-- **Tarefa atual:** montagem dos PDFs finais de Português e Redação 2ª fase 2025/2026 — estado: **CONCLUÍDO** (capas conferidas por renderização; 20 págs de prova + proteção + gabarito oficial `_2f` + página de observação sobre a redação; validação e fidelidade visual OK; site atualizado). Próxima tarefa técnica aguarda pacotes do Codex.
+- **Tarefa atual:** integração das entregas do Codex (PEDIDOS 1 e 4) e construção do integrador automático de pacotes — estado: EM_ANDAMENTO.
+- **Concluído antes:** Português e Redação 2ª fase 2025/2026 montados e validados; 10 PDFs finais no site.
+- **Decisões de integração (2026-07-17):** auditoria APROVADA (reconferida por amostragem); recomendação do pacote fontes-2002-2007 ACEITA — 6 anos permanecem pendentes, nada será ingerido sem procedência/autorização; fontes registradas em FONTES.md como referência apenas.
 - **Arquivos sob responsabilidade:** `ferramentas/`, `site/`, `.github/`, PDFs finais em `site/public/pdfs/`, integração do inventário.
 
 **Estado consolidado do projeto:**

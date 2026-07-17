@@ -1,0 +1,150 @@
+{
+  "pacote": "fontes-2002-2007",
+  "preparado_por": "Codex",
+  "transcrito_por": "Claude (a sessão do Codex não tinha credencial de push; conteúdo colado pelo usuário em 2026-07-17)",
+  "data": "2026-07-17T00:20:47-03:00",
+  "pedido_atendido": "PEDIDO 4",
+  "escopo": "Pesquisa documentada de fontes públicas para as provas do ITA de 2002 a 2007. Nenhum arquivo foi baixado, incorporado ao repositório ou considerado autorizado para publicação nesta entrega.",
+  "criterio_de_aceitacao": "Pela decisão D7, somente fonte oficial ou cópia pública confiável cuja procedência e adequação ao PDF original possam ser verificadas poderá seguir para ingestão. A existência de um link público não equivale a autorização de redistribuição.",
+  "metodo": [
+    "Conferência do inventário local, que registra os seis anos como ausentes do acervo oficial em https://www.vestibular.ita.br/provas.htm.",
+    "Inspeção de páginas públicas de acervos e de seus links declarados, sem formulários, logins ou tentativas de contornar restrições.",
+    "Separação explícita entre fonte encontrada, cobertura alegada, qualidade/procedência ainda não comprovada e material que não deve ser integrado."
+  ],
+  "fontes": [
+    {
+      "id": "oficial_ita",
+      "nome": "Acervo oficial do ITA",
+      "url": "https://www.vestibular.ita.br/provas.htm",
+      "oficial": true,
+      "resultado": "O INVENTARIO_ITA.csv do projeto registra 2002, 2003, 2004, 2005, 2006 e 2007 como ausentes dessa página em 2026-07-17.",
+      "uso": "Fonte prioritária verificada; não fornece os seis anos nesta etapa.",
+      "situacao": "lacuna_confirmada"
+    },
+    {
+      "id": "sotao_quimica",
+      "nome": "O Sótão da Química — índice de provas ITA",
+      "url": "https://sotaodaquimica.com.br/crbst_1.html",
+      "oficial": false,
+      "resultado": "A página lista links de Química para ITA 2002, 2003, 2004, 2005, 2006 e 2007.",
+      "amostra_aberta": {
+        "url": "https://sotaodaquimica.com.br/wa_files/ITA_202007_20AA.pdf",
+        "descricao": "Link da entrada ITA 2007; PDF público de 11 páginas, cuja primeira página traz a identificação 'Professora Sonia' e o domínio do próprio acervo."
+      },
+      "procedencia_declarada": "O acervo se apresenta como coleção de provas antigas; a página complementar do mesmo acervo declara colaboração do COMAER/ITA, mas não exibe licença, autorização de republicação ou cadeia documental verificável para cada arquivo.",
+      "uso": "Candidato para investigação posterior. Não usar como PDF original nem publicar sem decisão do Claude e validação adicional de procedência, integridade e permissão.",
+      "situacao": "pendente_de_validacao_e_autorizacao"
+    },
+    {
+      "id": "sotao_demais_materias",
+      "nome": "O Sótão da Química — Matemática, Física, Português e Inglês",
+      "url": "https://sotaodaquimica.com.br/crbst_7.html",
+      "url_espelho": "https://www.quimicaparaovestibular.com.br/crbst_7.html",
+      "oficial": false,
+      "resultado": "A página lista, para cada ano de 2002 a 2007, entradas separadas de Inglês, Português, Física e Matemática. Ela afirma que o acervo conta com colaboração do COMAER/ITA e de colaboradores, mas não apresenta licença de redistribuição nem comprovação específica por PDF.",
+      "uso": "Candidato para investigação posterior; o espelho não é fonte independente. Não baixar para o repositório nem publicar antes de validação individual.",
+      "situacao": "pendente_de_validacao_e_autorizacao"
+    },
+    {
+      "id": "soliteratura_zip",
+      "nome": "Só Literatura — provas de vestibular ITA",
+      "url": "https://www.soliteratura.com.br/prova_vestibular/ITA/index.php",
+      "oficial": false,
+      "resultado": "A página oferece um arquivo ZIP por ano, incluindo 2002 a 2007, e declara copyright do próprio site ('Todos os direitos reservados'). Não informa a procedência dos PDFs internos, nem uma licença de redistribuição.",
+      "urls_declaradas": {
+        "2002": "https://www.soliteratura.com.br/prova_vestibular/ITA/2002.zip",
+        "2003": "https://www.soliteratura.com.br/prova_vestibular/ITA/2003.zip",
+        "2004": "https://www.soliteratura.com.br/prova_vestibular/ITA/2004.zip",
+        "2005": "https://www.soliteratura.com.br/prova_vestibular/ITA/2005.zip",
+        "2006": "https://www.soliteratura.com.br/prova_vestibular/ITA/2006.zip",
+        "2007": "https://www.soliteratura.com.br/prova_vestibular/ITA/2007.zip"
+      },
+      "uso": "Referência de descoberta, não fonte pronta para ingestão. Não foi feito download; o conteúdo, o formato histórico, a fidelidade e a autorização continuam desconhecidos.",
+      "situacao": "pendente_de_validacao_e_autorizacao"
+    },
+    {
+      "id": "curso_objetivo",
+      "nome": "Curso Objetivo — resoluções comentadas do ITA",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/ita.aspx",
+      "oficial": false,
+      "resultado": "O índice lista resoluções de 2002 a 2007, mas as páginas individuais verificadas não disponibilizaram um caderno de prova no conteúdo acessível. O aviso legal do site proíbe reprodução, utilização, edição ou compartilhamento sem autorização prévia e expressa.",
+      "uso": "Não é fonte de prova original para este projeto e não deve ser copiado ou hospedado.",
+      "situacao": "nao_utilizavel"
+    },
+    {
+      "id": "somatematica_2004",
+      "nome": "Só Matemática / Só Ensino — ITA 2004",
+      "url": "https://www.somatematica.com.br/provas/ita.php",
+      "oficial": false,
+      "resultado": "O índice declara um PDF de ITA 2004 e aponta para https://www.soensino.com.br/somatematica/provas/ita2004.zip. A inspeção não retornou o arquivo, portanto não foi possível confirmar conteúdo, abrangência ou procedência.",
+      "uso": "Referência secundária restrita a um ano; não é utilizável sem confirmação posterior.",
+      "situacao": "pendente_de_verificacao"
+    },
+    {
+      "id": "tecconcursos_2002",
+      "nome": "Tec Concursos — concurso de admissão 2003/vestibular 2002",
+      "url": "https://www.tecconcursos.com.br/concursos/vestibular-ita-2002-concurso-de-admissao-2003",
+      "oficial": false,
+      "resultado": "A página foi localizada como banco de questões e menciona arquivos para download, mas a abertura não permitiu confirmar um PDF público, completo e reutilizável.",
+      "uso": "Não é fonte de ingestão; pode apenas orientar futura checagem de nomenclatura do concurso.",
+      "situacao": "pendente_de_verificacao"
+    }
+  ],
+  "itens": [
+    {
+      "id": "ita-2002",
+      "ano": "2002",
+      "fontes_candidatas": ["sotao_quimica", "sotao_demais_materias", "soliteratura_zip", "tecconcursos_2002"],
+      "cobertura_publicamente_listada": "Química; Matemática, Física, Português e Inglês; e um ZIP anual de conteúdo ainda não inspecionado.",
+      "status": "pendente",
+      "lacunas": ["Nenhum PDF oficial no acervo atual.", "Nenhuma autorização/licença verificável para republicar uma cópia pública.", "É necessário conferir a correspondência entre o rótulo '2002' e a edição do concurso antes de qualquer ingestão.", "Gabarito oficial separado não foi localizado nesta pesquisa."]
+    },
+    {
+      "id": "ita-2003",
+      "ano": "2003",
+      "fontes_candidatas": ["sotao_quimica", "sotao_demais_materias", "soliteratura_zip"],
+      "cobertura_publicamente_listada": "Química; Matemática, Física, Português e Inglês; e um ZIP anual de conteúdo ainda não inspecionado.",
+      "status": "pendente",
+      "lacunas": ["Nenhum PDF oficial no acervo atual.", "Nenhuma autorização/licença verificável para republicar uma cópia pública.", "Gabarito oficial separado não foi localizado nesta pesquisa."]
+    },
+    {
+      "id": "ita-2004",
+      "ano": "2004",
+      "fontes_candidatas": ["sotao_quimica", "sotao_demais_materias", "soliteratura_zip", "somatematica_2004"],
+      "cobertura_publicamente_listada": "Química; Matemática, Física, Português e Inglês; um ZIP anual; e um ZIP secundário não confirmado.",
+      "status": "pendente",
+      "lacunas": ["Nenhum PDF oficial no acervo atual.", "Nenhuma autorização/licença verificável para republicar uma cópia pública.", "O arquivo secundário não pôde ser inspecionado.", "Gabarito oficial separado não foi localizado nesta pesquisa."]
+    },
+    {
+      "id": "ita-2005",
+      "ano": "2005",
+      "fontes_candidatas": ["sotao_quimica", "sotao_demais_materias", "soliteratura_zip"],
+      "cobertura_publicamente_listada": "Química; Matemática, Física, Português e Inglês; e um ZIP anual de conteúdo ainda não inspecionado.",
+      "status": "pendente",
+      "lacunas": ["Nenhum PDF oficial no acervo atual.", "Nenhuma autorização/licença verificável para republicar uma cópia pública.", "Gabarito oficial separado não foi localizado nesta pesquisa."]
+    },
+    {
+      "id": "ita-2006",
+      "ano": "2006",
+      "fontes_candidatas": ["sotao_quimica", "sotao_demais_materias", "soliteratura_zip"],
+      "cobertura_publicamente_listada": "Química; Matemática, Física, Português e Inglês; e um ZIP anual de conteúdo ainda não inspecionado.",
+      "status": "pendente",
+      "lacunas": ["Nenhum PDF oficial no acervo atual.", "Nenhuma autorização/licença verificável para republicar uma cópia pública.", "Gabarito oficial separado não foi localizado nesta pesquisa."]
+    },
+    {
+      "id": "ita-2007",
+      "ano": "2007",
+      "fontes_candidatas": ["sotao_quimica", "sotao_demais_materias", "soliteratura_zip"],
+      "cobertura_publicamente_listada": "Química; Matemática, Física, Português e Inglês; e um ZIP anual de conteúdo ainda não inspecionado.",
+      "status": "pendente",
+      "lacunas": ["Nenhum PDF oficial no acervo atual.", "A amostra de Química acessível contém identificação do acervo de terceiros, portanto não deve ser tratada como arquivo original intacto.", "Nenhuma autorização/licença verificável para republicar uma cópia pública.", "Gabarito oficial separado não foi localizado nesta pesquisa."]
+    }
+  ],
+  "decisao_recomendada_ao_claude": "Não integrar nem baixar em massa os arquivos listados. Se decidir avançar, primeiro escolha uma fonte por ano/matéria, valide visualmente a completude e a fidelidade ao documento do ITA, registre proveniência e obtenha/registre fundamento de autorização adequado. Sem isso, manter os seis anos como pendentes no catálogo.",
+  "pendencias": [
+    "Encontrar uma fonte oficial, um espelho institucional ou uma autorização clara para os PDFs de 2002 a 2007.",
+    "Confirmar o formato real de cada edição e quais cadernos/gabaritos existem antes de alterar o inventário.",
+    "Localizar gabaritos oficiais ou outra fonte autorizada para os seis anos.",
+    "Não usar o conteúdo de resoluções de terceiros como substituto das provas originais."
+  ]
+}

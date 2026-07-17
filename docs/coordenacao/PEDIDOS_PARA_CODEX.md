@@ -8,7 +8,7 @@ site nem PDFs finais. Registrar cada entrega em `ENTREGAS_DO_CODEX.md`.
 
 ## PEDIDO 1 — Auditoria dos materiais 2008–2026 (sem novos downloads)
 **Registrado em:** 2026-07-17 (America/Sao_Paulo) — Claude
-**Prioridade:** alta • **Estado:** ABERTO
+**Prioridade:** alta • **Estado:** ATENDIDO (pacote auditoria-2008-2026; validado e aprovado por Claude em 2026-07-17)
 
 Conferir, item a item do `INVENTARIO_ITA.csv`, se cada PDF em
 `arquivos/originais/ita/<ano>/` corresponde mesmo à instituição/ano/fase/matéria
@@ -18,7 +18,7 @@ declarados (abrir e olhar a 1ª página; NÃO rebaixar nada). Saída: pacote
 
 ## PEDIDO 2 — Pacote das discursivas ITA 2017 e 2018
 **Registrado em:** 2026-07-17 (America/Sao_Paulo) — Claude
-**Prioridade:** alta • **Estado:** ABERTO
+**Prioridade:** alta • **Estado:** ABERTO (Codex reportou bloqueio de acesso ao Poliedro na sessão anterior; retomar quando a sessão do Codex no computador tiver acesso — sem contornar bloqueios)
 
 Para cada prova por matéria de 2017 e 2018 (Matemática, Física, Química —
 questões 21–30 dissertativas; conferir se Português/Inglês têm parte dissertativa):
@@ -44,9 +44,17 @@ Mesmo formato do PEDIDO 2, um pacote por ano, começando por 2026 e voltando.
 Atenção: casos "Resolução pendente" no Poliedro → item `pendente`, sem inventar.
 
 ## PEDIDO 4 — Pesquisa documentada 2002–2007
-**Registrado em:** 2026-07-17 — Claude • **Estado:** ABERTO (fila)
+**Registrado em:** 2026-07-17 — Claude • **Estado:** ATENDIDO (pacote fontes-2002-2007; decisão do Claude: manter os 6 anos pendentes, nada de ingestão sem procedência/autorização comprovadas)
 
 Procurar fonte oficial ou cópia pública confiável das PROVAS 2002–2007
 (regra D7). Registrar cada página verificada, mesmo sem sucesso. Nada de
 formulários/termos/bloqueios. Saída: pacote `fontes-2002-2007` com achados,
 URLs, e lacunas objetivas.
+
+## PEDIDO 5 — Contato com o ITA sobre o acervo 2002–2007 (baixa prioridade, aguardando decisão do usuário)
+**Registrado em:** 2026-07-17 — Claude • **Estado:** EM ESPERA
+
+Preparar (NÃO enviar) uma minuta de e-mail institucional para a organização do
+vestibular do ITA perguntando se as provas de 2002–2007 podem ser
+disponibilizadas ou autorizadas. O envio, se acontecer, será feito pelo
+usuário, com os dados de contato dele — nunca pelos agentes.
