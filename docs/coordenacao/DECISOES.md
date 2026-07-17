@@ -17,6 +17,8 @@ Gratuito, sem nova conta, HTTPS automático, CDN. Publicação em duas etapas: p
 ### D5 — Armazenamento dos PDFs: decisão adiada até medição real (ajuste do usuário, 2026-07-16)
 A decisão de manter os PDFs dentro do repositório GitHub **só será tomada após baixar os primeiros arquivos e medir o tamanho real** (estimativa extrapolada para as 25 edições). Se houver risco de repositório pesado, o armazenamento dos PDFs será separado do site desde cedo (por exemplo, Cloudflare R2), sem esperar chegar perto de 1 GB. O catálogo referencia os PDFs por URL, então a migração não altera site, IDs nem inventário.
 
+**Fechamento (2026-07-17, Claude, após medição real):** os 116 PDFs oficiais de 2008–2026 somam **90 MB** (maior arquivo: 18 MB). Com os PDFs finais montados, a projeção do projeto ITA completo fica em ~200–250 MB — confortável para o repositório. **Decisão: manter os PDFs no GitHub.** A rota de migração para armazenamento separado continua documentada para quando outras instituições forem adicionadas.
+
 ### D6 — Fonte única de dados
 `docs/coordenacao/INVENTARIO_ITA.csv` → `ferramentas/catalogo.py` → `site/src/data/catalogo.json` → páginas do site. Nada é cadastrado duas vezes.
 
