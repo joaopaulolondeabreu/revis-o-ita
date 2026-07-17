@@ -32,6 +32,16 @@
 3. Português 2ª fase 2025/2026: montar com `gabarito_<ano>_2f.pdf` (verificar se a prova inclui redação → entrada "produção textual").
 4. 2002–2007: buscar fonte oficial/pública confiável das provas.
 
+## Mapeamento do Poliedro (concluído em 2026-07-16/17)
+
+- Cobertura pública: ITA **2017–2026**. Dissertativas de 2008–2016 SEM fonte de resolução pública no Poliedro → tratar como lacuna (link/complemento pendente ou buscar alternativa aprovada).
+- Link direto por prova (testado): página da primeira questão + âncora `#exam-downloads`, onde a resolução daquela prova pode ser baixada imediatamente, sem cadastro. Detalhes e slugs em URLS_CANDIDATAS.md.
+
 ## Próxima tarefa recomendada
 
-Mapear o Poliedro Resolve: confirmar a existência de página específica por prova (candidata: `…/vestibulares/ita/<ano>/<slug-da-prova>/`), registrar os links diretos por prova/matéria no inventário e iniciar a transcrição das respostas finais das dissertativas, começando pelos anos mais recentes.
+Caso 2, começando por 2026 e voltando no tempo (2017–2026):
+1. para cada prova de 2ª fase (e matérias 2017–2018), baixar a resolução do Poliedro APENAS para consulta local (fora do repositório);
+2. transcrever os resultados finais explícitos (regras da seção 16 do plano; conferência visual caractere a caractere);
+3. registrar em RESPOSTAS_COMPLEMENTARES.csv;
+4. montar os PDFs finais Caso 2 com duas páginas de proteção + QR;
+5. em paralelo: montar Português 2ª fase 2025/2026 (gabarito oficial `_2f` + entrada de redação "produção textual").

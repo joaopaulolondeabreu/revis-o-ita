@@ -20,13 +20,18 @@ Conclusões provisórias (a confirmar no acesso direto):
 - O acervo oficial cobre pelo menos até **2012** (existe `gabarito_2012.pdf`), coerente com a estimativa "2008–2026".
 - A página índice é `https://www.vestibular.ita.br/provas.htm` — mapear a lista completa por lá, não por adivinhação de padrões.
 
-## Poliedro Resolve — estrutura observada
+## Poliedro Resolve — estrutura VERIFICADA (acesso direto em 2026-07-16/17)
 
 - Página do ITA: `https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita`
-- Estrutura por prova/questão observada:
-  `…/vestibulares/ita/<ano>/<slug-da-prova>/<slug-da-questao>`
-  (ex.: `…/vestibulares/ita/2026/ita-1-fase-05-10-2025-1-fase/questao-1-matematica-1-fase-ita-2026`)
-- Indício de que existe uma **página por prova** (`…/ita/<ano>/<slug-da-prova>/`) — candidata ideal para o link direto + QR Code. Confirmar se ela permite baixar a resolução daquela prova.
+- **Cobertura pública: ITA 2017 a 2026.** Não há listagem pública de 2016 para trás — lacuna registrada para as dissertativas de 2008–2016.
+- A URL `…/ita/<ano>/<slug-da-prova>/` SEM o slug de questão responde **404**. A página funcional é a da questão: `…/ita/<ano>/<slug-da-prova>/<slug-da-questao>`.
+- Cada página de questão contém a seção **Downloads** (âncora `#exam-downloads`) com a prova original e as **resoluções em PDF por matéria**, para download imediato e **sem cadastro**.
+- **Formato do link direto para o Caso 2** (testado e funcionando):
+  `…/ita/<ano>/<slug-da-prova>/<slug-da-primeira-questao>#exam-downloads`
+  Exemplo verificado (ITA 2024, 2ª fase dia 1): a seção Downloads lista "ITA 2024 - 2ª Fase Dia 1 - Resoluções - Matemática.pdf" e "…Química.pdf".
+- Observação: em provas muito recentes pode aparecer "Resolução pendente" (o Poliedro ainda não publicou) — nesse caso o item fica `pendente` no nosso inventário.
+- Slugs por prova (capturados da página do ITA em 2026-07-16): 2017–2018 por matéria (`matematica-7`, `fisica-5`, `portugues-e-ingles`, …); 2019–2026 por fase/dia (`ita-1-fase-…`, `ita-2-fase-dia-1-…`, …). Lista completa no histórico desta sessão e recuperável da própria página do ITA.
+- Os PDFs de resolução podem ser **consultados** para transcrever resultados finais, mas **nunca** hospedados ou copiados para o repositório (regra FONTES.md).
 
 ## Fontes terciárias vistas na busca (usar só como último recurso, com registro de autorização)
 
