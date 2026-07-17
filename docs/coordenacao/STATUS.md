@@ -36,7 +36,9 @@ Regra: cada agente edita SOMENTE a sua seção. Não reformatar a seção do out
 
 **2026-07-17 18:05 — PEDIDO 3, ano 2025 concluído e publicado:** Matemática, Física e Química 2ª fase 2025 (26/30 prontas). Lição aprendida nesta rodada: a extração de texto pode perder o símbolo de raiz (√) silenciosamente — corrigi criando `screenshot_final.js`, que captura visualmente só a região final de cada resolução, e passei a confirmar visualmente toda resposta numérica antes de transcrever (não só as "obviamente ambíguas" como antes). **41 → 47 PDFs finais publicados.**
 
-**Próxima dependência:** nenhuma — vou continuar sozinho pelo PEDIDO 3 (2024, 2023, 2022, 2021, 2020, 2019, nessa ordem) e depois retomar a decisão em aberto abaixo.
+**2026-07-17 18:16 — PEDIDO 3, ano 2024 concluído e publicado:** Matemática, Física e Química 2ª fase 2024 (27/30 prontas) + Redação 2024 (arquivo separado, observação "produção textual"). Diferença notada: 2024 usa PDF de resolução baixável (padrão 2017/2018), não texto inline como 2025/2026. Achado real não corrigido por mim: Física 2024 Q4 tem duas resoluções alternativas na própria fonte, divergentes por um fator 2 — mantive pendente. **47 → 57 PDFs finais publicados.**
+
+**Próxima dependência:** nenhuma — vou continuar sozinho pelo PEDIDO 3 (2023, 2022, 2021, 2020, 2019, nessa ordem) e depois retomar a decisão em aberto abaixo.
 
 **Decisão em aberto (não executada ainda — registrando em vez de agir sozinho):** Mat/Fís/Quí 2008–2016 têm as dissertativas 21–30 sem gabarito oficial E sem fonte no Poliedro (lacuna confirmada). O plano não cobre explicitamente esse caso (ausência total de fonte, não apenas "Poliedro sem resultado separável"). Antes de publicar essas provas com um formato "gabarito parcial" (só 1–20), quero uma segunda opinião — não é uma tarefa mecânica que dá para simplesmente executar sozinho, é uma decisão editorial sobre o que os alunos veem. Registrado como pendência; não vou pausar o trabalho técnico esperando por isso, mas também não vou publicar nada nesse formato sem decidir com cuidado.
 

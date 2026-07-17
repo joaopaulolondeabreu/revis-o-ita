@@ -172,6 +172,90 @@
       ],
       "status": "9 de 10 prontas",
       "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+    },
+    {
+      "id": "ita-2024-matematica-2fase",
+      "ano": "2024", "fase": "2ª fase", "dia": "dia 1", "materia": "Matemática",
+      "pdf_original": "arquivos/originais/ita/2024/matematica_2024_2f.pdf",
+      "gabarito_oficial": null,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2024_2f.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 1 - Resoluções - Matemática.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 8589603b6821cd8c"
+      },
+      "respostas": [
+        {"questao": "1", "resposta": "n = 4", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "2", "resposta": "32 caminhos possíveis", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "3", "resposta": "-4 < x < -1/4 ou 1/4 < x < 4", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "4", "resposta": "-1 < b < 1", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "5", "resposta": "Raízes: 1+√6i, 1−√6i, 1+√3 e 1−√3", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "6", "resposta": "AB = 4√161/5", "evidencia": "resolução, resultado final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "7", "resposta": "(x − 4 − √6)² + (y − 3 + √6)² = 22 + 8√6", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "8", "resposta": "Área = 483/64", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "9", "resposta": "Área = 4√5", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "10", "resposta": "tg((α+β)/2) = (1+√5)/2; tg((α−β)/2) = √5/5; tg((α−β)/2)/tg((α+β)/2) = (5−√5)/10", "evidencia": "resolução, três resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "10 de 10 prontas",
+      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Resolução consultada via PDF baixável do Poliedro (padrão igual a 2017/2018), não texto inline como em 2025/2026."
+    },
+    {
+      "id": "ita-2024-fisica-2fase",
+      "ano": "2024", "fase": "2ª fase", "dia": "dia 2", "materia": "Física",
+      "pdf_original": "arquivos/originais/ita/2024/fisica_2024_2f.pdf",
+      "gabarito_oficial": null,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2024_2f.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 2 - Resoluções.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 7f75d4aa583a0349. Última página do PDF é comentário/proposta de redação do Poliedro — não usada em nenhuma resposta (regra: não copiar comentários)."
+      },
+      "respostas": [
+        {"questao": "1", "resposta": "a) N₁ = (M+m)g/3 + Mg√3(2R−L)/(3ℓ), em que ℓ é o lado do triângulo equilátero; b) 2R < L ≤ (1+m/M)·ℓ√3/3 + 2R", "evidencia": "resolução, itens a e b, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "2", "resposta": "F = Mg√15", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "3", "resposta": "a) T = 2π√(m/k); b) ω = √(2k/m); c) x_A = (qE/4k)[1−cos(√(2k/m)·t)] + (qE/4m)t²; x_B = ℓ₀ + (qE/4k)[cos(√(2k/m)·t)−1] + (qE/4m)t²", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "4", "resposta": "", "evidencia": "a resolução apresenta DUAS soluções ('Resolução' e 'Resolução alternativa') que chegam a fórmulas diferentes (com fator 2 de diferença) para h e Δh — divergência da própria fonte", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pendente", "obs": "Divergência entre duas resoluções alternativas apresentadas pela própria fonte; não escolhido qual está correta."},
+        {"questao": "5", "resposta": "W = C_p·(T₁−T₂)²/T₂", "evidencia": "resolução, mesmo resultado obtido nos dois casos considerados (T₁>T₂ e T₂>T₁)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "6", "resposta": "a) distância entre as estrelas d ≈ 7,4×10¹⁰ m; b) massa da estrela de maior velocidade (m) ≈ 15×10³¹ kg; massa da estrela de menor velocidade (M) ≈ 7,5×10³¹ kg", "evidencia": "resolução, itens a e b, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": "Rotulagem das massas (M e m) conforme aparece na fonte; conferir contexto na fonte em caso de dúvida."},
+        {"questao": "7", "resposta": "r_n = √{[(n−1)λ/2 + √(r₁²+f²)]² − f²}", "evidencia": "resolução, mesma fórmula final obtida para n par e n ímpar", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "8", "resposta": "a) E_p = (1/(πε₀a))·[q₁²/2·(1+1/(2√2)) + q₂²/2·(1/2+√2) + 2q₁q₂·(1+1/√5)]; b) q₁/q₂ = −16(25+2√5) / (25(4+√2))", "evidencia": "resolução, itens a e b, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "9", "resposta": "a) ε = 46,25 V; r = 0,625 Ω; b) i₂ = i₅ ≈ 8 A; i₁₀ ≈ 4,35 A; c) para V < 42,5 V, P = 8·V (reta crescente); para V > 42,5 V, P = (46,25−V)V/0,625 (parábola com concavidade para baixo)", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "10", "resposta": "r₂/r₁ = raiz quadrada de { [(1+2K/(m₀c²))² − 1] / [(1+K/(m₀c²))² − 1] }", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "9 de 10 prontas",
+      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. O PDF de resolução do Poliedro inclui, na última página, um comentário sobre a proposta de redação de 2024 — não utilizado (redação tratada separadamente, sem resposta única)."
+    },
+    {
+      "id": "ita-2024-quimica-2fase",
+      "ano": "2024", "fase": "2ª fase", "dia": "dia 1", "materia": "Química",
+      "pdf_original": "arquivos/originais/ita/2024/quimica_2024_2f.pdf",
+      "gabarito_oficial": null,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2024_2f.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17",
+        "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 1 - Resoluções - Química.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): cfbf3ea89be2172e"
+      },
+      "respostas": [
+        {"questao": "1", "resposta": "a) Naftaleno; b) Ácido etanoico; c) D₂O; d) CSe₂; e) 4-hidroxibenzoato de metila", "evidencia": "resolução, conclusão de cada item (a-e); justificativas explicativas não transcritas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "2", "resposta": "", "evidencia": "resolução apresentada inteiramente como fórmulas estruturais desenhadas, sem equações em texto", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pendente", "obs": "Resposta apenas em desenho estrutural; sem texto equivalente para transcrever com segurança."},
+        {"questao": "3", "resposta": "a) X(A) = 1/11; X(água) = 10/11; b) fração molar da água na fase vapor = 1; c) P = 21,64 Torr; d) o volume de líquido no béquer I aumenta em relação ao inicial", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "4", "resposta": "a) catodo (redução): 4e⁻ + 2H₂O + 2Ag₂O(s) → 4Ag(s) + 4OH⁻(aq); anodo (oxidação): Nb(s) + 2H₂O(l) → NbO₂(s) + 4H⁺(aq) + 4e⁻; b) reação global: Nb(s) + 2Ag₂O(s) + 4H₂O(l) → NbO₂(s) + 4Ag(s) + 4H⁺(aq) + 4OH⁻(aq); c) força eletromotriz ΔE° = +1,032 V", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "5", "resposta": "a) ordem em relação a A = 2; b) ordem em relação a B = 1; c) ordem global = 3; d) k(400K) = 0,1 L²·mol⁻²·min⁻¹; e) k(500K) = 1 L²·mol⁻²·min⁻¹; f) energia de ativação ≅ 9,11 kcal/mol", "evidencia": "resolução, itens a a f, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "6", "resposta": "a) CO₂(g) ⇌ CO₂(aq) [K_h]; CO₂(aq) ⇌ H⁺(aq) + HCO₃⁻(aq) [K_a1]; b) pH = −(1/2)·log(K_h·K_a1·P_CO2); c) ΔpH (pH_II − pH_I) = −0,15", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "7", "resposta": "a) zinco consumido = 0,01 mol; b) cloreto na solução inicial = 0,020 mol; c) NaCl ≅ 0,010 mol e KCl ≅ 0,010 mol", "evidencia": "resolução, itens a, b e c, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "8", "resposta": "", "evidencia": "resolução apresentada inteiramente como fórmulas estruturais desenhadas, sem equações em texto", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pendente", "obs": "Resposta apenas em desenho estrutural; sem texto equivalente para transcrever com segurança."},
+        {"questao": "9", "resposta": "a) o rendimento é o limitante da operação (não a temperatura); b) T = 420 K; c) rendimento = 24,41%; d) sim, k(vtotal) a 420 K ≈ 10,44 s⁻¹, que supera 10 s⁻¹", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
+        {"questao": "10", "resposta": "a) Z = 8 (oxigênio), Z−2 = 6 (carbono), Z−3 = 5 (boro); b) C(grafite) + O₂(g) → CO₂(g); c) 4B(s) + 3O₂(g) → 2B₂O₃(s)", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "8 de 10 prontas",
+      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Questões 2 e 8 pendentes por serem inteiramente respondidas com estruturas químicas desenhadas, sem equivalente textual."
     }
   ],
   "pendencias": [
@@ -179,6 +263,8 @@
     "Física 2026 Q2: item b) sem valores individuais determináveis (a própria fonte só declara a soma); item a) com fórmulas longas, marcado pendente por prudência.",
     "Física 2026 Q4: a própria fonte considera a questão possivelmente inválida/anulável por premissa inconsistente.",
     "Física 2025 Q2, Q3, Q8: fórmulas finais complexas (radicais/expoentes aninhados, somatórios) não transcritas com segurança a partir da renderização disponível.",
-    "Química 2025 Q9: questão inteiramente descritiva, sem resultado curto separável."
+    "Química 2025 Q9: questão inteiramente descritiva, sem resultado curto separável.",
+    "Física 2024 Q4: a fonte apresenta duas resoluções alternativas com fórmulas divergentes (fator 2) — não escolhido qual está correta.",
+    "Química 2024 Q2 e Q8: respostas inteiramente em desenho estrutural, sem equivalente textual transcritível."
   ]
 }

@@ -44,6 +44,17 @@ Modelo de registro (copiar por entrega):
 - Pendências: Física 2025 Q2, Q3 e Q8 (fórmulas finais longas com radicais/expoentes aninhados, cortadas ou ambíguas na renderização disponível — marcadas pendentes por prudência, não por falta de conteúdo); Química 2025 Q9 (questão inteiramente descritiva, sem resultado curto separável); Matemática 2025 e Química 2025 tiveram pequenos itens pendentes dentro de questões majoritariamente prontas (ex.: desenho de isômeros).
 - Validação: 6/6 PDFs finais (2026+2025) montados, fidelidade visual OK, QR decodificado = URL em todos.
 
+## PACOTE discursivas-2019-2026 (lote 2024) — 2026-07-17 18:16 (America/Sao_Paulo)
+- Preparado e integrado por: Claude
+- Pedido atendido: PEDIDO 3 (ano 2024)
+- Estado: CONCLUÍDO
+- Itens: 3 provas (Matemática, Física, Química) / 30 questões / 27 prontas / 3 pendentes
+- Método diferente dos lotes 2025/2026: em 2024 o Poliedro publica um PDF de resolução baixável por matéria (mesmo padrão de 2017/2018), não texto inline. Baixei os 3 PDFs (mat/fís/quí) só para consulta local (não commitados), renderizei cada página e li visualmente.
+- Achado registrado, não corrigido pelo agente: Física 2024 Q4 tem duas resoluções alternativas apresentadas pela própria fonte que divergem por um fator 2 — mantive pendente em vez de escolher uma.
+- Química 2024 Q2 e Q8: resolvidas inteiramente por desenho de fórmulas estruturais, sem texto equivalente — pendentes por não haver o que transcrever com segurança.
+- Redação 2024 (arquivo separado da ITA) publicada com página de observação "Não possui resposta única — produção textual", sem envolver o Poliedro (mesmo padrão usado para Português 2025/2026).
+- Validação: 9/9 PDFs finais (2026+2025+2024) montados, fidelidade visual OK, QR decodificado = URL em todos.
+
 ## PACOTE discursivas-2019-2026 (lote 2026) — 2026-07-17 17:50 (America/Sao_Paulo)
 - Preparado e integrado por: Claude (papel único a partir de D15 — Codex descontinuado)
 - Pedido atendido: PEDIDO 3 (início, ano 2026)
