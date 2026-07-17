@@ -1,0 +1,9 @@
+---
+import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL;
+---
+<Base titulo="Página não encontrada — Revisão ITA">
+  <h2>Página não encontrada</h2>
+  <p>O endereço que você tentou abrir não existe.</p>
+  <a class="botao" href={base}>Voltar à página inicial</a>
+</Base>

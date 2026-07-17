@@ -1,12 +1,14 @@
 # HANDOFF — resumo para o próximo agente
 
-- **Última atualização:** 2026-07-16 22:40 (America/Sao_Paulo) — Claude
+- **Última atualização:** 2026-07-16 22:52 (America/Sao_Paulo) — Claude
 
 ## O que já existe
 
 - Plano aprovado pelo usuário em 2026-07-16, com 5 ajustes incorporados (ver DECISOES.md D3, D4, D5, D7, D9).
 - Fundação criada nesta sessão: documentação de coordenação, inventário-esqueleto (`INVENTARIO_ITA.csv`, 25 edições com situação `aguardando verificacao`), scripts em `ferramentas/`, site Astro em `site/`.
 - Cadeia de montagem de PDF testada com material fictício (teste de fumaça em `ferramentas/teste_fundacao.py`).
+- Ingestão pronta para rodar assim que a rede for liberada: `ferramentas/ingestao.py` + padrões de URL candidatos em `docs/coordenacao/URLS_CANDIDATAS.md` (não verificados — confirmar pela página índice `provas.htm`, nunca por adivinhação de padrão).
+- Workflow de publicação manual em `.github/workflows/publicar-site.yml` (exige o usuário ativar Pages em Settings → Pages → Source: GitHub Actions, uma única vez, antes da pré-visualização).
 
 ## O que NÃO fazer
 

@@ -25,3 +25,4 @@
 |---|---|---|
 | 2026-07-16 | https://www.vestibular.ita.br/provas.htm | Bloqueado pela política de rede do ambiente (não é erro do site) |
 | 2026-07-16 | https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita | Bloqueado pela política de rede do ambiente (não é erro do site) |
+| 2026-07-16 | Busca na web (indireta) | Padrões de URL do acervo oficial e estrutura do Poliedro identificados — ver URLS_CANDIDATAS.md; nada disso vale como verificação |
