@@ -1,0 +1,1 @@
+PDFs de origem, intactos. Nunca editar. SHA-256 de cada arquivo fica registrado em docs/coordenacao/INVENTARIO_ITA.csv.

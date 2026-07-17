@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+const { titulo } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{titulo}</title>
+    <meta name="description" content="Provas antigas do vestibular do ITA com gabarito no final. Gratuito e sem anúncios." />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href={base} style="text-decoration:none;color:inherit;">
+          <h1>Revisão ITA</h1>
+        </a>
+      </header>
+      <slot />
+      <footer class="suave" style="margin-top:2rem;border-top:1px solid var(--borda);padding-top:1rem;">
+        <p>Site de estudos gratuito, sem anúncios. Provas e gabaritos oficiais: acervo do vestibular do ITA. Respostas complementares conferidas no Poliedro Resolve, com crédito e link nas páginas de cada PDF.</p>
+      </footer>
+    </main>
+  </body>
+</html>

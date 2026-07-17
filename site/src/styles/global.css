@@ -1,0 +1,103 @@
+/* Mobile-first, alto contraste, botões grandes. */
+:root {
+  --fundo: #ffffff;
+  --texto: #1a1a1a;
+  --texto-suave: #4a4a4a;
+  --primaria: #0b4f9e;
+  --primaria-texto: #ffffff;
+  --cartao: #f4f6f9;
+  --borda: #d4dae2;
+  --selo-fundo: #fff3cd;
+  --selo-texto: #6b4e00;
+  --pendente: #8a5a00;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #14181d;
+    --texto: #f0f2f4;
+    --texto-suave: #b6bcc4;
+    --primaria: #4d9fff;
+    --primaria-texto: #08243f;
+    --cartao: #1d232b;
+    --borda: #333c47;
+    --selo-fundo: #3d3110;
+    --selo-texto: #ffd76b;
+    --pendente: #ffc65c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+main { max-width: 60rem; margin: 0 auto; padding: 1rem; }
+h1 { font-size: 1.6rem; margin: 0.5rem 0; }
+h2 { font-size: 1.25rem; }
+a { color: var(--primaria); }
+.cartao {
+  display: block;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  text-decoration: none;
+  color: var(--texto);
+}
+.cartao:hover, .cartao:focus-visible { outline: 3px solid var(--primaria); }
+.botao {
+  display: inline-block;
+  background: var(--primaria);
+  color: var(--primaria-texto);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  min-height: 44px;
+}
+.selo {
+  display: inline-block;
+  background: var(--selo-fundo);
+  color: var(--selo-texto);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.pendente { color: var(--pendente); font-weight: 600; }
+.suave { color: var(--texto-suave); font-size: 0.9rem; }
+.grade-anos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+.grade-anos a {
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.1rem 0;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--texto);
+}
+.grade-anos a:hover, .grade-anos a:focus-visible { outline: 3px solid var(--primaria); }
+input[type="search"] {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  background: var(--fundo);
+  color: var(--texto);
+  margin: 0.5rem 0 1rem;
+}

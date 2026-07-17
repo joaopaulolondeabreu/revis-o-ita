@@ -1,0 +1,54 @@
+---
+import Base from "../../layouts/Base.astro";
+import catalogo from "../../data/catalogo.json";
+
+export function getStaticPaths() {
+  const ita = catalogo.instituicoes.find((i) => i.id === "ita");
+  return Object.keys(ita.anos).map((ano) => ({ params: { ano } }));
+}
+
+const { ano } = Astro.params;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const ita = catalogo.instituicoes.find((i) => i.id === "ita");
+const materiais = ita.anos[ano] ?? [];
+const disponiveis = materiais.filter((m) => m.situacao === "encontrado" && m.arquivo);
+const pendentes = materiais.filter((m) => m.situacao !== "encontrado" || !m.arquivo);
+
+function rotulo(m) {
+  return [m.fase_formato, m.dia, m.materia].filter(Boolean).join(" — ") || "Prova";
+}
+---
+<Base titulo={`ITA ${ano} — provas com gabarito no final`}>
+  <p><a href={`${base}/ita/`}>← Todos os anos</a></p>
+  <h2>ITA {ano}</h2>
+  <p class="suave">Cada PDF contém a prova original e, depois de uma página de aviso, o gabarito e as respostas.</p>
+
+  {disponiveis.map((m) => (
+    <div class="cartao">
+      <h3 style="margin:0 0 0.3rem;">{rotulo(m)}</h3>
+      <p style="margin:0 0 0.6rem;"><span class="selo">GABARITO NO FINAL</span></p>
+      <a class="botao" href={`${base}/pdfs/ita/${ano}/${m.arquivo}`}>
+        Abrir prova — gabarito no final
+      </a>
+      <p class="suave" style="margin:0.6rem 0 0;">Fonte: {m.oficial ? "acervo oficial do ITA" : m.fonte}</p>
+    </div>
+  ))}
+
+  {pendentes.length > 0 && (
+    <section>
+      <h3>Ainda não disponível</h3>
+      {pendentes.map((m) => (
+        <div class="cartao">
+          <p style="margin:0;"><strong>{rotulo(m)}</strong></p>
+          <p class="pendente" style="margin:0.3rem 0 0;">
+            {m.situacao === "ausente" ? "Não encontrado nas fontes verificadas." : "Em preparação — ainda não disponível."}
+          </p>
+        </div>
+      ))}
+    </section>
+  )}
+
+  {materiais.length === 0 && (
+    <p class="pendente">Os materiais deste ano ainda não foram catalogados.</p>
+  )}
+</Base>

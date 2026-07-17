@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import catalogo from "../data/catalogo.json";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const ita = catalogo.instituicoes.find((i) => i.id === "ita");
+const anos = Object.keys(ita.anos);
+const maisAntigo = Math.min(...anos.map(Number));
+const maisNovo = Math.max(...anos.map(Number));
+---
+<Base titulo="Revisão ITA — provas antigas com gabarito no final">
+  <p>Escolha a instituição, escolha o ano e estude. Cada prova é um único PDF com o gabarito no final, depois de uma página de aviso.</p>
+  <a class="cartao" href={`${base}/ita/`}>
+    <h2 style="margin:0;">ITA</h2>
+    <p class="suave" style="margin:0.3rem 0 0;">Instituto Tecnológico de Aeronáutica — provas de {maisAntigo} a {maisNovo}</p>
+  </a>
+</Base>

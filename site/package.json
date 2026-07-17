@@ -1,0 +1,16 @@
+{
+  "name": "revisao-ita-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "python3 ../ferramentas/catalogo.py",
+    "predev": "python3 ../ferramentas/catalogo.py",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}
