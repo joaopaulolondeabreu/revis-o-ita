@@ -26,11 +26,11 @@ Regra: cada agente edita SOMENTE a sua seção. Não reformatar a seção do out
 
 ### Codex
 
-- **Atualizado em:** 2026-07-17 01:50 (America/Sao_Paulo)
+- **Atualizado em:** 2026-07-17 02:29 (America/Sao_Paulo)
 - **Papel nesta etapa:** finalização técnica assumida a pedido explícito do usuário após o encerramento da sessão do Claude; a seção do Claude foi preservada sem alterações.
 - **Tarefa:** integrar o PEDIDO 2, corrigir bloqueios de publicação, validar e publicar o site.
-- **Estado:** CONCLUÍDO; PUBLICAÇÃO AUTORIZADA PELO USUÁRIO E EM DISPARO.
+- **Estado:** CONCLUÍDO E PUBLICADO. GitHub Pages ativado com fonte `GitHub Actions`; workflow `Publicar site #2` concluído com build e deploy em sucesso.
 - **Integração do PEDIDO 2:** Matemática 2018, único item integralmente `pronto`, foi integrada em PDF final de 10 páginas. As outras cinco provas continuam pendentes porque contêm respostas exclusivamente gráficas/estruturais, ausência de resultado separável ou inconsistência da própria fonte; nada foi deduzido.
 - **Correções técnicas:** compatibilidade do integrador com Windows; registros idempotentes; dependência `tzdata`; quebra de linhas e fontes Unicode nos PDFs; regeneração validada dos 10 PDFs finais anteriores; Astro atualizado para 7.1.0, com auditoria npm em 0 vulnerabilidades.
-- **Validações:** teste de fumaça completo; fidelidade visual das páginas oficiais; QR decodificado; 11 PDFs finais válidos; build estático de 28 páginas; simulação do GitHub Pages com base `/revis-o-ita`; página inicial, ano 2018 e download do PDF respondendo HTTP 200; navegador sem erros.
+- **Validações:** teste de fumaça completo; fidelidade visual das páginas oficiais; QR decodificado; 11 PDFs finais válidos; build estático de 28 páginas; publicação pública em `https://joaopaulolondeabreu.github.io/revis-o-ita/`; página inicial, ano 2018 e PDF de Matemática 2018 respondendo HTTP 200; PDF servido como `application/pdf` com 286.161 bytes; navegador sem erros.
 - **Próxima fila após a publicação:** PEDIDO 3, começando pelo pacote da 2ª fase de 2026.

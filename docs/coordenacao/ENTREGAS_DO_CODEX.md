@@ -45,3 +45,11 @@ Modelo de registro (copiar por entrega):
 - Confirmação adicional: Inglês 1–20 e Português 21–40 de 2017–2018 são objetivos e constam do gabarito oficial; não há parte discursiva 21–30 nessas matérias. A redação separada foi registrada apenas com a frase padrão.
 - Materiais de consulta: seis PDFs em `consulta/`, cobertos por `docs/coordenacao/pacotes/.gitignore` e não commitados.
 - Commit: a entrega e este registro integram o mesmo commit; o hash é informado no handoff ao usuário.
+
+## PUBLICAÇÃO GitHub Pages — 2026-07-17 02:29 (America/Sao_Paulo)
+- Estado: CONCLUÍDO
+- Ramo publicado: `claude/ita-vestibular-planning-bjhf6y`
+- Conteúdo validado: árvore Git `6ab15f25a639eb7f5231c3706aba603a0f3cb686`; commit técnico publicado `fe86e65baea3a3c4ee7b58335f155085d81a7ed2`
+- Workflow: `Publicar site #2`, execução `29557366174`; jobs `build` e `deploy` concluídos com sucesso
+- URL pública: `https://joaopaulolondeabreu.github.io/revis-o-ita/`
+- Evidências: página inicial e página `/ita/2018/` responderam HTTP 200; o PDF de Matemática 2018 respondeu HTTP 200, `application/pdf`, 286.161 bytes; conferência visual no navegador sem erros de console
