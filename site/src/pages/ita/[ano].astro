@@ -11,8 +11,8 @@ const { ano } = Astro.params;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const ita = catalogo.instituicoes.find((i) => i.id === "ita");
 const materiais = ita.anos[ano] ?? [];
-const disponiveis = materiais.filter((m) => m.situacao === "encontrado" && m.arquivo);
-const pendentes = materiais.filter((m) => m.situacao !== "encontrado" || !m.arquivo);
+const disponiveis = materiais.filter((m) => m.tipo === "pdf_final" && m.arquivo);
+const pendentes = materiais.filter((m) => m.tipo !== "pdf_final");
 
 function rotulo(m) {
   return [m.fase_formato, m.dia, m.materia].filter(Boolean).join(" — ") || "Prova";
@@ -42,7 +42,11 @@ function rotulo(m) {
         <div class="cartao">
           <p style="margin:0;"><strong>{rotulo(m)}</strong></p>
           <p class="pendente" style="margin:0.3rem 0 0;">
-            {m.situacao === "ausente" ? "Não encontrado nas fontes verificadas." : "Em preparação — ainda não disponível."}
+            {m.situacao === "ausente"
+              ? "Não encontrado nas fontes verificadas."
+              : m.tipo === "prova"
+                ? "Prova já obtida — PDF com gabarito em preparação."
+                : "Em preparação — ainda não disponível."}
           </p>
         </div>
       ))}

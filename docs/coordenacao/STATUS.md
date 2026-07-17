@@ -2,9 +2,9 @@
 
 ## Situação atual
 
-- **Última atualização:** 2026-07-16 22:52 (America/Sao_Paulo)
+- **Última atualização:** 2026-07-16 23:02 (America/Sao_Paulo)
 - **Agente:** Claude
-- **Etapa do projeto:** 1 — Fundação **CONCLUÍDA** + preparação da ingestão (offline)
+- **Etapa do projeto:** 1 — Ingestão oficial CONCLUÍDA; primeiros PDFs finais (Caso 1) montados
 
 ## Trabalho realizado nesta atualização
 
@@ -15,11 +15,23 @@
 - Preparação da ingestão sem depender da rede: `ferramentas/ingestao.py` (download + validação + hash + registro automático no inventário, sem sobrescrever nada divergente), `ferramentas/relatorio.py` (resumo do inventário por situação/ano), `docs/coordenacao/URLS_CANDIDATAS.md` (padrões de URL do acervo oficial e do Poliedro descobertos por busca na web — TODOS ainda a verificar).
 - Fluxo de publicação criado (`.github/workflows/publicar-site.yml`), disparo manual apenas — nada é publicado sem acionamento deliberado, e a divulgação definitiva só após aprovação explícita do usuário.
 
-## Pendências que bloqueiam as próximas etapas
+## Fatos consolidados (2026-07-16/17)
 
-1. **Rede do ambiente bloqueada** para `vestibular.ita.br` e `poliedroresolve.sistemapoliedro.com.br` — o usuário precisa liberar nas configurações do ambiente (instruções já enviadas). Bloqueia: verificação do acervo, inventário real, toda a ingestão.
-2. GitHub Pages ainda não ativado (só será necessário na fase de pré-visualização).
+- Rede liberada pelo usuário; ambos os sites acessíveis.
+- Acervo oficial mapeado por `provas.htm`: **116 PDFs, todos baixados, validados e inventariados** (0 falhas).
+  - 2008–2018: provas por matéria (Mat/Fís/Quí/Por/Ing), questões 1–20 objetivas + 21–30 dissertativas; gabarito oficial cobre só as objetivas → **Caso 2** para as dissertativas.
+  - 2019–2026: 1ª fase objetiva + 2ª fase por matéria (Redação 2019–2024; Português na 2ª fase 2025–2026 com gabarito objetivo próprio `gabarito_<ano>_2f.pdf`); gabaritos oficiais cobrem só objetivas → 2ª fase discursiva é **Caso 2**.
+  - 2002–2007: **ausentes do acervo oficial** — pendentes (regra D7).
+- **PDFs finais Caso 1 montados e validados: 1ª fase 2019–2026 (8 arquivos)** — prova + página de proteção + gabarito oficial; fidelidade visual conferida por renderização página a página.
+- Site atualizado: mostra como disponíveis apenas os PDFs finais; provas já obtidas aparecem como "PDF com gabarito em preparação".
+
+## Pendências
+
+1. GitHub Pages ainda não ativado (necessário só na pré-visualização).
+2. Caso 2 pendente: mapear páginas por prova no Poliedro Resolve (link direto + QR), transcrever respostas finais das dissertativas (2008–2018 e 2ª fase 2019–2026).
+3. Português 2ª fase 2025/2026: montar com `gabarito_<ano>_2f.pdf` (verificar se a prova inclui redação → entrada "produção textual").
+4. 2002–2007: buscar fonte oficial/pública confiável das provas.
 
 ## Próxima tarefa recomendada
 
-Assim que a rede for liberada: verificar o acervo oficial do ITA (`provas.htm`), mapear anos/formatos reais, preencher o inventário 2026–2002 e **medir o tamanho real dos primeiros PDFs** antes de decidir onde armazená-los (ver DECISOES.md D5).
+Mapear o Poliedro Resolve: confirmar a existência de página específica por prova (candidata: `…/vestibulares/ita/<ano>/<slug-da-prova>/`), registrar os links diretos por prova/matéria no inventário e iniciar a transcrição das respostas finais das dissertativas, começando pelos anos mais recentes.
