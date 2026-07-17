@@ -1,14 +1,16 @@
 # HANDOFF — resumo para o próximo agente
 
-- **Última atualização:** 2026-07-16 22:52 (America/Sao_Paulo) — Claude
+- **Última atualização:** 2026-07-17 01:50 (America/Sao_Paulo) — Codex, após assumir a finalização a pedido do usuário
 
 ## O que já existe
 
-- Plano aprovado pelo usuário em 2026-07-16, com 5 ajustes incorporados (ver DECISOES.md D3, D4, D5, D7, D9).
-- Fundação criada nesta sessão: documentação de coordenação, inventário-esqueleto (`INVENTARIO_ITA.csv`, 25 edições com situação `aguardando verificacao`), scripts em `ferramentas/`, site Astro em `site/`.
-- Cadeia de montagem de PDF testada com material fictício (teste de fumaça em `ferramentas/teste_fundacao.py`).
-- Ingestão pronta para rodar assim que a rede for liberada: `ferramentas/ingestao.py` + padrões de URL candidatos em `docs/coordenacao/URLS_CANDIDATAS.md` (não verificados — confirmar pela página índice `provas.htm`, nunca por adivinhação de padrão).
-- Workflow de publicação manual em `.github/workflows/publicar-site.yml` (exige o usuário ativar Pages em Settings → Pages → Source: GitHub Actions, uma única vez, antes da pré-visualização).
+- Acervo oficial 2008–2026 completo: 116 PDFs originais validados e inventariados. Anos 2002–2007 continuam pendentes por falta de fonte autorizada/confiável.
+- Onze PDFs finais publicados no site: oito primeiras fases de 2019–2026, Português/Redação de 2025–2026 e Matemática 2018 com respostas finais complementares.
+- Pacote `discursivas-2017-2018` concluído: 49 questões prontas e 11 pendentes/parciais. Somente Matemática 2018 é um item integralmente pronto e foi integrada; não deduzir nem copiar diagramas para completar os outros itens.
+- Geradores de PDF corrigidos para fontes Unicode, quebra de linhas, URLs longas e compatibilidade Windows/Linux. Os onze PDFs foram montados/validados novamente; originais continuam visualmente intactos.
+- Integradores de pacote/lote são idempotentes e substituem seus próprios registros no inventário em vez de duplicá-los.
+- Site atualizado para Astro 7.1.0, auditoria npm com zero vulnerabilidades, build estático com 28 páginas e base do GitHub Pages validada em `/revis-o-ita`.
+- O usuário autorizou explicitamente a publicação em 2026-07-17. O workflow permanece manual em `.github/workflows/publicar-site.yml`.
 
 ## O que NÃO fazer
 
@@ -16,13 +18,13 @@
 - Não extrair questões individuais.
 - Não copiar/hospedar resoluções completas do Poliedro.
 - Não resolver/deduzir/redigir respostas — só transcrição fiel de resultado final explícito.
-- Não divulgar link definitivo antes da aprovação explícita do usuário.
+- Não expandir para IME nem usar fontes não autorizadas sem nova decisão do usuário.
 - Não colocar dados pessoais do usuário em lugar nenhum (incluindo autoria de commits — usar identidade neutra).
 
 ## Bloqueio atual
 
-A rede do ambiente nega acesso às duas fontes (ITA e Poliedro). O usuário foi instruído a liberar. **Nada de ingestão até isso ser resolvido e testado.**
+Nenhum bloqueio técnico para o conteúdo já integrado. As cinco provas restantes de 2017–2018 dependem de decisão editorial ou de respostas finais textuais permitidas; suas lacunas estão documentadas no pacote.
 
 ## Próxima ação
 
-Ver STATUS.md → "Próxima tarefa recomendada".
+Confirmar a publicação no GitHub Pages e depois iniciar o PEDIDO 3 por 2026, sem preencher respostas pendentes por dedução.

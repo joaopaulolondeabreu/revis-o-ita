@@ -73,3 +73,6 @@ Provas cujo caderno inclui redação recebem, após o gabarito oficial, uma pág
 
 ### D12 — Divisão de trabalho (definida pelo usuário em 2026-07-17)
 Claude = líder técnico (código, PDFs finais, site, testes, publicação, integração, decisões). Codex = preparação (fontes, downloads permitidos, inventário, links diretos, respostas mínimas com evidência), sem alterar implementação. Esteira: Codex prepara N+1 enquanto Claude implementa N. Claude não interrompe tarefa técnica para caçar insumo: registra em PEDIDOS_PARA_CODEX.md e segue.
+
+### D13 — Continuidade após encerramento da sessão do Claude
+Em 2026-07-17, o usuário informou que os tokens do Claude terminaram e autorizou explicitamente o Codex a assumir a finalização técnica e publicar. A divisão D12 permanece como histórico do fluxo normal; nesta etapa excepcional, o Codex pode corrigir integração, PDFs, site e publicação, preservando todas as regras de conteúdo, procedência e dados pessoais.

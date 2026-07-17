@@ -6,6 +6,7 @@ completo do ITA). O PDF final = prova + página de proteção + gabarito oficial
 Uso: python montar_lote.py
 """
 
+import argparse
 import csv
 import sys
 from datetime import datetime
@@ -13,7 +14,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from comum import sha256_arquivo
-from ingestao import CABECALHO, INVENTARIO, ORIGINAIS, registrar_linha
+from ingestao import CABECALHO, INVENTARIO, ORIGINAIS
 from montar import montar_pdf_final, verificar_fidelidade_visual
 from validar_pdf import validar
 
@@ -57,14 +58,33 @@ def ja_registrado(nome_final: str) -> bool:
         )
 
 
-def main() -> int:
+def registrar_pdf_final(linha: dict) -> None:
+    """Substitui o registro do mesmo PDF final, sem duplicar o inventário."""
+    with open(INVENTARIO, newline="", encoding="utf-8") as f:
+        existentes = [
+            atual for atual in csv.DictReader(f)
+            if not (
+                atual.get("tipo_material") == "pdf_final"
+                and atual.get("nome_padronizado") == linha["nome_padronizado"]
+            )
+        ]
+    temporario = INVENTARIO.with_suffix(".csv.tmp")
+    with open(temporario, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CABECALHO, lineterminator="\n")
+        w.writeheader()
+        w.writerows(existentes)
+        w.writerow(linha)
+    temporario.replace(INVENTARIO)
+
+
+def main(regerar: bool = False) -> int:
     hoje = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%Y-%m-%d")
     falhas = []
     for t in TRABALHOS_CASO1:
         ano, prova, gabarito = t["ano"], t["prova"], t["gabarito"]
         nome_final, fase, materia = t["nome_final"], t["fase"], t["materia"]
         nota = t.get("nota")
-        if ja_registrado(nome_final):
+        if ja_registrado(nome_final) and not regerar:
             print(f"pulado (já registrado): {nome_final}")
             continue
         caminho_prova = ORIGINAIS / ano / prova
@@ -85,7 +105,7 @@ def main() -> int:
             ruins = [r for r in fidelidade if not r["ok"]]
             if ruins:
                 raise RuntimeError(f"fidelidade visual falhou: {ruins}")
-            registrar_linha({
+            registrar_pdf_final({
                 "instituicao": "ITA", "ano": ano, "fase_formato": fase,
                 "dia": t["dia"], "materia": materia, "tipo_material": "pdf_final",
                 "nome_original": f"{prova} + protecao + {gabarito}",
@@ -113,4 +133,10 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    ap = argparse.ArgumentParser()
+    ap.add_argument(
+        "--regerar", action="store_true",
+        help="remonta mesmo os PDFs já registrados e substitui seus registros",
+    )
+    args = ap.parse_args()
+    sys.exit(main(regerar=args.regerar))

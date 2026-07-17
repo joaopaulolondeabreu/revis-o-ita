@@ -27,7 +27,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from comum import renderizar_pagina, sha256_arquivo
-from ingestao import INVENTARIO, registrar_linha
+from ingestao import CABECALHO as CABECALHO_INVENTARIO, INVENTARIO
 from montar import montar_pdf_final, verificar_fidelidade_visual
 from qr import decodificar_qr
 from validar_pdf import validar
@@ -35,6 +35,10 @@ from validar_pdf import validar
 RAIZ = Path(__file__).resolve().parent.parent
 DESTINO = RAIZ / "site" / "public" / "pdfs" / "ita"
 RESPOSTAS_CSV = RAIZ / "docs" / "coordenacao" / "RESPOSTAS_COMPLEMENTARES.csv"
+CABECALHO_RESPOSTAS = [
+    "documento_id", "questao", "resposta_transcrita", "url_resolucao",
+    "data_consulta", "agente", "situacao_conferencia", "observacoes",
+]
 
 
 def url_responde(url: str) -> bool:
@@ -49,15 +53,55 @@ def url_responde(url: str) -> bool:
 
 
 def registrar_respostas(item: dict, agente: str, hoje: str) -> None:
-    with open(RESPOSTAS_CSV, "a", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+    """Substitui as respostas do documento, tornando a integração idempotente."""
+    existentes = []
+    if RESPOSTAS_CSV.is_file():
+        with open(RESPOSTAS_CSV, newline="", encoding="utf-8") as f:
+            existentes = [
+                linha for linha in csv.DictReader(f)
+                if linha.get("documento_id") != item["id"]
+            ]
+
+    temporario = RESPOSTAS_CSV.with_suffix(".csv.tmp")
+    with open(temporario, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CABECALHO_RESPOSTAS, lineterminator="\n")
+        w.writeheader()
+        w.writerows(existentes)
         for r in item.get("respostas", []):
-            w.writerow([
-                item["id"], r.get("questao", r.get("rotulo", "")), r["resposta"],
-                r.get("url_fonte", item["poliedro"]["url_direta"]), hoje, agente,
-                "transcrita pelo Codex; integrada por Claude",
-                r.get("obs", "") + (f" | evidência: {r['evidencia']}" if r.get("evidencia") else ""),
-            ])
+            w.writerow({
+                "documento_id": item["id"],
+                "questao": r.get("questao", r.get("rotulo", "")),
+                "resposta_transcrita": r["resposta"],
+                "url_resolucao": r.get("url_fonte", item["poliedro"]["url_direta"]),
+                "data_consulta": hoje,
+                "agente": agente,
+                "situacao_conferencia": "transcrita e integrada pelo Codex",
+                "observacoes": r.get("obs", "")
+                + (f" | evidência: {r['evidencia']}" if r.get("evidencia") else ""),
+            })
+    temporario.replace(RESPOSTAS_CSV)
+
+
+def registrar_inventario(linha: dict) -> None:
+    """Substitui a linha do mesmo PDF final em vez de duplicá-la."""
+    existentes = []
+    if INVENTARIO.is_file():
+        with open(INVENTARIO, newline="", encoding="utf-8") as f:
+            existentes = [
+                atual for atual in csv.DictReader(f)
+                if not (
+                    atual.get("tipo_material") == "pdf_final"
+                    and atual.get("nome_padronizado") == linha["nome_padronizado"]
+                )
+            ]
+
+    temporario = INVENTARIO.with_suffix(".csv.tmp")
+    with open(temporario, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CABECALHO_INVENTARIO, lineterminator="\n")
+        w.writeheader()
+        w.writerows(existentes)
+        w.writerow(linha)
+    temporario.replace(INVENTARIO)
 
 
 def integrar_item(item: dict, hoje: str, somente_validar: bool) -> list[str]:
@@ -112,13 +156,17 @@ def integrar_item(item: dict, hoje: str, somente_validar: bool) -> list[str]:
     # QR na 2ª página de proteção (logo após as páginas da prova + 1ª proteção).
     indice_qr = resumo["prova"] + 1
     img = renderizar_pagina(saida, indice_qr, escala=3.0)
-    with tempfile.NamedTemporaryFile(suffix=".png") as tmp:
-        img.save(tmp.name)
-        lido = decodificar_qr(Path(tmp.name))
+    # NamedTemporaryFile permanece bloqueado no Windows e impede o Pillow de
+    # reabrir o mesmo caminho. Um diretório temporário funciona nos dois
+    # sistemas usados pelo projeto (Windows local e Ubuntu no GitHub Actions).
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        caminho_qr = Path(tmp_dir) / "qr.png"
+        img.save(caminho_qr)
+        lido = decodificar_qr(caminho_qr)
     if lido != url:
         return [f"QR decodificado ({lido!r}) difere da URL declarada ({url!r})"]
 
-    registrar_linha({
+    registrar_inventario({
         "instituicao": "ITA", "ano": item["ano"],
         "fase_formato": item.get("fase", ""), "dia": item.get("dia", ""),
         "materia": item.get("materia", ""), "tipo_material": "pdf_final",
@@ -136,7 +184,7 @@ def integrar_item(item: dict, hoje: str, somente_validar: bool) -> list[str]:
         "situacao": "encontrado",
         "observacoes": f"Caso 2; blocos: {resumo}; link direto: {url}",
     })
-    registrar_respostas(item, "Codex (transcrição) / Claude (integração)", hoje)
+    registrar_respostas(item, "Codex (transcrição e integração final)", hoje)
     print(f"OK {nome_final}: {resumo}")
     return []
 

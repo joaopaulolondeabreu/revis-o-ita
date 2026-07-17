@@ -68,9 +68,10 @@ def main(dir_saida: Path) -> None:
 
     # QR Code da 2ª página de proteção (página 5 do Caso 2, índice 4)
     img = renderizar_pagina(final2, 4, escala=3.0)
-    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
-        img.save(tmp.name)
-        lido = decodificar_qr(Path(tmp.name))
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        caminho_qr = Path(tmp_dir) / "qr.png"
+        img.save(caminho_qr)
+        lido = decodificar_qr(caminho_qr)
     if lido != URL_TESTE:
         falhas.append(f"QR: esperado {URL_TESTE!r}, lido {lido!r}")
 

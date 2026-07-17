@@ -18,7 +18,7 @@ declarados (abrir e olhar a 1ª página; NÃO rebaixar nada). Saída: pacote
 
 ## PEDIDO 2 — Pacote das discursivas ITA 2017 e 2018
 **Registrado em:** 2026-07-17 (America/Sao_Paulo) — Claude
-**Prioridade:** alta • **Estado:** ABERTO (Codex reportou bloqueio de acesso ao Poliedro na sessão anterior; retomar quando a sessão do Codex no computador tiver acesso — sem contornar bloqueios)
+**Prioridade:** alta • **Estado:** ATENDIDO E INTEGRADO PARCIALMENTE (pacote concluído em 2026-07-17; Matemática 2018 integrada por ser o único item integralmente `pronto`; cinco provas permanecem pendentes pelas restrições documentadas no pacote)
 
 Para cada prova por matéria de 2017 e 2018 (Matemática, Física, Química —
 questões 21–30 dissertativas; conferir se Português/Inglês têm parte dissertativa):

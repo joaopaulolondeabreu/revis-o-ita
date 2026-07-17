@@ -26,10 +26,11 @@ Regra: cada agente edita SOMENTE a sua seção. Não reformatar a seção do out
 
 ### Codex
 
-- **Atualizado em:** 2026-07-17 01:10 (America/Sao_Paulo)
-- **Papel:** preparação de fontes e metadados, conforme D12; sem alterações em código, site, PDFs finais, catálogo ou seção do Claude.
-- **Tarefa concluída:** PEDIDO 2 — pacote `discursivas-2017-2018` preparado no formato D10.
-- **Estado:** CONCLUÍDO COM PENDÊNCIAS DOCUMENTADAS.
-- **Resultado:** 6 páginas e 6 PDFs públicos do Poliedro verificados com HTTP 200; 60 questões conferidas visualmente; 49 respostas finais prontas e 11 questões pendentes ou parciais por dependerem de gráfico/diagrama/fórmula estrutural, por ausência de resultado separável ou por inconsistência explícita da fonte. Português e Inglês de 2017–2018 foram confirmados como objetivos, cobertos pelo gabarito oficial; a redação separada recebeu somente a frase padrão.
-- **Arquivos entregues:** `docs/coordenacao/pacotes/discursivas-2017-2018/pacote.json` e registro em `docs/coordenacao/ENTREGAS_DO_CODEX.md`. Os seis PDFs de consulta estão em `consulta/`, ignorados pelo Git e não commitados.
-- **Próxima fila:** PEDIDO 3, começando por 2026, somente após o handoff desta entrega.
+- **Atualizado em:** 2026-07-17 01:50 (America/Sao_Paulo)
+- **Papel nesta etapa:** finalização técnica assumida a pedido explícito do usuário após o encerramento da sessão do Claude; a seção do Claude foi preservada sem alterações.
+- **Tarefa:** integrar o PEDIDO 2, corrigir bloqueios de publicação, validar e publicar o site.
+- **Estado:** CONCLUÍDO; PUBLICAÇÃO AUTORIZADA PELO USUÁRIO E EM DISPARO.
+- **Integração do PEDIDO 2:** Matemática 2018, único item integralmente `pronto`, foi integrada em PDF final de 10 páginas. As outras cinco provas continuam pendentes porque contêm respostas exclusivamente gráficas/estruturais, ausência de resultado separável ou inconsistência da própria fonte; nada foi deduzido.
+- **Correções técnicas:** compatibilidade do integrador com Windows; registros idempotentes; dependência `tzdata`; quebra de linhas e fontes Unicode nos PDFs; regeneração validada dos 10 PDFs finais anteriores; Astro atualizado para 7.1.0, com auditoria npm em 0 vulnerabilidades.
+- **Validações:** teste de fumaça completo; fidelidade visual das páginas oficiais; QR decodificado; 11 PDFs finais válidos; build estático de 28 páginas; simulação do GitHub Pages com base `/revis-o-ita`; página inicial, ano 2018 e download do PDF respondendo HTTP 200; navegador sem erros.
+- **Próxima fila após a publicação:** PEDIDO 3, começando pelo pacote da 2ª fase de 2026.
