@@ -196,15 +196,25 @@ def integrar_item(item: dict, hoje: str, somente_validar: bool) -> list[str]:
         return [f"fidelidade visual falhou: {ruins}"]
 
     # QR na 2ª página de proteção (logo após as páginas da prova + 1ª proteção).
+    # Escalas maiores são tentadas em sequência porque URLs longas (muitas
+    # matérias/dias no slug) geram QR mais denso; em resolução baixa o
+    # decodificador de teste pode falhar mesmo com o QR fisicamente correto
+    # (confirmado manualmente: o mesmo PNG decodifica certo a partir de
+    # escala 4.0). Uma câmera de celular real tem resolução muito maior que
+    # qualquer uma dessas escalas de teste.
     indice_qr = resumo["prova"] + 1
-    img = renderizar_pagina(saida, indice_qr, escala=3.0)
+    lido = None
     # NamedTemporaryFile permanece bloqueado no Windows e impede o Pillow de
     # reabrir o mesmo caminho. Um diretório temporário funciona nos dois
     # sistemas usados pelo projeto (Windows local e Ubuntu no GitHub Actions).
     with tempfile.TemporaryDirectory() as tmp_dir:
         caminho_qr = Path(tmp_dir) / "qr.png"
-        img.save(caminho_qr)
-        lido = decodificar_qr(caminho_qr)
+        for escala in (3.0, 4.5, 6.0):
+            img = renderizar_pagina(saida, indice_qr, escala=escala)
+            img.save(caminho_qr)
+            lido = decodificar_qr(caminho_qr)
+            if lido is not None:
+                break
     if lido != url:
         return [f"QR decodificado ({lido!r}) difere da URL declarada ({url!r})"]
 

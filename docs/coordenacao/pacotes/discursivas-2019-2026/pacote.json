@@ -1,0 +1,101 @@
+{
+  "pacote": "discursivas-2019-2026",
+  "preparado_por": "Claude (assumindo também o papel de preparação, ver DECISOES.md D15)",
+  "data": "2026-07-17",
+  "pedido_atendido": "PEDIDO 3",
+  "metodo": [
+    "Para 2026: as páginas de questão do Poliedro (https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/...) publicam a resolução como texto/HTML diretamente na página de cada questão (bloco '.ck-content' após o enunciado), em vez de um PDF de resolução separado.",
+    "Cada página foi baixada com curl (HTTP 200 confirmado) e o texto do bloco de resolução foi extraído com Playwright (innerText, sem CSS remoto, sem rede no navegador) para leitura.",
+    "Nos casos com fórmulas/frações/radicais potencialmente ambíguos na extração de texto, a página foi adicionalmente renderizada localmente (HTML já baixado, sem depender de rede no Chromium) e capturada em screenshot para conferência visual da notação exata antes da transcrição.",
+    "Transcrito somente o resultado final explicitamente declarado; nenhum desenvolvimento, demonstração ou explicação foi copiado.",
+    "Questões com múltiplos itens (a, b, c...) foram tratadas por item; quando a própria fonte declara que um item não tem resultado determinável isoladamente (ex.: Física 2026 Q2b) ou quando a fonte sinaliza que a questão deveria ser anulada por premissa inconsistente (Física 2026 Q4), o item foi marcado pendente com a razão exata."
+  ],
+  "itens": [
+    {
+      "id": "ita-2026-matematica-2fase",
+      "ano": "2026", "fase": "2ª fase", "dia": "dia 1", "materia": "Matemática",
+      "pdf_original": "arquivos/originais/ita/2026/matematica_2026_2f.pdf",
+      "gabarito_oficial": null,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2026_2f.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2026",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17"
+      },
+      "respostas": [
+        {"questao": "1", "resposta": "231", "evidencia": "resolução, bloco final ('Total de pontos: ... = 231')", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "2", "resposta": "n = 15", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-2-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "3", "resposta": "Área(ABCD) = 30", "evidencia": "resolução, ambas as soluções alternativas convergem para 30", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-3-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "4", "resposta": "S = π(α² + 32α + 528)", "evidencia": "resolução, resultado final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-4-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "5", "resposta": "(22 + 9√6)/16", "evidencia": "resolução, última linha (conferida também por captura de tela)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-5-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "6", "resposta": "", "evidencia": "resolução conclui apenas que as matrizes descritas não existem, sem separar resultado para os itens a) determinante, b) traço e c) valores de alpha", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-6-matematica-2-fase-dia-1-ita-2026", "status_questao": "pendente", "obs": "Sem resultado separável por item na fonte."},
+        {"questao": "7", "resposta": "Raízes: -1, 1/2, 1+2i, 1-2i", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-7-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "8", "resposta": "784", "evidencia": "resolução, última linha (conferida também por captura de tela: C(99,2) - 3×49, dividido por 6)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-8-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "9", "resposta": "a) y = 2√6x − 8 e y = −2√6x − 8; b) T₁ = (−√6, 4) e T₂ = (√6, 4)", "evidencia": "resolução, conclusões dos itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-9-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "10", "resposta": "a) raios: 2√3 e 6; b) S = 10π − 12√3", "evidencia": "resolução, conclusões dos itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-10-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "9 de 10 prontas",
+      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Único link direto usado para toda a matéria (página tem navegação interna entre as 10 questões)."
+    },
+    {
+      "id": "ita-2026-fisica-2fase",
+      "ano": "2026", "fase": "2ª fase", "dia": "dia 3", "materia": "Física",
+      "pdf_original": "arquivos/originais/ita/2026/fisica_2026_2f.pdf",
+      "gabarito_oficial": null,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2026_2f.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2026",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17"
+      },
+      "respostas": [
+        {"questao": "1", "resposta": "a) r = (v²/g)·(cosθ − μsenθ)/(senθ + μcosθ); b) r = (v²/g)·cotgθ; c) r = v²/(μg)", "evidencia": "resolução, resultados finais dos itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "2", "resposta": "a) N_B e N_A dados por fórmulas em função de M, m, m_c, L, d, a, b, g, θ (ver fonte); b) Fat_A + Fat_B = (m+M+m_c)·g·senθ — a própria fonte declara que não há dados suficientes para separar as duas forças de atrito individualmente", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-2-fisica-2-fase-dia-3-ita-2026", "status_questao": "pendente", "obs": "Fórmulas de N_A/N_B são longas demais para transcrição fiel sem risco de erro de notação; item b) a própria fonte diz que os valores individuais não são determináveis. Marcado pendente por prudência — remeter à fonte."},
+        {"questao": "3", "resposta": "a) P_R = Mgcosθ + Mω²(L−2a)/2; b) θ = arccos(−ω²(L−2a)/(2g)), válido para a < L/2", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-3-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "4", "resposta": "", "evidencia": "a própria resolução do Poliedro declara: 'a premissa fundamental da questão... não é verdadeira... sugerimos a anulação da questão'", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-4-fisica-2-fase-dia-3-ita-2026", "status_questao": "pendente", "obs": "A fonte considera a própria questão possivelmente inválida/anulável; não há resultado confiável para transcrever."},
+        {"questao": "5", "resposta": "a) W = 70(M₁−M₂)gαL; b) η = (M₁−M₂)gαL / [ρ_H2O·V·c_H2O + (m/M_Cu)·3R + M₁gαL + (m·g·α·L)/2]", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-5-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "6", "resposta": "a) L = 85 cm; b) G = 16 em módulo (com sinal, G = −16), imagem invertida; c) imagem real, invertida, menor, a 5,2 cm da ocular", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-6-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "7", "resposta": "a) I_final = I₀·x^(N+1)·cos²ᴺ(φ/N); b) r = √(P / (πI₀·x^(N+1)·cos²ᴺ(φ/N)))", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-7-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "8", "resposta": "a) P_mín = 35 W; b) Δt = (56/25)π²·10⁻⁶ s", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-8-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "9", "resposta": "a) d = 600√2 nm; b) y' = 20√14/7 cm", "evidencia": "resolução, itens a e b (conferidos também por captura de tela)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-9-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "10", "resposta": "a) t_Terra ≈ 12,1 anos; b) t_nave2 = 9,675 anos", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-10-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "8 de 10 prontas",
+      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Questão 4 possivelmente inválida segundo a própria fonte."
+    },
+    {
+      "id": "ita-2026-quimica-2fase",
+      "ano": "2026", "fase": "2ª fase", "dia": "dia 2", "materia": "Química",
+      "pdf_original": "arquivos/originais/ita/2026/quimica_2026_2f.pdf",
+      "gabarito_oficial": null,
+      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2026_2f.pdf",
+      "poliedro": {
+        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2026",
+        "http_status_verificado": 200,
+        "verificado_em": "2026-07-17"
+      },
+      "respostas": [
+        {"questao": "1", "resposta": "a) [ácido]Sol.2 = 0,4 mol/L; b) [ácido]Sol.1 = 2,0 mol/L; c) [base]Sol.3 = 2,1×10⁻² mol/L", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "2", "resposta": "a) V(O₂) ≈ 0,611 L; b) [H₂O₂] em 5 min ≈ 0,353 mol/L", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-2-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "3", "resposta": "a) Δt ≈ 553,6 s; b) [A⁺]eq = 6,135×10⁻³ mol/L; [B⁻]eq = 1,655×10⁻³ mol/L", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-3-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "4", "resposta": "a) massa de oxalato = 5,57 g; b) n = 9", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-4-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "5", "resposta": "a) 3 arranjos: [CNS]⁻, [NCS]⁻, [CSN]⁻; b) trigonal planar: BF₃, BH₃ ou SO₃; pirâmide trigonal: NH₃ ou NF₃; c) C₆H₅F; d) ordem crescente de ponto de ebulição: H₂S < CH₃OH < H₂O", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-5-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": "Item c) pede estruturas moleculares desenhadas; publicada apenas a fórmula molecular do produto principal (C₆H₅F), sem o desenho."},
+        {"questao": "6", "resposta": "a) Reação 1: não favorece os produtos; b) Reação 2: não favorece os produtos; c) Reação 3: favorece os produtos", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-6-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "7", "resposta": "a) cátodo: 2H₂O + 2e⁻ → H₂ + 2OH⁻; ânodo: 2H₂O → O₂ + 4H⁺ + 4e⁻; b) E = 530,4 kJ; c) n ≈ 1,36×10⁻² mol; d) ≈1,5 GJ (1.498.380 kJ); e) λ = 835 nm", "evidencia": "resolução, itens a a e", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-7-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "8", "resposta": "a) 15CH₄(g) + 30O₂(g) → 15CO₂(g) + 30H₂O(g), ΔH = −800 kJ/mol CH₄; b) m(CH₄) = 240 g, m(O₂) = 960 g; c) m(CH₄) = 0,64 g; d) m(CH₄) = 200 g", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-8-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "9", "resposta": "a) espécies principais: H⁺, SO₄²⁻, Cu²⁺, K⁺, Cr₂O₇²⁻ (traços: OH⁻, HSO₄⁻, CrO₄²⁻); b) Pt₁ (polo −) atrai Cu²⁺ (azul); Pt₂ (polo +) atrai Cr₂O₇²⁻ (alaranjado); c) Pt₁ = catodo: 2H⁺ + 2e⁻ → H₂; Pt₂ = anodo: 2H₂O → O₂ + 4H⁺ + 4e⁻; d) P₁ = polo −, P₂ = polo +; elétrons de P₁ para P₂; corrente convencional de P₂ para P₁", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-9-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
+        {"questao": "10", "resposta": "a) X = 226; b) Z = 86; c) 3 partículas alfa", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-10-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""}
+      ],
+      "status": "10 de 10 prontas",
+      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+    }
+  ],
+  "pendencias": [
+    "Matemática 2026 Q6: sem resultado separável por item na fonte.",
+    "Física 2026 Q2: item b) sem valores individuais determináveis (a própria fonte só declara a soma); item a) com fórmulas longas, marcado pendente por prudência.",
+    "Física 2026 Q4: a própria fonte considera a questão possivelmente inválida/anulável por premissa inconsistente."
+  ]
+}

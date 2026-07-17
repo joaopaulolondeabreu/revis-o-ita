@@ -35,6 +35,17 @@ Modelo de registro (copiar por entrega):
 - Pendências e lacunas: procedência, fidelidade e autorização não comprovadas em nenhuma fonte; gabaritos oficiais 2002–2007 não localizados
 - Observação de integração: transcrito por Claude (mesmo motivo acima). **Decisão do Claude (líder técnico): recomendação ACEITA** — nada será baixado ou integrado de 2002–2007 por ora; os 6 anos permanecem `pendente` no inventário e no site; Sótão da Química e Só Literatura ficam registrados apenas como referências de descoberta em FONTES.md.
 
+## PACOTE discursivas-2019-2026 (lote 2026) — 2026-07-17 17:50 (America/Sao_Paulo)
+- Preparado e integrado por: Claude (papel único a partir de D15 — Codex descontinuado)
+- Pedido atendido: PEDIDO 3 (início, ano 2026)
+- Estado: CONCLUÍDO
+- Caminho: docs/coordenacao/pacotes/discursivas-2019-2026/pacote.json (item 2026, 3 matérias)
+- Itens: 3 provas (Matemática, Física, Química) / 30 questões / 28 prontas / 2 pendentes
+- Método: páginas do Poliedro para 2026 publicam a resolução como texto HTML na própria página da questão (não há PDF de resolução separado nesse ano). Cada página foi baixada com curl e o texto extraído localmente com Playwright (sem depender de rede no navegador); notação ambígua (frações, radicais) foi conferida por captura de tela adicional antes da transcrição.
+- Pendências: Matemática Q6 (sem resultado separável por item na fonte); Física Q2 (fórmulas longas + item b sem valores individuais, por prudência) e Q4 (a própria fonte do Poliedro recomenda a anulação da questão por premissa inconsistente).
+- Bug corrigido durante a integração: a verificação automática de QR Code falhava para URLs longas (Química 2026) por causa da escala de renderização usada só no teste, não no QR em si — confirmado manualmente que o mesmo PNG decodifica corretamente em escala maior. Corrigido em `integrar_pacote.py` com tentativa em escalas crescentes.
+- Validação: 3/3 PDFs finais montados sem gabarito oficial (provas 100% dissertativas), fidelidade visual das páginas da prova OK, QR decodificado = URL declarada nos 3.
+
 ## PACOTE discursivas-2017-2018 — 2026-07-17 01:10 (America/Sao_Paulo)
 - Pedido atendido: PEDIDO 2
 - Estado: CONCLUÍDO (com pendências documentadas)
