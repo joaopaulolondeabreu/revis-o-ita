@@ -1,270 +1,1234 @@
 {
-  "pacote": "discursivas-2019-2026",
-  "preparado_por": "Claude (assumindo também o papel de preparação, ver DECISOES.md D15)",
-  "data": "2026-07-17",
-  "pedido_atendido": "PEDIDO 3",
-  "metodo": [
-    "Para 2026: as páginas de questão do Poliedro (https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/...) publicam a resolução como texto/HTML diretamente na página de cada questão (bloco '.ck-content' após o enunciado), em vez de um PDF de resolução separado.",
-    "Cada página foi baixada com curl (HTTP 200 confirmado) e o texto do bloco de resolução foi extraído com Playwright (innerText, sem CSS remoto, sem rede no navegador) para leitura.",
-    "Nos casos com fórmulas/frações/radicais potencialmente ambíguos na extração de texto, a página foi adicionalmente renderizada localmente (HTML já baixado, sem depender de rede no Chromium) e capturada em screenshot para conferência visual da notação exata antes da transcrição.",
-    "Transcrito somente o resultado final explicitamente declarado; nenhum desenvolvimento, demonstração ou explicação foi copiado.",
-    "Questões com múltiplos itens (a, b, c...) foram tratadas por item; quando a própria fonte declara que um item não tem resultado determinável isoladamente (ex.: Física 2026 Q2b) ou quando a fonte sinaliza que a questão deveria ser anulada por premissa inconsistente (Física 2026 Q4), o item foi marcado pendente com a razão exata."
-  ],
-  "itens": [
+ "pacote": "discursivas-2019-2026",
+ "preparado_por": "Claude (assumindo também o papel de preparação, ver DECISOES.md D15)",
+ "data": "2026-07-17",
+ "pedido_atendido": "PEDIDO 3",
+ "metodo": [
+  "Para 2026: as páginas de questão do Poliedro (https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/...) publicam a resolução como texto/HTML diretamente na página de cada questão (bloco '.ck-content' após o enunciado), em vez de um PDF de resolução separado.",
+  "Cada página foi baixada com curl (HTTP 200 confirmado) e o texto do bloco de resolução foi extraído com Playwright (innerText, sem CSS remoto, sem rede no navegador) para leitura.",
+  "Nos casos com fórmulas/frações/radicais potencialmente ambíguos na extração de texto, a página foi adicionalmente renderizada localmente (HTML já baixado, sem depender de rede no Chromium) e capturada em screenshot para conferência visual da notação exata antes da transcrição.",
+  "Transcrito somente o resultado final explicitamente declarado; nenhum desenvolvimento, demonstração ou explicação foi copiado.",
+  "Questões com múltiplos itens (a, b, c...) foram tratadas por item; quando a própria fonte declara que um item não tem resultado determinável isoladamente (ex.: Física 2026 Q2b) ou quando a fonte sinaliza que a questão deveria ser anulada por premissa inconsistente (Física 2026 Q4), o item foi marcado pendente com a razão exata.",
+  "Para 2023: mesmo padrão de 2024 — PDFs de resolução baixáveis na seção Downloads (#exam-downloads) das páginas de questão do Poliedro. Cada resolução foi baixada com curl, renderizada página a página em PNG (pypdfium2) e lida VISUALMENTE (não por extração de texto), eliminando o risco de perda silenciosa de símbolos (√, subíndices); trechos com notação densa foram conferidos em zoom adicional."
+ ],
+ "itens": [
+  {
+   "id": "ita-2026-matematica-2fase",
+   "ano": "2026",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Matemática",
+   "pdf_original": "arquivos/originais/ita/2026/matematica_2026_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2026_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2026",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17"
+   },
+   "respostas": [
     {
-      "id": "ita-2026-matematica-2fase",
-      "ano": "2026", "fase": "2ª fase", "dia": "dia 1", "materia": "Matemática",
-      "pdf_original": "arquivos/originais/ita/2026/matematica_2026_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2026_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2026",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "231", "evidencia": "resolução, bloco final ('Total de pontos: ... = 231')", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "n = 15", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-2-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "3", "resposta": "Área(ABCD) = 30", "evidencia": "resolução, ambas as soluções alternativas convergem para 30", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-3-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "S = π(α² + 32α + 528)", "evidencia": "resolução, resultado final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-4-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "5", "resposta": "(22 + 9√6)/16", "evidencia": "resolução, última linha (conferida também por captura de tela)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-5-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "", "evidencia": "resolução conclui apenas que as matrizes descritas não existem, sem separar resultado para os itens a) determinante, b) traço e c) valores de alpha", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-6-matematica-2-fase-dia-1-ita-2026", "status_questao": "pendente", "obs": "Sem resultado separável por item na fonte."},
-        {"questao": "7", "resposta": "Raízes: -1, 1/2, 1+2i, 1-2i", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-7-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "784", "evidencia": "resolução, última linha (conferida também por captura de tela: C(99,2) - 3×49, dividido por 6)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-8-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "a) y = 2√6x − 8 e y = −2√6x − 8; b) T₁ = (−√6, 4) e T₂ = (√6, 4)", "evidencia": "resolução, conclusões dos itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-9-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "a) raios: 2√3 e 6; b) S = 10π − 12√3", "evidencia": "resolução, conclusões dos itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-10-matematica-2-fase-dia-1-ita-2026", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "9 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Único link direto usado para toda a matéria (página tem navegação interna entre as 10 questões)."
+     "questao": "1",
+     "resposta": "231",
+     "evidencia": "resolução, bloco final ('Total de pontos: ... = 231')",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2026-fisica-2fase",
-      "ano": "2026", "fase": "2ª fase", "dia": "dia 3", "materia": "Física",
-      "pdf_original": "arquivos/originais/ita/2026/fisica_2026_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2026_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2026",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a) r = (v²/g)·(cosθ − μsenθ)/(senθ + μcosθ); b) r = (v²/g)·cotgθ; c) r = v²/(μg)", "evidencia": "resolução, resultados finais dos itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "a) N_B e N_A dados por fórmulas em função de M, m, m_c, L, d, a, b, g, θ (ver fonte); b) Fat_A + Fat_B = (m+M+m_c)·g·senθ — a própria fonte declara que não há dados suficientes para separar as duas forças de atrito individualmente", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-2-fisica-2-fase-dia-3-ita-2026", "status_questao": "pendente", "obs": "Fórmulas de N_A/N_B são longas demais para transcrição fiel sem risco de erro de notação; item b) a própria fonte diz que os valores individuais não são determináveis. Marcado pendente por prudência — remeter à fonte."},
-        {"questao": "3", "resposta": "a) P_R = Mgcosθ + Mω²(L−2a)/2; b) θ = arccos(−ω²(L−2a)/(2g)), válido para a < L/2", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-3-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "", "evidencia": "a própria resolução do Poliedro declara: 'a premissa fundamental da questão... não é verdadeira... sugerimos a anulação da questão'", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-4-fisica-2-fase-dia-3-ita-2026", "status_questao": "pendente", "obs": "A fonte considera a própria questão possivelmente inválida/anulável; não há resultado confiável para transcrever."},
-        {"questao": "5", "resposta": "a) W = 70(M₁−M₂)gαL; b) η = (M₁−M₂)gαL / [ρ_H2O·V·c_H2O + (m/M_Cu)·3R + M₁gαL + (m·g·α·L)/2]", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-5-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "a) L = 85 cm; b) G = 16 em módulo (com sinal, G = −16), imagem invertida; c) imagem real, invertida, menor, a 5,2 cm da ocular", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-6-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "a) I_final = I₀·x^(N+1)·cos²ᴺ(φ/N); b) r = √(P / (πI₀·x^(N+1)·cos²ᴺ(φ/N)))", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-7-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "a) P_mín = 35 W; b) Δt = (56/25)π²·10⁻⁶ s", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-8-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "a) d = 600√2 nm; b) y' = 20√14/7 cm", "evidencia": "resolução, itens a e b (conferidos também por captura de tela)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-9-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "a) t_Terra ≈ 12,1 anos; b) t_nave2 = 9,675 anos", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-10-fisica-2-fase-dia-3-ita-2026", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "8 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Questão 4 possivelmente inválida segundo a própria fonte."
+     "questao": "2",
+     "resposta": "n = 15",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-2-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2026-quimica-2fase",
-      "ano": "2026", "fase": "2ª fase", "dia": "dia 2", "materia": "Química",
-      "pdf_original": "arquivos/originais/ita/2026/quimica_2026_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2026_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2026",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a) [ácido]Sol.2 = 0,4 mol/L; b) [ácido]Sol.1 = 2,0 mol/L; c) [base]Sol.3 = 2,1×10⁻² mol/L", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "a) V(O₂) ≈ 0,611 L; b) [H₂O₂] em 5 min ≈ 0,353 mol/L", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-2-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "3", "resposta": "a) Δt ≈ 553,6 s; b) [A⁺]eq = 6,135×10⁻³ mol/L; [B⁻]eq = 1,655×10⁻³ mol/L", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-3-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "a) massa de oxalato = 5,57 g; b) n = 9", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-4-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "5", "resposta": "a) 3 arranjos: [CNS]⁻, [NCS]⁻, [CSN]⁻; b) trigonal planar: BF₃, BH₃ ou SO₃; pirâmide trigonal: NH₃ ou NF₃; c) C₆H₅F; d) ordem crescente de ponto de ebulição: H₂S < CH₃OH < H₂O", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-5-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": "Item c) pede estruturas moleculares desenhadas; publicada apenas a fórmula molecular do produto principal (C₆H₅F), sem o desenho."},
-        {"questao": "6", "resposta": "a) Reação 1: não favorece os produtos; b) Reação 2: não favorece os produtos; c) Reação 3: favorece os produtos", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-6-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "a) cátodo: 2H₂O + 2e⁻ → H₂ + 2OH⁻; ânodo: 2H₂O → O₂ + 4H⁺ + 4e⁻; b) E = 530,4 kJ; c) n ≈ 1,36×10⁻² mol; d) ≈1,5 GJ (1.498.380 kJ); e) λ = 835 nm", "evidencia": "resolução, itens a a e", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-7-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "a) 15CH₄(g) + 30O₂(g) → 15CO₂(g) + 30H₂O(g), ΔH = −800 kJ/mol CH₄; b) m(CH₄) = 240 g, m(O₂) = 960 g; c) m(CH₄) = 0,64 g; d) m(CH₄) = 200 g", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-8-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "a) espécies principais: H⁺, SO₄²⁻, Cu²⁺, K⁺, Cr₂O₇²⁻ (traços: OH⁻, HSO₄⁻, CrO₄²⁻); b) Pt₁ (polo −) atrai Cu²⁺ (azul); Pt₂ (polo +) atrai Cr₂O₇²⁻ (alaranjado); c) Pt₁ = catodo: 2H⁺ + 2e⁻ → H₂; Pt₂ = anodo: 2H₂O → O₂ + 4H⁺ + 4e⁻; d) P₁ = polo −, P₂ = polo +; elétrons de P₁ para P₂; corrente convencional de P₂ para P₁", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-9-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "a) X = 226; b) Z = 86; c) 3 partículas alfa", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-10-quimica-2-fase-dia-2-ita-2026", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "10 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+     "questao": "3",
+     "resposta": "Área(ABCD) = 30",
+     "evidencia": "resolução, ambas as soluções alternativas convergem para 30",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-3-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2025-matematica-2fase",
-      "ano": "2025", "fase": "2ª fase", "dia": "dia 1", "materia": "Matemática",
-      "pdf_original": "arquivos/originais/ita/2025/matematica_2025_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2025_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2025",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a = -1 e b = 3", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "r = √3", "evidencia": "resolução, última linha (conferida por captura de tela)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-2-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "3", "resposta": "sen(α+β) = (√7 + 5)/8", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-3-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "r_A = 15√3", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-4-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "5", "resposta": "5", "evidencia": "resolução, duas soluções alternativas convergem para o primeiro algarismo = 5", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-5-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "n = 6 ou n = 7", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-6-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "a = 3·⁴√2/2 e b = -⁴√8/2, ou a = -3·⁴√2/2 e b = ⁴√8/2", "evidencia": "resolução, conclusão final (conferida por captura de tela ampliada)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-7-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "1013", "evidencia": "resolução, última linha", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-8-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "3840", "evidencia": "resolução, última linha (2⁵·5!)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-9-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "4√3", "evidencia": "resolução, última linha", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-10-matematica-2-fase-dia-1-ita-2025", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "10 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+     "questao": "4",
+     "resposta": "S = π(α² + 32α + 528)",
+     "evidencia": "resolução, resultado final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-4-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2025-fisica-2fase",
-      "ano": "2025", "fase": "2ª fase", "dia": "dia 3", "materia": "Física",
-      "pdf_original": "arquivos/originais/ita/2025/fisica_2025_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2025_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2025",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a) φ₀ = h/(2e); b) R = h/(2π·m_e·β·c)", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "", "evidencia": "resolução apresenta fórmulas longas com potências/somatórios em série geométrica que não puderam ser transcritas com segurança a partir da renderização disponível", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-2-fisica-2-fase-dia-3-ita-2025", "status_questao": "pendente", "obs": "Fórmulas finais (F0, T) complexas demais para transcrição fiel sem risco de erro de notação."},
-        {"questao": "3", "resposta": "", "evidencia": "resolução com fórmulas extensas (N', F) cuja renderização disponível cortou parte do conteúdo à direita", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-3-fisica-2-fase-dia-3-ita-2025", "status_questao": "pendente", "obs": "Notação complexa e captura incompleta; não transcrito por prudência."},
-        {"questao": "4", "resposta": "a) v₁ = m·v·senα / (M·sen(θ+α)); c) M/m = 20", "evidencia": "resolução, itens a e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-4-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": "Item b) (fórmula de δ) não incluído por notação complexa/ambígua; remeter à fonte."},
-        {"questao": "5", "resposta": "a) v_e = v₁·(d₁/d₂)²; b) d₂ = √[(M_v·v₁·d₁²·√(R_T+h)) / ((M_v+m)·√(GM_T) − v₀·√(R_T+h))]", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-5-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "a) K_eq = 2K₁K₂/(K₁+K₂); b) fluxo de calor φ ≈ 136,3 kW; potência do refrigerador de Carnot ≈ 187,4 kW", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-6-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "a) I₁ = I₀ e I₂ = 0; b) I₁ = (I₀/2)(1+cosφ) e I₂ = (I₀/2)(1−cosφ)", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-7-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": "Item c) é pergunta conceitual (interpretação quântica), sem resultado curto separável; não incluído."},
-        {"questao": "8", "resposta": "", "evidencia": "resolução com fórmula final envolvendo radicais e expoentes aninhados de leitura ambígua na renderização disponível", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-8-fisica-2-fase-dia-3-ita-2025", "status_questao": "pendente", "obs": "Notação da fórmula final de ω ambígua; não transcrito por prudência."},
-        {"questao": "9", "resposta": "B = mg(d₂−d₁) / (ℓ·L·(i₂−i₁)); numericamente B ≈ 7×10⁻⁴ T", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-9-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "a) E₁ = 13,6 eV; E₂ = 54,4 eV; E₃ = 870,4 eV; b) v = 3c/5; E₁' = 27,2 eV; variação percentual = 100%", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-10-fisica-2-fase-dia-3-ita-2025", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "7 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Questões 2, 3 e 8 pendentes por complexidade/ambiguidade de notação (fórmulas longas com radicais e expoentes aninhados), não por falta de conteúdo na fonte."
+     "questao": "5",
+     "resposta": "(22 + 9√6)/16",
+     "evidencia": "resolução, última linha (conferida também por captura de tela)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-5-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2025-quimica-2fase",
-      "ano": "2025", "fase": "2ª fase", "dia": "dia 2", "materia": "Química",
-      "pdf_original": "arquivos/originais/ita/2025/quimica_2025_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2025_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2025",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a) fórmula empírica: C₃H₆O; b) M = 58 g/mol, fórmula molecular: C₃H₆O", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": "Item c) pede fórmulas estruturais dos isômeros apresentadas apenas como desenho (imagem), sem texto equivalente; não incluído."},
-        {"questao": "2", "resposta": "a) B_eq = 0,5 mol/L e C_eq = 1 mol/L; b) y = 2 mol; c) B_eq = C_eq = 2 mol/L", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-2-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "3", "resposta": "b) não há transformação do mercúrio, pois ele não vaporiza a 357°C; c) o nível de Hg em B desce; d) o nível de Hg em C sobe", "evidencia": "resolução, itens b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-3-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "a) massa molar média = 18,8 g/mol; b) Q = 1507,96 kJ; c) massa de gás natural = 27,87 g", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-4-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "5", "resposta": "a) Δt ≅ 1513 anos; b) contaminação de madeira nova = 40%", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-5-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "a) equação global balanceada: 2K₂Cr₂O₇ + 3C₂H₅OH + 8H₂SO₄ → 2Cr₂(SO₄)₃ + 2K₂SO₄ + 3CH₃COOH + 11H₂O; b) concentração de etanol na aferição = 0,072 mg/L, superior ao limite de 0,05 mg/L", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-6-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "a) RCOOH + NaHCO₃ → RCOO⁻Na⁺ + H₂O + CO₂; ROH + NaOH → RO⁻Na⁺ + H₂O; RNH₂ + HCl → RNH₃⁺Cl⁻; b) na 1ª etapa extrai-se o ácido carboxílico; na 2ª, o fenol; na 3ª, a amina; o éster permanece isolado na fase etérea", "evidencia": "resolução, itens a e b", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-7-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "a) C+D → A+B, ΔH = −150 kJ/mol; b) ΔH = +100 kJ/mol; c) ΔS ≅ −3 kJ/(K·mol)", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-8-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "", "evidencia": "resolução é inteiramente explicativa (mecanismo de migração iônica e mudança de cor ao longo do tempo), sem resultado numérico ou curto separável", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-9-quimica-2-fase-dia-2-ita-2025", "status_questao": "pendente", "obs": "Questão descritiva sem resultado curto separável."},
-        {"questao": "10", "resposta": "a) catodo: AgCl + e⁻ → Ag + Cl⁻; anodo: 2Cl⁻ → Cl₂ + 2e⁻; b) reação global: 2AgCl(s) → 2Ag(s) + Cl₂(g); c) Δm(anodo) = 0 g; Δm(catodo) = 0,354 g", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-10-quimica-2-fase-dia-2-ita-2025", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "9 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+     "questao": "6",
+     "resposta": "",
+     "evidencia": "resolução conclui apenas que as matrizes descritas não existem, sem separar resultado para os itens a) determinante, b) traço e c) valores de alpha",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-6-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pendente",
+     "obs": "Sem resultado separável por item na fonte."
     },
     {
-      "id": "ita-2024-matematica-2fase",
-      "ano": "2024", "fase": "2ª fase", "dia": "dia 1", "materia": "Matemática",
-      "pdf_original": "arquivos/originais/ita/2024/matematica_2024_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2024_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17",
-        "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 1 - Resoluções - Matemática.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 8589603b6821cd8c"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "n = 4", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "32 caminhos possíveis", "evidencia": "resolução, conclusão final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "3", "resposta": "-4 < x < -1/4 ou 1/4 < x < 4", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "-1 < b < 1", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "5", "resposta": "Raízes: 1+√6i, 1−√6i, 1+√3 e 1−√3", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "AB = 4√161/5", "evidencia": "resolução, resultado final", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "(x − 4 − √6)² + (y − 3 + √6)² = 22 + 8√6", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "Área = 483/64", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "Área = 4√5", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "tg((α+β)/2) = (1+√5)/2; tg((α−β)/2) = √5/5; tg((α−β)/2)/tg((α+β)/2) = (5−√5)/10", "evidencia": "resolução, três resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "10 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Resolução consultada via PDF baixável do Poliedro (padrão igual a 2017/2018), não texto inline como em 2025/2026."
+     "questao": "7",
+     "resposta": "Raízes: -1, 1/2, 1+2i, 1-2i",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-7-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2024-fisica-2fase",
-      "ano": "2024", "fase": "2ª fase", "dia": "dia 2", "materia": "Física",
-      "pdf_original": "arquivos/originais/ita/2024/fisica_2024_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2024_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17",
-        "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 2 - Resoluções.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 7f75d4aa583a0349. Última página do PDF é comentário/proposta de redação do Poliedro — não usada em nenhuma resposta (regra: não copiar comentários)."
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a) N₁ = (M+m)g/3 + Mg√3(2R−L)/(3ℓ), em que ℓ é o lado do triângulo equilátero; b) 2R < L ≤ (1+m/M)·ℓ√3/3 + 2R", "evidencia": "resolução, itens a e b, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "F = Mg√15", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "3", "resposta": "a) T = 2π√(m/k); b) ω = √(2k/m); c) x_A = (qE/4k)[1−cos(√(2k/m)·t)] + (qE/4m)t²; x_B = ℓ₀ + (qE/4k)[cos(√(2k/m)·t)−1] + (qE/4m)t²", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "", "evidencia": "a resolução apresenta DUAS soluções ('Resolução' e 'Resolução alternativa') que chegam a fórmulas diferentes (com fator 2 de diferença) para h e Δh — divergência da própria fonte", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pendente", "obs": "Divergência entre duas resoluções alternativas apresentadas pela própria fonte; não escolhido qual está correta."},
-        {"questao": "5", "resposta": "W = C_p·(T₁−T₂)²/T₂", "evidencia": "resolução, mesmo resultado obtido nos dois casos considerados (T₁>T₂ e T₂>T₁)", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "a) distância entre as estrelas d ≈ 7,4×10¹⁰ m; b) massa da estrela de maior velocidade (m) ≈ 15×10³¹ kg; massa da estrela de menor velocidade (M) ≈ 7,5×10³¹ kg", "evidencia": "resolução, itens a e b, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": "Rotulagem das massas (M e m) conforme aparece na fonte; conferir contexto na fonte em caso de dúvida."},
-        {"questao": "7", "resposta": "r_n = √{[(n−1)λ/2 + √(r₁²+f²)]² − f²}", "evidencia": "resolução, mesma fórmula final obtida para n par e n ímpar", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "a) E_p = (1/(πε₀a))·[q₁²/2·(1+1/(2√2)) + q₂²/2·(1/2+√2) + 2q₁q₂·(1+1/√5)]; b) q₁/q₂ = −16(25+2√5) / (25(4+√2))", "evidencia": "resolução, itens a e b, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "9", "resposta": "a) ε = 46,25 V; r = 0,625 Ω; b) i₂ = i₅ ≈ 8 A; i₁₀ ≈ 4,35 A; c) para V < 42,5 V, P = 8·V (reta crescente); para V > 42,5 V, P = (46,25−V)V/0,625 (parábola com concavidade para baixo)", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "r₂/r₁ = raiz quadrada de { [(1+2K/(m₀c²))² − 1] / [(1+K/(m₀c²))² − 1] }", "evidencia": "resolução, resultado final destacado em caixa", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "9 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. O PDF de resolução do Poliedro inclui, na última página, um comentário sobre a proposta de redação de 2024 — não utilizado (redação tratada separadamente, sem resposta única)."
+     "questao": "8",
+     "resposta": "784",
+     "evidencia": "resolução, última linha (conferida também por captura de tela: C(99,2) - 3×49, dividido por 6)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-8-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     },
     {
-      "id": "ita-2024-quimica-2fase",
-      "ano": "2024", "fase": "2ª fase", "dia": "dia 1", "materia": "Química",
-      "pdf_original": "arquivos/originais/ita/2024/quimica_2024_2f.pdf",
-      "gabarito_oficial": null,
-      "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
-      "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2024_2f.pdf",
-      "poliedro": {
-        "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
-        "http_status_verificado": 200,
-        "verificado_em": "2026-07-17",
-        "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 1 - Resoluções - Química.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): cfbf3ea89be2172e"
-      },
-      "respostas": [
-        {"questao": "1", "resposta": "a) Naftaleno; b) Ácido etanoico; c) D₂O; d) CSe₂; e) 4-hidroxibenzoato de metila", "evidencia": "resolução, conclusão de cada item (a-e); justificativas explicativas não transcritas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "2", "resposta": "", "evidencia": "resolução apresentada inteiramente como fórmulas estruturais desenhadas, sem equações em texto", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pendente", "obs": "Resposta apenas em desenho estrutural; sem texto equivalente para transcrever com segurança."},
-        {"questao": "3", "resposta": "a) X(A) = 1/11; X(água) = 10/11; b) fração molar da água na fase vapor = 1; c) P = 21,64 Torr; d) o volume de líquido no béquer I aumenta em relação ao inicial", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "4", "resposta": "a) catodo (redução): 4e⁻ + 2H₂O + 2Ag₂O(s) → 4Ag(s) + 4OH⁻(aq); anodo (oxidação): Nb(s) + 2H₂O(l) → NbO₂(s) + 4H⁺(aq) + 4e⁻; b) reação global: Nb(s) + 2Ag₂O(s) + 4H₂O(l) → NbO₂(s) + 4Ag(s) + 4H⁺(aq) + 4OH⁻(aq); c) força eletromotriz ΔE° = +1,032 V", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "5", "resposta": "a) ordem em relação a A = 2; b) ordem em relação a B = 1; c) ordem global = 3; d) k(400K) = 0,1 L²·mol⁻²·min⁻¹; e) k(500K) = 1 L²·mol⁻²·min⁻¹; f) energia de ativação ≅ 9,11 kcal/mol", "evidencia": "resolução, itens a a f, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "6", "resposta": "a) CO₂(g) ⇌ CO₂(aq) [K_h]; CO₂(aq) ⇌ H⁺(aq) + HCO₃⁻(aq) [K_a1]; b) pH = −(1/2)·log(K_h·K_a1·P_CO2); c) ΔpH (pH_II − pH_I) = −0,15", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "7", "resposta": "a) zinco consumido = 0,01 mol; b) cloreto na solução inicial = 0,020 mol; c) NaCl ≅ 0,010 mol e KCl ≅ 0,010 mol", "evidencia": "resolução, itens a, b e c, resultados destacados em caixas", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "8", "resposta": "", "evidencia": "resolução apresentada inteiramente como fórmulas estruturais desenhadas, sem equações em texto", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pendente", "obs": "Resposta apenas em desenho estrutural; sem texto equivalente para transcrever com segurança."},
-        {"questao": "9", "resposta": "a) o rendimento é o limitante da operação (não a temperatura); b) T = 420 K; c) rendimento = 24,41%; d) sim, k(vtotal) a 420 K ≈ 10,44 s⁻¹, que supera 10 s⁻¹", "evidencia": "resolução, itens a, b, c e d", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""},
-        {"questao": "10", "resposta": "a) Z = 8 (oxigênio), Z−2 = 6 (carbono), Z−3 = 5 (boro); b) C(grafite) + O₂(g) → CO₂(g); c) 4B(s) + 3O₂(g) → 2B₂O₃(s)", "evidencia": "resolução, itens a, b e c", "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads", "status_questao": "pronto", "obs": ""}
-      ],
-      "status": "8 de 10 prontas",
-      "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Questões 2 e 8 pendentes por serem inteiramente respondidas com estruturas químicas desenhadas, sem equivalente textual."
+     "questao": "9",
+     "resposta": "a) y = 2√6x − 8 e y = −2√6x − 8; b) T₁ = (−√6, 4) e T₂ = (√6, 4)",
+     "evidencia": "resolução, conclusões dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-9-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) raios: 2√3 e 6; b) S = 10π − 12√3",
+     "evidencia": "resolução, conclusões dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-1-28-10-2025-2-fase-dia-1/dissertativa-10-matematica-2-fase-dia-1-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
     }
-  ],
-  "pendencias": [
-    "Matemática 2026 Q6: sem resultado separável por item na fonte.",
-    "Física 2026 Q2: item b) sem valores individuais determináveis (a própria fonte só declara a soma); item a) com fórmulas longas, marcado pendente por prudência.",
-    "Física 2026 Q4: a própria fonte considera a questão possivelmente inválida/anulável por premissa inconsistente.",
-    "Física 2025 Q2, Q3, Q8: fórmulas finais complexas (radicais/expoentes aninhados, somatórios) não transcritas com segurança a partir da renderização disponível.",
-    "Química 2025 Q9: questão inteiramente descritiva, sem resultado curto separável.",
-    "Física 2024 Q4: a fonte apresenta duas resoluções alternativas com fórmulas divergentes (fator 2) — não escolhido qual está correta.",
-    "Química 2024 Q2 e Q8: respostas inteiramente em desenho estrutural, sem equivalente textual transcritível."
-  ]
+   ],
+   "status": "9 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Único link direto usado para toda a matéria (página tem navegação interna entre as 10 questões)."
+  },
+  {
+   "id": "ita-2026-fisica-2fase",
+   "ano": "2026",
+   "fase": "2ª fase",
+   "dia": "dia 3",
+   "materia": "Física",
+   "pdf_original": "arquivos/originais/ita/2026/fisica_2026_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2026_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2026",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) r = (v²/g)·(cosθ − μsenθ)/(senθ + μcosθ); b) r = (v²/g)·cotgθ; c) r = v²/(μg)",
+     "evidencia": "resolução, resultados finais dos itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "a) N_B e N_A dados por fórmulas em função de M, m, m_c, L, d, a, b, g, θ (ver fonte); b) Fat_A + Fat_B = (m+M+m_c)·g·senθ — a própria fonte declara que não há dados suficientes para separar as duas forças de atrito individualmente",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-2-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pendente",
+     "obs": "Fórmulas de N_A/N_B são longas demais para transcrição fiel sem risco de erro de notação; item b) a própria fonte diz que os valores individuais não são determináveis. Marcado pendente por prudência — remeter à fonte."
+    },
+    {
+     "questao": "3",
+     "resposta": "a) P_R = Mgcosθ + Mω²(L−2a)/2; b) θ = arccos(−ω²(L−2a)/(2g)), válido para a < L/2",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-3-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "",
+     "evidencia": "a própria resolução do Poliedro declara: 'a premissa fundamental da questão... não é verdadeira... sugerimos a anulação da questão'",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-4-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pendente",
+     "obs": "A fonte considera a própria questão possivelmente inválida/anulável; não há resultado confiável para transcrever."
+    },
+    {
+     "questao": "5",
+     "resposta": "a) W = 70(M₁−M₂)gαL; b) η = (M₁−M₂)gαL / [ρ_H2O·V·c_H2O + (m/M_Cu)·3R + M₁gαL + (m·g·α·L)/2]",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-5-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) L = 85 cm; b) G = 16 em módulo (com sinal, G = −16), imagem invertida; c) imagem real, invertida, menor, a 5,2 cm da ocular",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-6-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) I_final = I₀·x^(N+1)·cos²ᴺ(φ/N); b) r = √(P / (πI₀·x^(N+1)·cos²ᴺ(φ/N)))",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-7-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) P_mín = 35 W; b) Δt = (56/25)π²·10⁻⁶ s",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-8-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "a) d = 600√2 nm; b) y' = 20√14/7 cm",
+     "evidencia": "resolução, itens a e b (conferidos também por captura de tela)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-9-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) t_Terra ≈ 12,1 anos; b) t_nave2 = 9,675 anos",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-3-30-10-2025-2-fase-dia-3/dissertativa-10-fisica-2-fase-dia-3-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "8 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Questão 4 possivelmente inválida segundo a própria fonte."
+  },
+  {
+   "id": "ita-2026-quimica-2fase",
+   "ano": "2026",
+   "fase": "2ª fase",
+   "dia": "dia 2",
+   "materia": "Química",
+   "pdf_original": "arquivos/originais/ita/2026/quimica_2026_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2026_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2026",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) [ácido]Sol.2 = 0,4 mol/L; b) [ácido]Sol.1 = 2,0 mol/L; c) [base]Sol.3 = 2,1×10⁻² mol/L",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "a) V(O₂) ≈ 0,611 L; b) [H₂O₂] em 5 min ≈ 0,353 mol/L",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-2-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "a) Δt ≈ 553,6 s; b) [A⁺]eq = 6,135×10⁻³ mol/L; [B⁻]eq = 1,655×10⁻³ mol/L",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-3-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "a) massa de oxalato = 5,57 g; b) n = 9",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-4-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) 3 arranjos: [CNS]⁻, [NCS]⁻, [CSN]⁻; b) trigonal planar: BF₃, BH₃ ou SO₃; pirâmide trigonal: NH₃ ou NF₃; c) C₆H₅F; d) ordem crescente de ponto de ebulição: H₂S < CH₃OH < H₂O",
+     "evidencia": "resolução, itens a, b, c e d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-5-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": "Item c) pede estruturas moleculares desenhadas; publicada apenas a fórmula molecular do produto principal (C₆H₅F), sem o desenho."
+    },
+    {
+     "questao": "6",
+     "resposta": "a) Reação 1: não favorece os produtos; b) Reação 2: não favorece os produtos; c) Reação 3: favorece os produtos",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-6-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) cátodo: 2H₂O + 2e⁻ → H₂ + 2OH⁻; ânodo: 2H₂O → O₂ + 4H⁺ + 4e⁻; b) E = 530,4 kJ; c) n ≈ 1,36×10⁻² mol; d) ≈1,5 GJ (1.498.380 kJ); e) λ = 835 nm",
+     "evidencia": "resolução, itens a a e",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-7-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) 15CH₄(g) + 30O₂(g) → 15CO₂(g) + 30H₂O(g), ΔH = −800 kJ/mol CH₄; b) m(CH₄) = 240 g, m(O₂) = 960 g; c) m(CH₄) = 0,64 g; d) m(CH₄) = 200 g",
+     "evidencia": "resolução, itens a, b, c e d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-8-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "a) espécies principais: H⁺, SO₄²⁻, Cu²⁺, K⁺, Cr₂O₇²⁻ (traços: OH⁻, HSO₄⁻, CrO₄²⁻); b) Pt₁ (polo −) atrai Cu²⁺ (azul); Pt₂ (polo +) atrai Cr₂O₇²⁻ (alaranjado); c) Pt₁ = catodo: 2H⁺ + 2e⁻ → H₂; Pt₂ = anodo: 2H₂O → O₂ + 4H⁺ + 4e⁻; d) P₁ = polo −, P₂ = polo +; elétrons de P₁ para P₂; corrente convencional de P₂ para P₁",
+     "evidencia": "resolução, itens a, b, c e d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-9-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) X = 226; b) Z = 86; c) 3 partículas alfa",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2026/ita-2-fase-dia-2-29-10-2025-2-fase-dia-2/dissertativa-10-quimica-2-fase-dia-2-ita-2026",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+  },
+  {
+   "id": "ita-2025-matematica-2fase",
+   "ano": "2025",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Matemática",
+   "pdf_original": "arquivos/originais/ita/2025/matematica_2025_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2025_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2025",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a = -1 e b = 3",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "r = √3",
+     "evidencia": "resolução, última linha (conferida por captura de tela)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-2-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "sen(α+β) = (√7 + 5)/8",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-3-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "r_A = 15√3",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-4-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "5",
+     "evidencia": "resolução, duas soluções alternativas convergem para o primeiro algarismo = 5",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-5-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "n = 6 ou n = 7",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-6-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a = 3·⁴√2/2 e b = -⁴√8/2, ou a = -3·⁴√2/2 e b = ⁴√8/2",
+     "evidencia": "resolução, conclusão final (conferida por captura de tela ampliada)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-7-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "1013",
+     "evidencia": "resolução, última linha",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-8-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "3840",
+     "evidencia": "resolução, última linha (2⁵·5!)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-9-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "4√3",
+     "evidencia": "resolução, última linha",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-1-matematica-05-11-2024-2-fase-dia-1/dissertativa-10-matematica-2-fase-dia-1-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+  },
+  {
+   "id": "ita-2025-fisica-2fase",
+   "ano": "2025",
+   "fase": "2ª fase",
+   "dia": "dia 3",
+   "materia": "Física",
+   "pdf_original": "arquivos/originais/ita/2025/fisica_2025_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2025_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2025",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) φ₀ = h/(2e); b) R = h/(2π·m_e·β·c)",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-1-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "",
+     "evidencia": "resolução apresenta fórmulas longas com potências/somatórios em série geométrica que não puderam ser transcritas com segurança a partir da renderização disponível",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-2-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pendente",
+     "obs": "Fórmulas finais (F0, T) complexas demais para transcrição fiel sem risco de erro de notação."
+    },
+    {
+     "questao": "3",
+     "resposta": "",
+     "evidencia": "resolução com fórmulas extensas (N', F) cuja renderização disponível cortou parte do conteúdo à direita",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-3-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pendente",
+     "obs": "Notação complexa e captura incompleta; não transcrito por prudência."
+    },
+    {
+     "questao": "4",
+     "resposta": "a) v₁ = m·v·senα / (M·sen(θ+α)); c) M/m = 20",
+     "evidencia": "resolução, itens a e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-4-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": "Item b) (fórmula de δ) não incluído por notação complexa/ambígua; remeter à fonte."
+    },
+    {
+     "questao": "5",
+     "resposta": "a) v_e = v₁·(d₁/d₂)²; b) d₂ = √[(M_v·v₁·d₁²·√(R_T+h)) / ((M_v+m)·√(GM_T) − v₀·√(R_T+h))]",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-5-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) K_eq = 2K₁K₂/(K₁+K₂); b) fluxo de calor φ ≈ 136,3 kW; potência do refrigerador de Carnot ≈ 187,4 kW",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-6-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) I₁ = I₀ e I₂ = 0; b) I₁ = (I₀/2)(1+cosφ) e I₂ = (I₀/2)(1−cosφ)",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-7-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": "Item c) é pergunta conceitual (interpretação quântica), sem resultado curto separável; não incluído."
+    },
+    {
+     "questao": "8",
+     "resposta": "",
+     "evidencia": "resolução com fórmula final envolvendo radicais e expoentes aninhados de leitura ambígua na renderização disponível",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-8-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pendente",
+     "obs": "Notação da fórmula final de ω ambígua; não transcrito por prudência."
+    },
+    {
+     "questao": "9",
+     "resposta": "B = mg(d₂−d₁) / (ℓ·L·(i₂−i₁)); numericamente B ≈ 7×10⁻⁴ T",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-9-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) E₁ = 13,6 eV; E₂ = 54,4 eV; E₃ = 870,4 eV; b) v = 3c/5; E₁' = 27,2 eV; variação percentual = 100%",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-3-fisica-07-11-2024-2-fase-dia-3/dissertativa-10-fisica-2-fase-dia-3-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "7 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial. Questões 2, 3 e 8 pendentes por complexidade/ambiguidade de notação (fórmulas longas com radicais e expoentes aninhados), não por falta de conteúdo na fonte."
+  },
+  {
+   "id": "ita-2025-quimica-2fase",
+   "ano": "2025",
+   "fase": "2ª fase",
+   "dia": "dia 2",
+   "materia": "Química",
+   "pdf_original": "arquivos/originais/ita/2025/quimica_2025_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2025_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2025",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) fórmula empírica: C₃H₆O; b) M = 58 g/mol, fórmula molecular: C₃H₆O",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-1-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": "Item c) pede fórmulas estruturais dos isômeros apresentadas apenas como desenho (imagem), sem texto equivalente; não incluído."
+    },
+    {
+     "questao": "2",
+     "resposta": "a) B_eq = 0,5 mol/L e C_eq = 1 mol/L; b) y = 2 mol; c) B_eq = C_eq = 2 mol/L",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-2-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "b) não há transformação do mercúrio, pois ele não vaporiza a 357°C; c) o nível de Hg em B desce; d) o nível de Hg em C sobe",
+     "evidencia": "resolução, itens b, c e d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-3-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "a) massa molar média = 18,8 g/mol; b) Q = 1507,96 kJ; c) massa de gás natural = 27,87 g",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-4-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) Δt ≅ 1513 anos; b) contaminação de madeira nova = 40%",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-5-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) equação global balanceada: 2K₂Cr₂O₇ + 3C₂H₅OH + 8H₂SO₄ → 2Cr₂(SO₄)₃ + 2K₂SO₄ + 3CH₃COOH + 11H₂O; b) concentração de etanol na aferição = 0,072 mg/L, superior ao limite de 0,05 mg/L",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-6-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) RCOOH + NaHCO₃ → RCOO⁻Na⁺ + H₂O + CO₂; ROH + NaOH → RO⁻Na⁺ + H₂O; RNH₂ + HCl → RNH₃⁺Cl⁻; b) na 1ª etapa extrai-se o ácido carboxílico; na 2ª, o fenol; na 3ª, a amina; o éster permanece isolado na fase etérea",
+     "evidencia": "resolução, itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-7-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) C+D → A+B, ΔH = −150 kJ/mol; b) ΔH = +100 kJ/mol; c) ΔS ≅ −3 kJ/(K·mol)",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-8-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "",
+     "evidencia": "resolução é inteiramente explicativa (mecanismo de migração iônica e mudança de cor ao longo do tempo), sem resultado numérico ou curto separável",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-9-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pendente",
+     "obs": "Questão descritiva sem resultado curto separável."
+    },
+    {
+     "questao": "10",
+     "resposta": "a) catodo: AgCl + e⁻ → Ag + Cl⁻; anodo: 2Cl⁻ → Cl₂ + 2e⁻; b) reação global: 2AgCl(s) → 2Ag(s) + Cl₂(g); c) Δm(anodo) = 0 g; Δm(catodo) = 0,354 g",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2025/ita-2-fase-dia-2-quimica-06-11-2024-2-fase-dia-2/dissertativa-10-quimica-2-fase-dia-2-ita-2025",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "9 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial."
+  },
+  {
+   "id": "ita-2024-matematica-2fase",
+   "ano": "2024",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Matemática",
+   "pdf_original": "arquivos/originais/ita/2024/matematica_2024_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2024_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 1 - Resoluções - Matemática.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 8589603b6821cd8c"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "n = 4",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "32 caminhos possíveis",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "-4 < x < -1/4 ou 1/4 < x < 4",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "-1 < b < 1",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "Raízes: 1+√6i, 1−√6i, 1+√3 e 1−√3",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "AB = 4√161/5",
+     "evidencia": "resolução, resultado final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "(x − 4 − √6)² + (y − 3 + √6)² = 22 + 8√6",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "Área = 483/64",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "Área = 4√5",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "tg((α+β)/2) = (1+√5)/2; tg((α−β)/2) = √5/5; tg((α−β)/2)/tg((α+β)/2) = (5−√5)/10",
+     "evidencia": "resolução, três resultados destacados em caixas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Resolução consultada via PDF baixável do Poliedro (padrão igual a 2017/2018), não texto inline como em 2025/2026."
+  },
+  {
+   "id": "ita-2024-fisica-2fase",
+   "ano": "2024",
+   "fase": "2ª fase",
+   "dia": "dia 2",
+   "materia": "Física",
+   "pdf_original": "arquivos/originais/ita/2024/fisica_2024_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2024_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 2 - Resoluções.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 7f75d4aa583a0349. Última página do PDF é comentário/proposta de redação do Poliedro — não usada em nenhuma resposta (regra: não copiar comentários)."
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) N₁ = (M+m)g/3 + Mg√3(2R−L)/(3ℓ), em que ℓ é o lado do triângulo equilátero; b) 2R < L ≤ (1+m/M)·ℓ√3/3 + 2R",
+     "evidencia": "resolução, itens a e b, resultados destacados em caixas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "F = Mg√15",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "a) T = 2π√(m/k); b) ω = √(2k/m); c) x_A = (qE/4k)[1−cos(√(2k/m)·t)] + (qE/4m)t²; x_B = ℓ₀ + (qE/4k)[cos(√(2k/m)·t)−1] + (qE/4m)t²",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "",
+     "evidencia": "a resolução apresenta DUAS soluções ('Resolução' e 'Resolução alternativa') que chegam a fórmulas diferentes (com fator 2 de diferença) para h e Δh — divergência da própria fonte",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pendente",
+     "obs": "Divergência entre duas resoluções alternativas apresentadas pela própria fonte; não escolhido qual está correta."
+    },
+    {
+     "questao": "5",
+     "resposta": "W = C_p·(T₁−T₂)²/T₂",
+     "evidencia": "resolução, mesmo resultado obtido nos dois casos considerados (T₁>T₂ e T₂>T₁)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) distância entre as estrelas d ≈ 7,4×10¹⁰ m; b) massa da estrela de maior velocidade (m) ≈ 15×10³¹ kg; massa da estrela de menor velocidade (M) ≈ 7,5×10³¹ kg",
+     "evidencia": "resolução, itens a e b, resultados destacados em caixas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "Rotulagem das massas (M e m) conforme aparece na fonte; conferir contexto na fonte em caso de dúvida."
+    },
+    {
+     "questao": "7",
+     "resposta": "r_n = √{[(n−1)λ/2 + √(r₁²+f²)]² − f²}",
+     "evidencia": "resolução, mesma fórmula final obtida para n par e n ímpar",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) E_p = (1/(πε₀a))·[q₁²/2·(1+1/(2√2)) + q₂²/2·(1/2+√2) + 2q₁q₂·(1+1/√5)]; b) q₁/q₂ = −16(25+2√5) / (25(4+√2))",
+     "evidencia": "resolução, itens a e b, resultados destacados em caixas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "a) ε = 46,25 V; r = 0,625 Ω; b) i₂ = i₅ ≈ 8 A; i₁₀ ≈ 4,35 A; c) para V < 42,5 V, P = 8·V (reta crescente); para V > 42,5 V, P = (46,25−V)V/0,625 (parábola com concavidade para baixo)",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "r₂/r₁ = raiz quadrada de { [(1+2K/(m₀c²))² − 1] / [(1+K/(m₀c²))² − 1] }",
+     "evidencia": "resolução, resultado final destacado em caixa",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-02-08-11-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "9 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. O PDF de resolução do Poliedro inclui, na última página, um comentário sobre a proposta de redação de 2024 — não utilizado (redação tratada separadamente, sem resposta única)."
+  },
+  {
+   "id": "ita-2024-quimica-2fase",
+   "ano": "2024",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Química",
+   "pdf_original": "arquivos/originais/ita/2024/quimica_2024_2f.pdf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2024_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2024 - 2ª Fase Dia 1 - Resoluções - Química.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): cfbf3ea89be2172e"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) Naftaleno; b) Ácido etanoico; c) D₂O; d) CSe₂; e) 4-hidroxibenzoato de metila",
+     "evidencia": "resolução, conclusão de cada item (a-e); justificativas explicativas não transcritas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "",
+     "evidencia": "resolução apresentada inteiramente como fórmulas estruturais desenhadas, sem equações em texto",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pendente",
+     "obs": "Resposta apenas em desenho estrutural; sem texto equivalente para transcrever com segurança."
+    },
+    {
+     "questao": "3",
+     "resposta": "a) X(A) = 1/11; X(água) = 10/11; b) fração molar da água na fase vapor = 1; c) P = 21,64 Torr; d) o volume de líquido no béquer I aumenta em relação ao inicial",
+     "evidencia": "resolução, itens a, b, c e d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "a) catodo (redução): 4e⁻ + 2H₂O + 2Ag₂O(s) → 4Ag(s) + 4OH⁻(aq); anodo (oxidação): Nb(s) + 2H₂O(l) → NbO₂(s) + 4H⁺(aq) + 4e⁻; b) reação global: Nb(s) + 2Ag₂O(s) + 4H₂O(l) → NbO₂(s) + 4Ag(s) + 4H⁺(aq) + 4OH⁻(aq); c) força eletromotriz ΔE° = +1,032 V",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) ordem em relação a A = 2; b) ordem em relação a B = 1; c) ordem global = 3; d) k(400K) = 0,1 L²·mol⁻²·min⁻¹; e) k(500K) = 1 L²·mol⁻²·min⁻¹; f) energia de ativação ≅ 9,11 kcal/mol",
+     "evidencia": "resolução, itens a a f, resultados destacados em caixas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) CO₂(g) ⇌ CO₂(aq) [K_h]; CO₂(aq) ⇌ H⁺(aq) + HCO₃⁻(aq) [K_a1]; b) pH = −(1/2)·log(K_h·K_a1·P_CO2); c) ΔpH (pH_II − pH_I) = −0,15",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) zinco consumido = 0,01 mol; b) cloreto na solução inicial = 0,020 mol; c) NaCl ≅ 0,010 mol e KCl ≅ 0,010 mol",
+     "evidencia": "resolução, itens a, b e c, resultados destacados em caixas",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "",
+     "evidencia": "resolução apresentada inteiramente como fórmulas estruturais desenhadas, sem equações em texto",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pendente",
+     "obs": "Resposta apenas em desenho estrutural; sem texto equivalente para transcrever com segurança."
+    },
+    {
+     "questao": "9",
+     "resposta": "a) o rendimento é o limitante da operação (não a temperatura); b) T = 420 K; c) rendimento = 24,41%; d) sim, k(vtotal) a 420 K ≈ 10,44 s⁻¹, que supera 10 s⁻¹",
+     "evidencia": "resolução, itens a, b, c e d",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) Z = 8 (oxigênio), Z−2 = 6 (carbono), Z−3 = 5 (boro); b) C(grafite) + O₂(g) → CO₂(g); c) 4B(s) + 3O₂(g) → 2B₂O₃(s)",
+     "evidencia": "resolução, itens a, b e c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2024/ita-2-fase-dia-1-05-11-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2024#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "8 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Questões 2 e 8 pendentes por serem inteiramente respondidas com estruturas químicas desenhadas, sem equivalente textual."
+  },
+  {
+   "id": "ita-2023-matematica-2fase",
+   "ano": "2023",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Matemática",
+   "pdf_original": "arquivos/originais/ita/2023/matematica_2023_2f.pdf",
+   "sha256_original": "6aa2b63d4af0949c91e54f2f1eb3c9953df12e47ea3a2d5b61dbee13854e13eb",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/matematica_2023_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2023 - 2ª Fase - Dia 1 - Resoluções - Matemática.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): be33a86e0c"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "b = 2a. Para a = 1/2 (logo b = 1), o conjunto solução é S = {(−15α/17, −16α/17, α), com α ∈ ℝ}",
+     "evidencia": "resolução, conclusão (determinante nulo → b = 2a; sistema escalonado)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "α ∈ ℝ − {3 − √15; 0; 2; 3 + √15}",
+     "evidencia": "resolução, conclusão final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "S = ]−2, 0[ ∪ ]0, 1[",
+     "evidencia": "resolução, conjunto-solução final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "Resto da divisão: 0; quociente: x⁶ + x⁵ − x − 1. Raízes complexas de p(x): x = cis(π/5), cis(3π/5), cis(7π/5) e cis(9π/5)",
+     "evidencia": "resolução, conclusões dos dois pedidos",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "sen(α − β) = 2AB/(A² + B²)",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "r = (6√7 − 3√3)/10",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "P = (−4√2/3, 1/3), Q = (4√2/3, 1/3), R = (4√2/3, −1/3) e S = (−4√2/3, −1/3)",
+     "evidencia": "resolução, conclusão final (interseção da elipse com os arcos capazes)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "Área da superfície lateral do cilindro: 400π cm²; volume da esfera: 4000π/3 cm³",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "Os outros dois lados medem 6 + √11 e 6 − √11",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "175",
+     "evidencia": "resolução, resultado final em destaque (595 − 210 − 210)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-matematica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Todas as respostas com resultado final separável."
+  },
+  {
+   "id": "ita-2023-quimica-2fase",
+   "ano": "2023",
+   "fase": "2ª fase",
+   "dia": "dia 1",
+   "materia": "Química",
+   "pdf_original": "arquivos/originais/ita/2023/quimica_2023_2f.pdf",
+   "sha256_original": "68749aa6c059d327c9cd205cb1f578f0dd74f9a819dd58e08a1abcc6e21c9192",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/quimica_2023_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2023 - 2ª Fase - Dia 1 - Resoluções - Quimica.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): c1a69fa199"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) Pressão de vapor de A puro: P°A = 80 torr; b) pressão de vapor da solução: P = 50 torr; c) fase vapor com 80% de A e 20% de B (frações molares 0,8 e 0,2)",
+     "evidencia": "resolução, resultados finais em destaque nos itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "a) Formiato de sódio, Na⁺[HCOO]⁻; b) CO + NaOH → Na⁺HCOO⁻; c) Na⁺HCOO⁻ + H₂SO₄ → HCOOH + NaHSO₄",
+     "evidencia": "resolução, itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "a fonte apresenta a fórmula estrutural desenhada; transcrição textual equivalente (fórmula do sal e equações moleculares)"
+    },
+    {
+     "questao": "3",
+     "resposta": "Aquecimento em 5 etapas: Q₁ = 0,5 kJ (aquecimento dos sólidos de −10 °C a 0 °C), Q₂ = 1 kJ (fusão de A a 0 °C), Q₃ = 0,7 kJ (aquecimento de 0 °C a 10 °C), Q₄ = 2 kJ (fusão de B a 10 °C), Q₅ = 1,5 kJ (aquecimento de 10 °C a 20 °C); total 5,7 kJ. O gráfico é uma linha crescente com patamares horizontais a 0 °C (entre 0,5 e 1,5 kJ) e a 10 °C (entre 2,2 e 4,2 kJ), atingindo 20 °C em 5,7 kJ",
+     "evidencia": "resolução, valores por etapa e gráfico final",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "a resposta pedida é um gráfico; transcritos os valores numéricos de cada etapa e a descrição da curva"
+    },
+    {
+     "questao": "4",
+     "resposta": "a) Solução 1: AC(s) se forma primeiro; solução 2: BC(s) se forma primeiro. b) Solução 1: [A⁺] = 10⁻² mol/L; solução 2: [B⁺] = 5·10⁻⁴ mol/L",
+     "evidencia": "resolução, conclusões dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) Composição em massa: ≈28% de óxido (MO) e ≈72% de carbonato (MCO₃). b) Concentração do sal formado: [MCl₂] = 0,15 mol/L",
+     "evidencia": "resolução, resultados finais dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "a) n = 200. b) rₙ = 2,12·10⁻⁶ m. c) v₁/vₙ = 200",
+     "evidencia": "resolução, resultados finais em destaque nos itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) d = 2,3·10¹⁷ kg/m³. b) R_Mg/R_Os = 1/2. c) d = 2,3·10¹⁷ kg/m³ — as densidades nucleares do Sg-271 e do Cu-63 são iguais, pois a densidade nuclear independe do número de massa",
+     "evidencia": "resolução, resultados finais em destaque nos itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) A = CaO; B = CO₂; C = Ca²⁺; D = OH⁻; E = Mg(OH)₂; F = MgCl₂. Equações: CaCO₃(s) --Δ--> CaO(s) + CO₂(g); CaO(s) + H₂O(l) → Ca(OH)₂(aq); Ca(OH)₂(aq) → Ca²⁺(aq) + 2 OH⁻(aq); Mg²⁺(aq) + 2 OH⁻(aq) → Mg(OH)₂(s); Mg(OH)₂(s) + 2 HCl(aq) → MgCl₂(aq) + 2 H₂O(l); MgCl₂(aq) --Δ--> MgCl₂(s). b) Ânodo (oxidação): 2 Cl⁻ → Cl₂ + 2 e⁻; cátodo (redução): Mg²⁺ + 2 e⁻ → Mg; reação global: MgCl₂(l) → Mg(l) + Cl₂(g)",
+     "evidencia": "resolução, itens a e b completos",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "I) ácido etanoico (CH₃COOH) + metanol; II) etanoato de sódio (CH₃COONa) + metanol; III) etanamida (CH₃CONH₂) + metanol; IV) etanol (CH₃CH₂OH) + metanol",
+     "evidencia": "resolução, produtos das quatro reações",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "a fonte apresenta as estruturas desenhadas; transcrição textual equivalente (nomes e fórmulas dos produtos)"
+    },
+    {
+     "questao": "10",
+     "resposta": "a) Os seis isômeros: but-1-eno, cis-but-2-eno, trans-but-2-eno, metilpropeno (isobuteno), ciclobutano e metilciclopropano. b) Produtos dibromados: but-1-eno → 1,2-dibromobutano; cis-but-2-eno e trans-but-2-eno → 2,3-dibromobutano; metilpropeno → 1,2-dibromo-2-metilpropano; ciclobutano → 1,4-dibromobutano; metilciclopropano → 1,3-dibromobutano",
+     "evidencia": "resolução, itens a e b (estruturas desenhadas)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-1-digitacao-02-10-2023-2-fase-dia-1/dissertativa-1-quimica-2-fase-dia-1-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": "a fonte apresenta as estruturas desenhadas; transcrição pela nomenclatura equivalente"
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. Questões 2, 9 e 10 respondidas na fonte com estruturas desenhadas simples — transcritas por nomenclatura/fórmula textual equivalente (sem perda de conteúdo)."
+  },
+  {
+   "id": "ita-2023-fisica-2fase",
+   "ano": "2023",
+   "fase": "2ª fase",
+   "dia": "dia 2",
+   "materia": "Física",
+   "pdf_original": "arquivos/originais/ita/2023/fisica_2023_2f.pdf",
+   "sha256_original": "bdb6015479b98f3f1e70498369b92119f19fa4a6d085d55db045b9896faf9adf",
+   "gabarito_oficial": null,
+   "url_pagina_origem": "https://www.vestibular.ita.br/provas.htm",
+   "url_arquivo": "https://www.vestibular.ita.br/provas/fisica_2023_2f.pdf",
+   "poliedro": {
+    "url_direta": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+    "http_status_verificado": 200,
+    "verificado_em": "2026-07-17",
+    "arquivo_consulta": "PDF 'ITA 2023 - 2ª Fase - Dia 2 - Resoluções - Física.pdf' baixado apenas para consulta local (não commitado); sha256 (10 primeiros chars): 9cb01ae08e"
+   },
+   "respostas": [
+    {
+     "questao": "1",
+     "resposta": "a) Δx₁ = 0,15 m; Δx₂ = 0,45 m; deslocamento total = 1,35 m. b) μ ≅ 0,2. c) δt ≅ 1·10⁻² s",
+     "evidencia": "resolução, resultados finais dos itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "2",
+     "resposta": "F₁ = F₂(6 − 3√2)",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "3",
+     "resposta": "a) y = h − x²/[4(H − h)]. b) O lugar geométrico é o interior do triângulo retângulo de vértices (0, 0), (0, H) e (H, 0)",
+     "evidencia": "resolução, resultados finais dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "4",
+     "resposta": "a) σhTe⁴ + κTe − κTi − σhT₀⁴ = 0. b) τ = α·(c·ρ·h²)/κ, em que α é uma constante adimensional",
+     "evidencia": "resolução, resultados finais em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "5",
+     "resposta": "a) v_máx = ωr. b) A cônica é uma elipse, de equação (f_obs − f_s)²/[(ωr/v_som)·f_s]² + x²/r² = 1",
+     "evidencia": "resolução, resultados finais dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "6",
+     "resposta": "n₁ ≅ −(d₁/d₂)·n₂",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "7",
+     "resposta": "a) A roda gira no sentido anti-horário (o torque anti-horário supera o horário). b) τ_O = qE₀d",
+     "evidencia": "resolução, conclusões dos itens a e b",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "8",
+     "resposta": "a) P_T = N·n_c·V²·ε² / [16·r·n_v·l·ρ₀·(1 + α(T − T₀))], em que ε é o diâmetro do fio e n_v o número de voltas por unidade de comprimento. b) E = W = 5,4·10³ · N·n_c·V²·ε² / [r·n_v·l·ρ₀·(1 + α(T − T₀))] · (T_e/T − 1), em joules",
+     "evidencia": "resolução, resultados finais dos itens a e b (notação conferida em zoom)",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "9",
+     "resposta": "v_máx = (μ₀·U₁·r·σ·I₂)/(2kd) · √(k/(ρπL))",
+     "evidencia": "resolução, resultado final em destaque",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    },
+    {
+     "questao": "10",
+     "resposta": "a) φ = 2,10 eV. b) f₀ = 5,08·10¹⁴ Hz. c) Não é possível: a conservação relativística de energia e momento leva a v = 0, um absurdo — logo um elétron livre não pode absorver um fóton como ocorre no efeito fotoelétrico",
+     "evidencia": "resolução, resultados finais dos itens a-c",
+     "url_fonte": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/ita/2023/ita-2-fase-dia-2-digitacao-03-10-2023-2-fase-dia-2/dissertativa-1-fisica-2-fase-dia-2-ita-2023#exam-downloads",
+     "status_questao": "pronto",
+     "obs": ""
+    }
+   ],
+   "status": "10 de 10 prontas",
+   "observacoes": "Prova 100% dissertativa (10 questões), sem gabarito oficial de 2ª fase. O PDF de resoluções do dia 2 inclui ao final o comentário da Redação (não é questão numerada; não transcrito)."
+  }
+ ],
+ "pendencias": [
+  "Matemática 2026 Q6: sem resultado separável por item na fonte.",
+  "Física 2026 Q2: item b) sem valores individuais determináveis (a própria fonte só declara a soma); item a) com fórmulas longas, marcado pendente por prudência.",
+  "Física 2026 Q4: a própria fonte considera a questão possivelmente inválida/anulável por premissa inconsistente.",
+  "Física 2025 Q2, Q3, Q8: fórmulas finais complexas (radicais/expoentes aninhados, somatórios) não transcritas com segurança a partir da renderização disponível.",
+  "Química 2025 Q9: questão inteiramente descritiva, sem resultado curto separável.",
+  "Física 2024 Q4: a fonte apresenta duas resoluções alternativas com fórmulas divergentes (fator 2) — não escolhido qual está correta.",
+  "Química 2024 Q2 e Q8: respostas inteiramente em desenho estrutural, sem equivalente textual transcritível."
+ ]
 }
